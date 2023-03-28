@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Trascrizione audio</title>
-</head>
-<body>
-	<h1>Trascrizione audio</h1>
-	<form action="/transcribe" method="post" enctype="multipart/form-data">
-		<label for="audio">Seleziona il file audio:</label><br>
-		<input type="file" id="audio" name="audio"><br><br>
-		<label for="text">Inserisci il testo:</label><br>
-		<textarea id="text" name="text"></textarea><br><br>
-		<input type="submit" value="Invia">
-		<form action="file:///C:/Users/Utente/Documents/index.html" method="post" enctype="multipart/form-data">
-	</form>
-	
-</body>
+  <head>
+    <title>Sottotitoli dell'audio</title>
+    <script src="https://cdn.jsdelivr.net/npm/webvtt/dist/webvtt.min.js"></script>
+  </head>
+  <body>
+    <h1>Sottotitoli dell'audio</h1>
+    <audio controls id="audio_player"></audio>
+    <div id="subtitles"></div>
+    <script>
+      // leggi i dati dei file audio e di testo
+      const urlParams = new URLSearchParams(window.location.search);
+      const audioFile = urlParams.get('audio_file');
+      const textFile = urlParams.get('testo_file');
+      
+      // carica il file audio e avvia la riproduzione
+      const audioPlayer = document.getElementById('audio_player');
+      audioPlayer.src = audioFile;
+      audioPlayer.load();
+      audioPlayer.play();
+      
+      // carica il file di testo e visualizza i sottotitoli
+      fetch(textFile)
+        .then(response => response.text())
+        .then(text => {
+          const cues = WebVTT.parse(text);
+          const subtitleDisplay = document.getElementById('subtitles');
+          const subtitleCues = cues.cues;
+          let currentCueIndex = 0;
+          audioPlayer.addEventListener('timeupdate', () => {
+            const currentTime = audioPlayer.currentTime;
+            const currentCue = subtitleCues[currentCueIndex];
+            if (currentCue && currentTime >= currentCue.startTime && currentTime <= currentCue.endTime) {
+              subtitle              subtitleDisplay.innerHTML = currentCue.text;
+            } else {
+              subtitleDisplay.innerHTML = '';
+            }
+            if (currentCue && currentTime >= currentCue.endTime) {
+              currentCueIndex++;
+            }
+          });
+        });
+    </script>
+  </body>
 </html>
