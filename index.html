@@ -1,18 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Carica file audio e di testo</title>
+    <title>Sottotitoli dell'audio</title>
+    <script src="https://cdn.jsdelivr.net/npm/webvtt/dist/webvtt.min.js"></script>
   </head>
   <body>
-    <h1>Carica file audio e di testo</h1>
-    <form action="audio_testo2.html" method="POST" enctype="multipart/form-data">
-      <label for="audio_file">Carica file audio:</label>
-      <input type="file" id="audio_file" name="audio_file" accept=".mp3, .wav">
-      <br>
-      <label for="testo_file">Carica file di testo:</label>
-      <input type="file" id="testo_file" name="testo_file" accept=".txt">
-      <br>
-      <input type="submit" value="Invia">
-    </form>
+    <h1>Sottotitoli dell'audio</h1>
+    <input type="file" id="audio_file_input" accept="audio/*">
+    <input type="file" id="testo_file_input" accept=".txt">
+    <button id="play_button">Play</button>
+    <br><br>
+    <audio controls id="audio_player"></audio>
+    <div id="subtitles"></div>
+    <script>
+      const audioFileInput = document.getElementById('audio_file_input');
+      const textFileInput = document.getElementById('testo_file_input');
+      const playButton = document.getElementById('play_button');
+      const audioPlayer = document.getElementById('audio_player');
+      const subtitleDisplay = document.getElementById('subtitles');
+      let currentCueIndex = 0;
+      
+      // funzione per leggere il file di testo e creare i sottotitoli
+      const loadTextFile = (file) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const cues = WebVTT.parse(reader.result);
+          const subtitleCues = cues.cues;
+          audioPlayer.addEventListener('timeupdate', () => {
+            const currentTime = audioPlayer.currentTime;
+            const currentCue = subtitleCues[currentCueIndex];
+            if (currentCue && currentTime >= currentCue.startTime && currentTime <= currentCue.endTime) {
+              subtitleDisplay.innerHTML = currentCue.text;
+            } else if (currentCue && currentTime >= currentCue.endTime) {
+              subtitleDisplay.innerHTML = '';
+              currentCueIndex++;
+            }
+          });
+        };
+        reader.readAsText(file);
+      };
+      
+      // quando viene scelto un file audio
+      audioFileInput.addEventListener('change', () => {
+        const file = audioFileInput.files[0];
+        audioPlayer.src = URL.createObjectURL(file);
+      });
+      
+      // quando viene scelto un file di testo
+      textFileInput.addEventListener('change', () => {
+        const file = textFileInput.files[0];
+        loadTextFile(file);
+      });
+      
+      // quando viene cliccato il pulsante Play
+      playButton.addEventListener('click', () => {
+        audioPlayer.play();
+      });
+    </script>
   </body>
 </html>
