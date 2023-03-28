@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Player with Real-time Subtitles</title>
+</head>
+<body>
+    <audio id="audio" src="path/to/audio/file.mp3" controls></audio>
+    <div id="subtitles"></div>
+
+    <script src="path/to/webvtt.min.js"></script>
+    <script>
+        const audio = document.getElementById('audio');
+        const subtitles = document.getElementById('subtitles');
+        const track = audio.addTextTrack('subtitles');
+	<form action="/upload" method="post" enctype="multipart/form-data">
+  <label for="audio">Select audio file:</label>
+  <input type="file" id="audio" name="audio"><br><br>
+  <label for="text">Select text file:</label>
+  <input type="file" id="text" name="text"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+        // Load subtitles from a WebVTT file
+        fetch('path/to/subtitles.vtt')
+            .then(response => response.text())
+            .then(data => {
+                const cues = new WebVTT.Parser(window, WebVTT.StringDecoder()).parse(data);
+                cues.forEach(cue => {
+                    track.addCue(cue);
+                });
+            });
+
+        // Update subtitles in real-time
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            const activeCues = track.activeCues;
+            let text = '';
+
+            if (activeCues.length > 0) {
+                // Concatenate text from all active cues
+                for (let i = 0; i < activeCues.length; i++) {
+                    text += activeCues[i].text + ' ';
+                }
+            }
+
+            // Update subtitles element with current text
+            subtitles.innerText = text;
+        });
+    </script>
+</body>
+</html>
