@@ -1,60 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sottotitoli dell'audio</title>
-    <script src="https://cdn.jsdelivr.net/npm/webvtt/dist/webvtt.min.js"></script>
+    <title>Convertitore audio con sottotitoli</title>
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.11.4/video.js"></script>
   </head>
   <body>
-    <h1>Sottotitoli dell'audio</h1>
-    <input type="file" id="audio_file_input" accept="audio/*">
-    <input type="file" id="testo_file_input" accept=".txt">
-    <button id="play_button">Play</button>
-    <br><br>
-    <audio controls id="audio_player"></audio>
-    <div id="subtitles"></div>
+    <h1>Convertitore audio con sottotitoli</h1>
+    <form>
+      <label for="audio_file">Seleziona il file audio:</label>
+      <input type="file" id="audio_file" name="audio_file" accept="audio/*" required><br><br>
+      <label for="subtitle_file">Seleziona il file dei sottotitoli:</label>
+      <input type="file" id="subtitle_file" name="subtitle_file" accept=".srt" required><br><br>
+      <input type="submit" value="Converti">
+    </form>
+    <br>
+    <div id="video_player"></div>
     <script>
-      const audioFileInput = document.getElementById('audio_file_input');
-      const textFileInput = document.getElementById('testo_file_input');
-      const playButton = document.getElementById('play_button');
-      const audioPlayer = document.getElementById('audio_player');
-      const subtitleDisplay = document.getElementById('subtitles');
-      let currentCueIndex = 0;
-      
-      // funzione per leggere il file di testo e creare i sottotitoli
-      const loadTextFile = (file) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          const cues = WebVTT.parse(reader.result);
-          const subtitleCues = cues.cues;
-          audioPlayer.addEventListener('timeupdate', () => {
-            const currentTime = audioPlayer.currentTime;
-            const currentCue = subtitleCues[currentCueIndex];
-            if (currentCue && currentTime >= currentCue.startTime && currentTime <= currentCue.endTime) {
-              subtitleDisplay.innerHTML = currentCue.text;
-            } else if (currentCue && currentTime >= currentCue.endTime) {
-              subtitleDisplay.innerHTML = '';
-              currentCueIndex++;
-            }
-          });
-        };
-        reader.readAsText(file);
-      };
-      
-      // quando viene scelto un file audio
-      audioFileInput.addEventListener('change', () => {
-        const file = audioFileInput.files[0];
-        audioPlayer.src = URL.createObjectURL(file);
-      });
-      
-      // quando viene scelto un file di testo
-      textFileInput.addEventListener('change', () => {
-        const file = textFileInput.files[0];
-        loadTextFile(file);
-      });
-      
-      // quando viene cliccato il pulsante Play
-      playButton.addEventListener('click', () => {
-        audioPlayer.play();
+      // quando viene inviato il form, crea il player video
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const audioFile = document.getElementById('audio_file').files[0];
+        const subtitleFile = document.getElementById('subtitle_file').files[0];
+        
+        // crea il player video
+        const videoPlayer = videojs('video_player', {
+          controls: true,
+          preload: 'auto'
+        });
+        
+        // aggiungi il file audio e i sottotitoli
+        videoPlayer.src({
+          type: 'audio/mp3',
+          src: URL.createObjectURL(audioFile),
+          textTracks: [{
+            kind: 'subtitles',
+            src: URL.createObjectURL(subtitleFile),
+            srclang: 'it',
+            label: 'Italiano'
+          }]
+        });
+        
+        // rimuovi il form dalla pagina
+        form.style.display = 'none';
       });
     </script>
   </body>
