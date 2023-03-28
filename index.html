@@ -1,56 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Editor di Python</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/python/python.min.js"></script>
 </head>
-  <body>
-    <h1>Sottotitoli dell'audio</h1>
-    <input type="file" id="audio_file_input" accept="audio/*">
-    <input type="file" id="testo_file_input" accept=".txt">
-    <button id="play_button">Play</button>
-    <br><br>
-    <audio controls id="audio_player"></audio>
-    <div id="subtitles"></div>
-    <script>
-      const audioFileInput = document.getElementById('audio_file_input');
-      const textFileInput = document.getElementById('testo_file_input');
-      const playButton = document.getElementById('play_button');
-      const audioPlayer = document.getElementById('audio_player');
-      const subtitleDisplay = document.getElementById('subtitles');
-      let currentCueIndex = 0;
-      
-      // funzione per leggere il file di testo e creare i sottotitoli
-      const loadTextFile = (file) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          const cues = WebVTT.parse(reader.result);
-          const subtitleCues = cues.cues;
-          audioPlayer.addEventListener('timeupdate', () => {
-            const currentTime = audioPlayer.currentTime;
-            const currentCue = subtitleCues[currentCueIndex];
-            if (currentCue && currentTime >= currentCue.startTime && currentTime <= currentCue.endTime) {
-              subtitleDisplay.innerHTML = currentCue.text;
-            } else if (currentCue && currentTime >= currentCue.endTime) {
-              subtitleDisplay.innerHTML = '';
-              currentCueIndex++;
-            }
-          });
-        };
-        reader.readAsText(file);
-      };
-      
-      // quando viene scelto un file audio
-      audioFileInput.addEventListener('change', () => {
-        const file = audioFileInput.files[0];
-        audioPlayer.src = URL.createObjectURL(file);
-      });
-      
-      // quando viene scelto un file di testo
-      textFileInput.addEventListener('change', () => {
-        const file = textFileInput.files[0];
-        loadTextFile(file);
-      });
-      
-      // quando viene cliccato il pulsante Play
-      playButton.addEventListener('click', () => {
-        audioPlayer.play();
-      });
-    </script>
-  </body>
+<body>
+  <textarea id="editor" name="editor"></textarea>
+  <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+      lineNumbers: true,
+      mode: "python",
+      theme: "darcula"
+    });
+  </script>
+</body>
 </html>
