@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Editor di Python</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/python/python.min.js"></script>
-</head>
-<body>
-  <textarea id="editor" name="editor"></textarea>
-  <script>
-    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
-      lineNumbers: true,
-      mode: "python",
-      theme: "darcula"
-    });
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <title>Editor Python</title>
+  </head>
+  <body>
+    <textarea id="codice" rows="10" cols="50">
+# Scrivi qui il codice Python
+print("Ciao, mondo!")
+    </textarea>
+    <br>
+    <button onclick="salva()">Salva</button>
+
+    <script>
+      function salva() {
+        var codice = document.getElementById("codice").value;
+        var nome_file = prompt("Nome del file:", "script.py");
+        var file = new Blob([codice], {type: "text/plain;charset=utf-8"});
+        saveAs(file, nome_file);
+      }
+
+      function saveAs(blob, filename) {
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", filename);
+        link.style.visibility = "hidden";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+  </body>
 </html>
