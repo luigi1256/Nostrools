@@ -1,5 +1,4 @@
-@media (min-width:1024px) {
-.PC {
-display: none;
-}
-}
+@media screen and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
