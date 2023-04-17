@@ -1,6 +1,5 @@
+@media screen and (min-width:1023px) {
 
-       
-@media screen and (min:1023px) {
+.smartphone { display: none; }
 
-.smartphone {
-                display: none;}}
+}
