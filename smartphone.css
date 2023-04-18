@@ -1,5 +1,7 @@
-@media screen and (min-width:1050px) {
-
-.smartphone { display: none; }
-
-}
+.solomobile { 
+ display:none; 
+ }
+@media screen and (max-width: 500px) {
+ .solomobile { 
+ display:block; }
+ }
