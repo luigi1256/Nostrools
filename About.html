@@ -268,6 +268,16 @@ nav ul li a {
 	   <div id="nostr-embed-707282a25d6089c584c0089d32e34a4eaddeef79e8f3b2b64d21b511af2880cb"></div><script>  !(function ()
 	{    const n=document.createElement('script');n.type='text/javascript';n.async=!0;n.src='https://cdn.jsdelivr.net/gh/nostrband/nostr-embed@0.1.5/dist/nostr-embed.js';    n.onload=function () {      nostrEmbed.init(        '707282a25d6089c584c0089d32e34a4eaddeef79e8f3b2b64d21b511af2880cb',        '#nostr-embed-707282a25d6089c584c0089d32e34a4eaddeef79e8f3b2b64d21b511af2880cb'style="height: 100px; width: 100px;",        ''      );    };const a=document.getElementsByTagName('script')[0];a.parentNode.insertBefore(n, a);  })();</script></h1>
  
-       </body>
+      
+       <h2>Aggiungi un commento</h2> <form action="" method="POST"> <label for="nome">Nome:</label> <input type="text" id="nome" name="nome" required><br><br> <label for="commento">Commento:</label><br> <textarea id="commento" name="commento" rows="5" cols="50" required></textarea><br><br> <button type="submit">Invia</button> </form>
+<?php 
+	if($_SERVER['REQUEST_METHOD'] == 'POST'){
+		$nome = $_POST['nome'];
+		$commento = $_POST['commento'];
+		echo '<hr><h3>Commento di '.$nome.'</h3><p>'.$commento.'</p>';
+	}
+?>
+</body> </html>
+       
 </html>
 
