@@ -8,6 +8,15 @@ float:left;
 margin-top:75px;
 width:auto;
 }
+		<style>
+a {text-decoration: none; } </style>
+<style>
+.btn {
+font-size: 20px;
+padding: 10px 20px;
+}
+</style>
+
 			</style>
 			<div class="menu">
     	
@@ -121,7 +130,13 @@ nav ul li a {
 }
 </style>
 </head>
- <body>
+ <body><div id="myBtnContainer">
+ <button class="btn active" onclick="filterSelection('all')"><a class="btn" href="https://github.com/luigi1256" target="_blank" onclick="filterSelection('animali')"> Animali</a></button>
+ <button class="btn" onclick="filterSelection('macchine')"> Macchine</button>
+ <button class="btn" onclick="filterSelection('animali')"> Animali</button>
+ <button class="btn" onclick="filterSelection('frutti')"> Frutti</button>
+ <button class="btn" onclick="filterSelection('colori')"> Colori</button>
+</div>
 	 <nav  style="float: left" class="desktop">
   <ul>
     <li><a href="#">Home</a></li>
