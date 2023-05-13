@@ -4,7 +4,28 @@
 		<font color="white">
 			<font face="Courier New, Courier, mono">
 <head> 
-		
+		<script>
+    // Verifica se l'elemento details è supportato dal browser
+    if (!('open' in document.createElement('details'))) {
+      document.documentElement.className += ' no-details';
+    }
+  </script>
+
+  <style>
+    /* Stile alternativo per i browser che non supportano details */
+    .no-details summary + * {
+      display: none;
+    }
+    .no-details[open] summary + * {
+      display: block;
+    }
+  </style>
+</body>
+</html>
+<details>
+  <summary>Dettagli</summary>
+  <p>Contenuto espandibile.</p>
+</details>
 	<title>Nostrools</title>
 			<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 </head> 
