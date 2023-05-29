@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<header>
+<meta name="viewport" content="width=device-width, initial-scale=0.6">
+ <style>
+        .button {
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 24px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: #ffffff;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+	<button class="button"
+      id="nostr-zap-target"
+      data-npub=npub
+      data-relays="wss://relay.damus.io,wss://relay.snort.social,wss://nostr.wine,wss://relay.nostr.band"
+    >
+      Zap a Developer ⚡️
+    </button><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<center><button class="button"><a href=""style="text-decoration: none">Refresh</a></button></center>
+ <b>
+<body  style="background: linear-gradient(to right, red,orange,purple);">
+<table border="1" style="font-size: 28px;"><h1>
+  <tr>
+	<th>&emsp;&emsp;&emsp;&emsp;</th>
+	<th>Name</th>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<th>Website</th>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<th>Nip-05</th>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<th>Npub</th>
+	  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>PABLOF7z</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://pablof7z.com"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>f7z.io</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://gotnostr.com/f7z.io"style="text-decoration: none" target="_blank">Got Nostr</a></td>
+	
+  </tr>
+  <tr><br>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Cameri</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://eden.nostr.land/invoices"style="text-decoration: none"target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>cameri@elder.nostr.land</td>
+    <td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/cameri@elder.nostr.land" style="text-decoration: none" target="_blank">nosta.me</a></td>
+	
+	
+  </tr>
+  <tr> <td>&emsp;&emsp;&emsp;&emsp;</td> 
+  <td>Michael Dilger</td> 
+  <td>&emsp;&emsp;&emsp;&emsp;</td> 
+  <td><a href="https://mikedilger.com/" style="text-decoration: none"target="_blank">Website</a></td> 
+  <td>&emsp;&emsp;&emsp;&emsp;
+  </td> 
+  <td>mikedilger.com
+  </td> 
+  <td>&emsp;&emsp;&emsp;&emsp;</td>
+  <td><a href="https://nosta.me/npub1acg6thl5psv62405rljzkj8spesceyfz2c32udakc2ak0dmvfeyse9p35c" style="text-decoration: none"target="_blank">nosta.me</a>
+  </td> </tr>
+<tr><br>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Will </td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://jb55.com/" style="text-decoration: none"target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>jb55@jb55.com</td>
+<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/npub1xtscya34g58tk0z605fvr788k263gsu6cy9x0mhnm87echrgufzsevkk5s" style="text-decoration: none"target="_blank">nosta.me</a></td>
+</tr>
+<tr><br>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Luke Dashjr</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="" style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>luke_nostr@dashjr.org
+</td>
+<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostr.band/npub1lh273a4wpkup00stw8dzqjvvrqrfdrv2v3v4t8pynuezlfe5vjnsnaa9nk" style="text-decoration: none"target="_blank">Nostr.band</a></td>
+</tr>
+<tr><br>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>unclebobmartin</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="http://cleancoder.com " style="text-decoration: none"target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>unclebobmartin@nostrplebs.com
+</td>
+<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostr.band/npub19mun7qwdyjf7qs3456u8kyxncjn5u2n7klpu4utgy68k4aenzj6synjnft" style="text-decoration: none" target="_blank">Nostr.band</a></td>
+</tr>
+<tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Keith Mukai</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostrtool.com" style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>KeithMukai@nostr.seedsigner.com
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostr.band/npub1tv8gmfhalwnxxquxjzeh6gtdsdz6vg7vx0s3rt7s7uuw6aujh32qn77wn2" style="text-decoration: none" target="_blamk">Nostr.band</a></td>
+  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Nick Klockenga</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://klockenga.com"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>newtonick@klockenga.com
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostr.band/npub1rfd0hxdzcze6pzj29thuz34vur57wm9quje7w3edxjgusq6m47csnl7wrt"style="text-decoration: none" target="_blank">Nostr.band</a></td>
+  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Karnage</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostrland.com"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>karnage@nostrplebs.com</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/1bc70a0148b3f316da33fe3c89f23e3e71ac4ff998027ec712b905cd24f6a411" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Derek Ross</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="NostrPlebs.com" style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>derekross@nostrplebs.com
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostr.band/npub18ams6ewn5aj2n3wt2qawzglx9mr4nzksxhvrdc4gzrecw7n5tvjqctp424" style="text-decoration: none" target="_blank">Nostr.band</a></td>
+  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>fiatjaf</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=""style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>fiatjaf.com
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://gotnostr.com/fiatjaf.com" style="text-decoration: none" target="_blank">Got Nostr</a></td>
+  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Kieran</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://snort.social"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>kieran@snort.social
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/kieran@snort.social" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>calle</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://github.com/callebtc"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>calle@cashu.me
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/calle@cashu.me" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Vitor Pamplona</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://vitorpamplona.com"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>vitor@vitorpamplona.com
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/vitor@vitorpamplona.com" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+   <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>hodlbod</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://geyser.fund/project/coracle"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>hodlbod@coracle.social
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/npub1jlrs53pkdfjnts29kveljul2sm0actt6n8dxrrzqcersttvcuv3qdjynqn" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+   <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>KoalaSat</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="http://github.com/KoalaSat ⚡"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>koalasat@nostros.net
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/npub1v3tgrwwsv7c6xckyhm5dmluc05jxd4yeqhpxew87chn0kua0tjzqc6yvjh"style="text-decoration: none"  target="_blank">nosta.me</a></td>
+  </tr>
+   <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>lapulpeta</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://github.com/lapulpeta/Nostrid"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>lapulpeta@nostrid.app
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/lapulpeta@nostrid.app" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+   <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Martti Malmi</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://twitter.com/marttimalmi" style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>sirius@iris.to
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/sirius@iris.to" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+   <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>henry</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostrimg.com/" style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>henry@nostrimg.com
+
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/henry@nostrimg.com" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+   <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>ben</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://stemstr.app" style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>ben@bdw.to
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/ben@bdw.to" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr>
+  <tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Rock</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="stemstr.app"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>rockymedure@cash.app
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/rockymedure@cash.app"style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Ro₿erto 🇸🇻⚡️🧡
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://www.robertoagreda.com/"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>rob@nostrplebs.com
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/rob@nostrplebs.com" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>iefan 🕊️</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://linktr.ee/realiefan" style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>iefan.tech
+
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/npub1cmmswlckn82se7f2jeftl6ll4szlc6zzh8hrjyyfm9vm3t2afr7svqlr6f" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>TC</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://timechaincalendar.com"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>tc@timechaincalendar.com
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/tc@timechaincalendar.com" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>jleger2023</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=" https://nostrgram.co/"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>jonleger.com
+
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/npub1t9a59hjk48svr8hz6rx727ta6kx53n5d6fw8x26vsua0zytpl87sa6h4uw" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Semisol 🐇</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostrplebs.com"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>semisol@nostrplebs.com
+
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/semisol@nostrplebs.com" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>RooSoft</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://github.com/RooSoft/nostr"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>roosoft.com
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/npub1alyr7qwglvcfmukgse4cc7fyej9k7pvq4lw7r4hpdc4kzp7zsckqmy0qkx" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>monlovesmango</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=""style="text-decoration: none"target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>monlovesmango@astral.ninja
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/monlovesmango@astral.ninja" style="text-decoration: none" target="_blank">nosta.me</a></td>
+  </tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>Artur Brugeman</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nostr.band/"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>artur@nostr.band
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="https://nosta.me/npub1xdtducdnjerex88gkg2qk2atsdlqsyxqaag4h05jmcpyspqt30wscmntxy" style="text-decoration: none" target="_blank">nosta.me</a>
+	</td></tr>
+	<tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>andre</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="zebedee.io"style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>andre@zbd.ai
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="" style="text-decoration: none" target="_blank">nosta.me</a>
+	</td></tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>name</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=""style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>nip05
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="" style="text-decoration: none" target="_blank">nosta.me</a>
+	</td></tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>name</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=""style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>nip05
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="" style="text-decoration: none" target="_blank">nosta.me</a>
+	</td></tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>name</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=""style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>nip05
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="" style="text-decoration: none" target="_blank">nosta.me</a>
+	</td></tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>name</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=""style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>nip05
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="" style="text-decoration: none" target="_blank">nosta.me</a>
+	</td></tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>name</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=""style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>nip05
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="" style="text-decoration: none" target="_blank">nosta.me</a>
+	</td></tr><tr>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>name</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href=""style="text-decoration: none" target="_blank">Website</a></td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td>nip05
+
+</td>
+	<td>&emsp;&emsp;&emsp;&emsp;</td>
+	<td><a href="" style="text-decoration: none" target="_blank">nosta.me</a>
+	</td></tr>
+</h1></table>
+<button class=button>
+<a href="https://nostr.com/note17ynjhdknk0msdaq3cg72ez9y2d3slkprtdnx6hrfv0mx364uyk2skfqqml"style="text-decoration: none" target="_blank"> Source</a>
+</button>
+<button class=button><a href="https://nostrich.fun/builders"style="text-decoration: none" target="_blank">Source 2</a></button>
+</body></b>
+ 
+</head>
+<body>
+  
+
+  <script src="script.json"></script>
+</script><script>var randomIndex = Math.floor(Math.random() * npubSet.length);
+var npub = npubSet[randomIndex];
+        var zapButton = document.getElementById("nostr-zap-target");
+        zapButton.setAttribute("data-npub", npub);</script>
+	 <script src="https://cdn.jsdelivr.net/npm/nostr-zap@0.9.0"></script>
+	 </body>
+</html>
