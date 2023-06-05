@@ -29,7 +29,7 @@
   .shim-content {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
