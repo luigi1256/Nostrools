@@ -68,10 +68,15 @@
     if (isExtensionInstalled) {
       // Hide the shim container after a successful login
       shimContainer.style.display = 'none'
-    } else {
-      alert('Please install nostr extension (alby or nos2x) to log in.')
+    }  else {
+    const installLink = "https://github.com/nostr-protocol/nips/blob/master/07.md"; // Sostituisci con il link desiderato
+    const message = `Please install nostr extension (alby or nos2x) to log in. Click OK to install.`;
+
+    if (confirm(message)) {
+      window.location.href = installLink;
     }
   }
+}
 
   async function checkForExtension() {
     // Check if window.nostr exists and has a getPublicKey method
