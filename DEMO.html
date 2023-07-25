@@ -1,0 +1,354 @@
+<html>
+<head>
+<style>
+  .my-button {
+    width: 150px;
+    height: 80px;
+  }
+</style>
+<style>
+  .dialog {
+    width: 500px;
+    height: 500px;
+  }
+</style>
+<style>
+  body {
+    background-color: gray;
+  }
+</style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha384-yfs9q6j/s2QVp/hxWhxSbjTrtEnBu3S8SwvQfdgcD+4VfOEmVgs+Rf4aIbMDq/Qo" crossorigin="anonymous">
+<title>DEMO</title>
+<h1><b>Nostr:</b><br>
+<b>Note and other stuff transmitted by Relays</b></h1>
+
+<button onclick="openDialog1()"class="my-button"style="font-size:20px">&emsp;&emsp;Welcome</button>
+<button onclick="openDialog2()"class="my-button"style="font-size:20px">&emsp;&emsp;Keys</button>
+<button onclick="openDialog3()"class="my-button"style="font-size:20px">&emsp;&emsp;Profile</button>
+<button onclick="openDialog4()"class="my-button"style="font-size:20px">&emsp;&emsp;JSON</button><br><br>
+<button onclick="openDialog5()"class="my-button"style="font-size:20px">&emsp;&emsp;Nostr Address</button>
+<button onclick="openDialog6()"class="my-button"style="font-size:20px">&emsp;&emsp;LightNing Address</button>
+<button onclick="openDialog7()"class="my-button"style="font-size:20px">&emsp;&emsp;Relay Explorer</button>
+<button onclick="openDialog8()"class="my-button"style="font-size:20px">&emsp;&emsp;Nostr key to safety</button><br><br>
+<button onclick="openDialog9()"style="font-size:20px" height="100px">&emsp;&emsp;Clients of Nostr | App| Blog| Tools</button>
+
+
+<body>
+<dialog id="myDialog1" class="dialog">
+  <h2>Window 1</h2>
+  <p><h1>Welcome in "" nostr client</h1>
+	<form>
+		<label for="testo"style="font-size:30px">Enter npub o nsec:</label>
+		<input type="text" id="testo" name="testo"><br><br>
+		<button type="button" onclick="cancellaTesto()"style="font-size:30px">login</button>
+	</form><script>
+		function cancellaTesto() {
+			var testo = document.getElementById("testo").value;
+			if (testo.trim() !== "") {
+				alert("Login ok!");
+				document.getElementById("testo").value = "";
+			}
+		}
+	</script></p>
+	<p><h1>Create an Account</h1> 
+		
+	
+	<button onclick="generateKey()"style="font-size:30px">Generate  a Key</button>
+<script>function generateKey() {
+  var length = 32; // Lunghezza della chiave
+  var alphabet = "npub1e08fhgecn6zykl3aagvd5ln33j7upx7yp9scf9ardj5z950avfsqwem3jm"; // Set di caratteri
+  var key = "";
+
+  for (var i = 0; i < length; i++) {
+    key += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+  }
+
+  alert(key); // Visualizza la chiave generata
+}</script></p>
+  <button onclick="closeDialog1()"style="font-size:30px">Close</button>
+</dialog>
+
+<dialog id="myDialog2" class="dialog">
+  <h2>Tab 2</h2>
+  <p style="font-size:30px"><h1>Save your keys</h1>
+	<div> <label for="npub"  style="font-size:30px">npub:</label> <input type="text" id="npub" name="npub" value="npub1e08fhgecn6zykl3aagvd5ln33j7upx7yp9scf9ardj5z950avfsqwem3jm"> 
+	<button type="button" onclick="copiaChiave('npub')"style="font-size:30px">Copy</button> </div> 
+	<br><br> <div> <label for="nsec"  style="font-size:30px">nsec:</label> 
+	<input type="text" id="nsec" name="nsec" readonly value="nsec1e08fhgecn6zykl3aagvd5ln33j7upx7yp9scf9ardj5z950avfsqwem3jmb"> 
+	<button type="button" onclick="copiaChiave('nsec')"style="font-size:30px">Copy</button> </div> 
+	<br> <button type="button" onclick="salvaChiavi()"style="font-size:30px">I have saved my keys, continue</button> 
+	<script> function copiaChiave(id) { var chiave = document.getElementById(id).value; navigator.clipboard.writeText(chiave); }
+function salvaChiavi() {
+var npub = document.getElementById("npub").value;
+var nsec = document.getElementById("nsec").value;
+// Aggiungi qui la logica per salvare le chiavi
+alert("Keys saved!");
+document.getElementById("salvaChiavi").value = "";
+}
+
+</script>
+ <h1>Pick a username</h1> 
+		<form> <label for="testo8"  style="font-size:30px">In nostr there are nickname:</label> 
+		<input type="text" id="testo8" name="testo8"><br><br> 
+		<button type="button" id="loginButton8" onclick="cancellaTesto4()"style="font-size:30px">Next</button> 
+		</form> 
+		<script> function cancellaTesto4() { 
+		var testo = document.getElementById("testo8").value; 
+		if (testo.trim() !== "") { alert("Save!"); document.getElementById("testo8").value = "";
+		}
+	} 
+	</script></p><br>
+  <button onclick="closeDialog2()"style="font-size:30px">Close</button>
+</dialog>
+<dialog id="myDialog3" class="dialog">
+  <h2>dialog 3</h2>
+  <p style="font-size:30px">
+  <script>function openTab(evt, tabName) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+document.getElementById(tabName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+</script>
+
+	
+	
+	
+	<p style="font-size:30px">
+	<meta charset="UTF-8"> Menù <br>
+	<body>
+	<meta charset="UTF-8"> Profile<br>
+	<body>
+	<form>
+  <label for="avatar" style="font-size:30px">Avatar:</label>
+  <input type="text" id="avatar" name="avatar"><br>
+
+  <label for="coverImage" style="font-size:30px">Cover image:</label>
+  <input type="text" id="coverImage" name="coverImage"><br>
+
+  <label for="name"style="font-size:30px">Name:</label>
+  <input type="text" id="name" name="name"><br>
+
+  <label for="about"style="font-size:30px">About:</label>
+  <input type="text" id="about" name="about"><br>
+
+  <label for="lnAddress"style="font-size:30px">LN Address:</label>
+  <input type="email" id="lnAddress" name="lnAddress"><br>
+
+  <label for="nip05"style="font-size:30px">Nip-05:</label>
+  <input type="email" id="nip05" name="nip05"><br>
+
+  <label for="zapOnly"style="font-size:30px">Zap-only:</label>
+  <input type="checkbox" id="zapOnly" name="zapOnly"><br>
+
+  <input type="submit" value="Save as HTML script">
+</form></p></p>
+  <button onclick="closeDialog3()"style="font-size:30px">Close</button>
+</dialog>
+<dialog id="myDialog4" class="dialog">
+  <h2>Dialog 4</h2>
+  <p><h1>Tools of Nostr</h1>
+  <p><h2>Examples</h2></p><br><br>
+  <button><a href="https://nak.nostr.com/"><h2>Nak.Nostr link</h2></a></button><BR><BR>
+  <iframe src="https://nak.nostr.com/" width="400" height="600" frameborder="0"></iframe>
+</body><br><br><button><a href="https://www.nostr.guru/"><h2>Nostr.guru link</h2></a></button><br><br>
+<iframe src="https://www.nostr.guru/" width="400" height="600" frameborder="0"></iframe><br><br>
+<iframe src="https://nostrtool.com/" width="400" height="600" frameborder="0"></iframe></p>
+  <button onclick="closeDialog4()"style="font-size:30px">Close</button>
+</dialog>
+<dialog id="myDialog5" class="dialog">
+  <h2>Dialog 5</h2>
+  <p><h1>Examples of Nip-05 Address</h1>
+	<a href="https://bitcoinnostr.com/#lfg"><h1>BitcoinNostr Link</h1></a><br><br> 
+	<iframe src="https://bitcoinnostr.com/#lfg" width="400" height="600" frameborder="0"></iframe>
+	<br><br><br><a href="https://nostrplebs.com/register"><h1>NostrPlebs Link</h1></a><br><br>
+	<iframe src="https://nostrplebs.com/register"width="400" height="600" frameborder="0"></iframe></p>
+  <button onclick="closeDialog5()"style="font-size:30px">Close</button>
+</dialog>
+
+<dialog id="myDialog6" class="dialog">
+  <h2>Dialog 6</h2>
+  <p><br><br><a href="https://lightningaddress.com/"><h1>LN Address link</h1></a><br><br>
+	<iframe src="https://lightningaddress.com/" width="500" height="600" frameborder="0"></iframe></p>
+  <button onclick="closeDialog6()"style="font-size:30px">Close</button>
+</dialog>
+<dialog id="myDialog7" class="dialog">
+  <h2>Dialog 7</h2>
+  <p><br><br><h1>Relays</h1>
+	<iframe src="https://nostref.punkhub.me/" width="500" height="600" frameborder="0"></iframe><p>
+  <button onclick="closeDialog7()"style="font-size:30px">Close</button>
+</dialog>
+<dialog id="myDialog8" class="dialog">
+  <h2>Dialog 8</h2>
+  <p><h1>Nostr-key Nip-07</h1> 
+	<p><h2>Nostr Signer Extension,
+This extension allows you to sign Nostr events on web-apps without having to give them your keys.
+</p><p></h2>
+<h3>
+Alby  <img src="https://avatars.githubusercontent.com/u/90630635?s=200&v=4" width="50px" height="50px"/>
+Blockcore  <img src="https://avatars.githubusercontent.com/u/53176002?s=200&v=4"width="50px" height="50px"/><br><br>
+Flamingo <img src="https://lh3.googleusercontent.com/73J47fHLOsHG4QK-QSl9O59XhhjqTK4hARO6ir_8b2B0EgOJytcfyK5_-MNo349HCgtHhCmSigxjoPP5A8DmB_F-nWY=w128-h128-e365-rj-sc0x00ffffff" width="50px" height="50px"/>
+nos2x <img src="https://lh3.googleusercontent.com/8mm7IxpiAOulzNPyyvILMAWHuRI6VqYpfIpDYU094vTGy6XOlTPswAEj-bQ325E8-RpSo-Sbhs9umF1drHC5Od7UpA=w128-h128-e365-rj-sc0x00ffffff" width="50px" height="50px"><br><br>
+</q></p></h3>
+	<a HREF="https://github.com/aljazceru/awesome-nostr#browser-extensions" ><h2>Source</h2></a></p>
+  <button onclick="closeDialog8()"style="font-size:30px">Close</button>
+</dialog>
+<dialog id="myDialog9" class="dialog">
+  <h2>Dialog 9</h2>
+  <p><br><br><br><button><a  href="https://www.nostrapps.com/"><h1>NostrApps link</h1></a></button><br><br><iframe src="https://www.nostrapps.com/"width="500" height="600" frameborder="0"></iframe></td>
+	</p>
+  <button onclick="closeDialog9()"style="font-size:30px">Close</button>
+</dialog>
+
+<script>
+  function openDialog1() {
+    var dialog = document.getElementById("myDialog1");
+    dialog.showModal();
+  }
+
+  function closeDialog1() {
+    var dialog = document.getElementById("myDialog1");
+    dialog.close();
+  }
+
+  function openDialog2() {
+    var dialog = document.getElementById("myDialog2");
+     dialog.showModal();
+  }
+
+  function closeDialog2() {
+    var dialog = document.getElementById("myDialog2");
+    dialog.close();
+  }
+  function openDialog3() {
+    var dialog = document.getElementById("myDialog3");
+    dialog.showModal();
+  }
+
+  function closeDialog3() {
+    var dialog = document.getElementById("myDialog3");
+    dialog.close();
+  }
+  function openDialog4() {
+    var dialog = document.getElementById("myDialog4");
+    dialog.showModal();
+  }
+
+  function closeDialog4() {
+    var dialog = document.getElementById("myDialog4");
+    dialog.close();
+	  }
+	  
+	  
+	  function openDialog5() {
+    var dialog = document.getElementById("myDialog5");
+    dialog.showModal();
+  }
+
+  function closeDialog5() {
+    var dialog = document.getElementById("myDialog5");
+    dialog.close();
+  }
+
+  function openDialog6() {
+    var dialog = document.getElementById("myDialog6");
+    dialog.showModal();
+  }
+
+  function closeDialog6() {
+    var dialog = document.getElementById("myDialog6");
+    dialog.close();
+  }
+  function openDialog7() {
+    var dialog = document.getElementById("myDialog7");
+    dialog.showModal();
+  }
+
+  function closeDialog7() {
+    var dialog = document.getElementById("myDialog7");
+    dialog.close();
+  }
+  function openDialog8() {
+    var dialog = document.getElementById("myDialog8");
+    dialog.showModal();
+  }
+
+  function closeDialog8() {
+    var dialog = document.getElementById("myDialog8");
+    dialog.close();
+  }
+   function openDialog9() {
+    var dialog = document.getElementById("myDialog9");
+    dialog.showModal();
+  }
+
+  function closeDialog9() {
+    var dialog = document.getElementById("myDialog9");
+    dialog.close();
+  }
+</script>
+<br><br><p style="font-size:30px">
+&emsp;&emsp;click here, the triangle</p>
+&emsp;&emsp;<details>
+  <summary>
+    <button class="language-button" onclick="toggleLanguage()"style="font-size:30px">English summary</button>&emsp;&emsp;
+    <button class="language-button" onclick="toggleLanguage()"style="font-size:30px">Italian summary</button>
+  </summary>
+  <div id="english-pass">
+    <p style="font-size:30px">
+Welcome, this is a summary, an initial approach to Nostr.<br><br>
+
+Tab 1: Simulating the generation of a private key associated with a public key.<br>
+Tab 2: Copying both keys, possibility to use a username.<br>
+
+Tab 3: Adjusting the profile settings of a typical Nostr client, there are unfamiliar things, wait.<br><br>
+Tab 4: Nostr upside-down. Each note is a JSON event, here you can better understand, or at least get a first idea.<br>
+
+Tab 5: Setting up a Nostr address, the public key (pubkey) is difficult to remember, groups and other questions.<br>
+Tab 6: If you're here for a zap, the easiest way is to have an lnAddress. Paste it in the settings and you're ready.<br><br>
+
+Tab 7: Another interesting thing concerns the relays. We send messages and other things to servers and connect to various ones. Here's a relay explorer.<br>
+Tab 8: A slightly more secure but slower way to sign notes and other things.<br>
+
+Tab 9: The best apps, clients, and tools of Nostr. Take a look.</p>
+  </div>
+  
+  <div id="italiano-passi" style="display: none;">
+    <p style="font-size:30px">
+Benvenuto questo è un sommario, un primo approccio a nostr<Br><br>
+Tab 1: Simulazione della generazione di una chiave privata associata a una chiave pubblica<br>
+Tab 2: Copia di entrambi le chiavi, possibilità di utilizzare un nome utente<br><br>
+Tab 3: Sistemazione delle impostazioni del profilo di un tipico client nostr, ci sono delle cose non familiari aspetta<br>
+Tab 4: Nostr sotto-sopra. Ogni nota è un evento json, qua puoi comprendere meglio, o almeno farti una prima idea.<br><br>
+Tab 5: Configurazione di un indirizzo Nostr, la chiave pubblica (pubkey) è difficile da ricordare, gruppi e altre domande<br>
+Tab 6: Se sei qui per fare uno zap, il modo più semplice è avere un lnAddress. Incollalo nelle impostazioni e sei pronto.<br><br>
+tab 7: Un'altra cosa interessante riguarda i relay. Noi inviamo messaggi e altre cose a dei server e ci colleghiamo a diversi di loro. Qui c'è un esploratore di relay<br>
+tab 8: Un modo per firmare le note e altre cose in modo leggermente più sicuro ma meno veloce<br><br>
+Tab 9: Le migliori app, client e strumenti di Nostr. Dai un'occhiata.  
+</p>
+  </div>
+</details>
+<script>
+function toggleLanguage() {
+  var englishPass = document.getElementById("english-pass");
+  var italianoPassi = document.getElementById("italiano-passi");
+  
+  if (englishPass.style.display === "none") {
+    englishPass.style.display = "block";
+    italianoPassi.style.display = "none";
+  } else {
+    englishPass.style.display = "none";
+    italianoPassi.style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
