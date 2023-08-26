@@ -8,10 +8,24 @@
 <head> <meta name="viewport" content="width=device-width, initial-scale=0.6">
 	<style>
 		a {
-  color: #010101; /* Cambia i valori con il grigio scuro desiderato */
-			text-decoration: none;
+       
+        text-decoration: none;
+        transition: color 0.3s;
+      
+      }
+</style>
+  <style>
+@media (max-width: 768px) {
+  body {
+   
+    color: white;
+  }
+
+  a {
+    color: grey; /* Colore per i link invertiti su sfondo nero */
+  }
 }
-	</style>	
+  </style>	
 	
 	<style>
 		h2 {
@@ -34,9 +48,9 @@
     cursor: pointer;
   }
 				</style>
-			<style>
+	<style>
   .grey-button {
-    background-color: grey;
+    background-color: white;
     color: white;
     padding: 20px 25px;
     border: none;
@@ -130,7 +144,7 @@ nav ul li a {
 				
 				</head> 
 <body style="background-color:DARKSLATEBLUE">
-	<body link="grey">
+	<body link="black">
 	<body vlink="grey">
 	<div>
 	<nav >
@@ -1201,3 +1215,4 @@ Projects or groups</h2>
 
        </body>
 </html>
+
