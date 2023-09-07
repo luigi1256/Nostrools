@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ 
+    <title>Video</title>
+	 <style>
+        /* Stili per la corona circolare */
+        .circle-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            border-radius: 50%;
+            overflow: hidden;
+			background-color:grey
+        }
+        
+        .outer-circle {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            border-radius: 50%;
+			
+        }
+        
+        /* Stili per le schede delle app */
+        .app-tab {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 320px;
+            background-color: white;
+            border-radius: 55%;
+            text-align: center;
+            line-height: 120px;
+            font-size: 20px;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        /* Stili per i link delle schede */
+        .app-link {
+             color: #87CEFA;
+            text-decoration: none;
+            cursor: pointer;
+        }
+		.sidebar2 {
+		width: 500px;
+		 position: absolute;
+      top: 100px;
+      left: 550px;
+      background-color: darkwhite;
+      padding: 10px;
+    }
+	
+	.my-button {
+	border-radius: 50%;
+	border: 2 px solid black;
+	 top: 35px;
+     left: 40px;
+	}
+	.hidden {
+	display: none;
+		}
+	#body{
+	
+	}	
+	.my-button2 {
+	border-radius: 50%;
+	border: 2 px solid black;
+		
+	 top: 35px;
+     left: 40px;
+	}
+	.hidden {
+	display: none;
+		}
+	#body{
+	
+	}	
+	
+	.my-button3 {
+	height:150px;
+	
+	background-color:white;
+	border-radius: 20%;
+	border: 2 px solid grey;
+	Font-size:30px;
+	}
+	.my-button4 {
+	height:80px;
+	border-radius: 10%;
+	border: 2 px solid grey;
+	Font-size:25px;
+	}
+	.my-button5 {
+	height:40px;
+	 background-color: darkgrey;
+	border-radius: 10%;
+	border: 2 px solid grey;
+	Font-size:25px;
+	}
+    </style>
+	<!--lighter!-->
+ <style>
+:root {
+  --background-color: DARKSLATEBLUE; 
+  --text-color: #000000;
+}
+
+/* tema scuro */
+.dark {
+  --background-color: #1F1F1F;
+  --text-color: #FFFFFF;
+}
+
+/* tema semi-scuro */
+.semilight {
+  --background-color: #3A3A3A;
+  --text-color: #FFFFFF;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+</style><center>
+<button class="my-button5" onclick="impostaTema('dark')">Dark</button>
+<button class="my-button5" onclick="impostaTema('semilight')">Semilight</button>
+<button class="my-button5" onclick="impostaTema('light')">Light</button><br></center>
+<button class="my-button5"><a href="https://nostrools.netlify.app" style="text-decoration: none" target="_blank">nostrools</a></button><br>
+<script>
+function impostaTema(tema) {
+  document.body.className = tema;
+}
+</script>
+<!--language!-->
+<style>
+  :root {
+    --language: 'en'; 
+  }
+  
+  .language {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+</style>
+ <body id="body">
+  
+  <label for="language-select"style="font-size: 30px;"><b>Select language:</b></label>
+  <select id="language-select" class="my-button5">
+    <option value="en">English</option>
+    <option value="es">Spanish</option>
+    <option value="fr">French</option>
+    
+  </select>
+
+
+<div class="content">
+  <div class="language">
+   
+<h2 class="translate" data-en="video updates" data-es="Video nostros" data-fr="video example">video updates</h2>
+<input type="text" id="filtro" style="font-size: 30px;" onkeyup="filtra()">
+<button type="button" class="my-button5" style="font-size: 30px;" onclick="filtra()"><b>Filter</b></button>
+    
+    
+  </div>
+</div>
+
+
+
+</head>
+
+
+<ul id="lista"style="font-size: 30px;">
+  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app1')" >Apps Update</a></li>
+  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app2')">Project update</a></li>
+  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app3')">Others Video</a></li>
+  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app4')">project short</a></li>
+  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app5')">test</a></li>
+  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app6')">test2</a></li>
+ 
+
+  
+</ul>
+ 
+<script>
+function filtra() {
+  var input = document.getElementById("filtro");
+  var filtro = input.value.toUpperCase();
+  var lista = document.getElementById("lista");
+  var elementi = lista.getElementsByTagName("li");
+  
+  for (var i = 0; i < elementi.length; i++) {
+    var testo = elementi[i].textContent || elementi[i].innerText;
+    if (testo.toUpperCase().indexOf(filtro) > -1) {
+      elementi[i].style.display = "";
+    } else {
+      elementi[i].style.display = "none";
+    }
+  }
+}
+</script>
+    
+	
+	<button class="my-button5"><b>Display<b></button>
+    <div class="circle-container">
+		
+		
+        <div class="outer-circle">
+		
+            </div>
+        
+        <div class="app-tab" id="app1-tab" style="display: none;">
+          
+            <div id="hiddenContent1" class="hidden">
+			<button class="my-button"><video width="320" height="320" controls class="my-button">
+		<source src="https://nostr.build/av/990d1d505dfb3857ceb161a9ec130f14e4faf39dd9a5ec6ff89e25551038656d.mov"></video>
+		</button>
+		
+			
+			</div>
+			<div id="hiddenContent10" class="hidden" >
+		
+			<button class="my-button"><video width="300" height="310" controls class="my-button">
+			
+			<source src="https://cdn.jb55.com/s/follow-hashtags-2.mp4"/></video>
+			</button>
+			<a href="https://cdn.jb55.com/s/follow-hashtags-2.mp4">Hashtag On Damus</a>
+			</div>
+			
+			<div id="hiddenContent11" class="hidden" >
+			<button class="my-button"><video width="300" height="300" controls class="my-button">
+			
+			<source src="https://cdn.jb55.com/s/nostrdb-update.mp4"/></video>
+			</button>
+			</div>
+			<div id="hiddenContent2" class="hidden">
+		<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://nostr.build/av/7ea8f3652ec30c7f20484b3f5218be773d4625838badaf6169296c23660ecf38.mov">
+	</video> </button></div>
+	
+	<div id="hiddenContent3" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://void.cat/d/SgYA7vnPUp1eBz688LfeLJ.mp4"></video>
+		</button>
+		</div>
+		<div id="hiddenContent22" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://nostr.build/av/bda39ff68d15b68430814a9eb007f345279664849beb4d60e230512533303870.mp4"></video>
+		</button>
+		</div>
+		<div id="hiddenContent23" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://nostr.build/av/3ce80436a019ab878eabf3fed89c209b212b49e3593eafc6d4aeccabf40367ac.mov"></video>
+		</button>
+		</div>
+		<div id="hiddenContent24" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://nostr.build/av/73f946f281fa1d22ac4142e7c1565c511d11dfb3a6dfe4109746a6c1f19ad6e9.mov"></video>
+		</button>
+		</div>
+				
+	     </div>
+        <div class="app-tab" id="app2-tab" style="display: none;">
+           
+            <div id="hiddenContent4" class="hidden">
+		 <button class="my-button"><video width="320" height="320" controls class="my-button2">
+		<source src="https://void.cat/d/BCGjvPTxNU5eNnC9p6gMx2.mp4"/></video>
+		</button>	</p>	</div>	
+		<div id="hiddenContent5" class="hidden">
+		<iframe width="320" height="320" src="https://www.youtube.com/embed/xex9rEsrU5I" class="my-button2"
+		title="YouTube video player" frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+		gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+		<div id="hiddenContent6" class="hidden">
+		<button class="my-button"><video width="320" height="320" controls class="my-button2">
+		<source src="https://nostr.build/av/c963c333955b6bd402ae023a54438cb8e7ef4082840a6ee39866d2371fa63415.mp4"/></video>
+		</button></div>
+		
+		<div id="hiddenContent13" class="hidden">
+		<button class="my-button"><video width="320" height="320" controls class="my-button2">
+		<source src="https://nostr.build/av/8ab64f84f788dcf1cf7b9b7c7fc5af9a46daaed94b6dd65960c4ecd62492596a.mp4"></video>
+	</div>	
+		
+		
+			
+        </div>
+        <div class="app-tab" id="app3-tab" style="display: none;">
+            
+            <div id="hiddenContent7" class="hidden">
+			<iframe width="320" height="320"  class="my-button"
+			src="https://www.youtube.com/embed/IrQ561KLtG4" title="YouTube video player" 
+			frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+			gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+			<div id="hiddenContent8" class="hidden">
+			
+			<iframe src="https://www.listennotes.com/podcasts/zenstr-seth-jEmrHpLFA0B/embed/" height="300px" width="300px" class="my-button2"></iframe>
+			</div>
+			<br>
+			
+			
+			
+        
+		</div>
+		 <div class="app-tab" id="app4-tab" style="display: none;">
+          
+            <div id="hiddenContent12" class="hidden">
+			<button class="my-button"><video width="320" height="320" controls class="my-button2">
+	<source src="https://nostr.build/av/9d7ba553aec1316793ceb241563e237ca0ad53f254f432a0604e9a48060cdfd8.mp4">
+	</video>	</button>
+			
+	</div>
+			
+        </div>
+		<div class="app-tab" id="app5-tab" style="display: none;">
+            
+            <div id="hiddenContent16" class="hidden">
+		
+			<button class="my-button"><video width="320" height="320" controls class="my-button2">
+	<source src="https://cdn.satellite.earth/04b6d88bb09bcc9a08a025504a4e2d2fa59c4a5a9d884e4c404a0bb794b27969.mkv"></video>	</button>
+			
+			
+				
+			</div>
+			<div id="hiddenContent17" class="hidden">
+		<button class="my-button"><video width="320" height="320" controls class="my-button2">
+	<source src="https://cdn.satellite.earth/b52f998c384064d48aa06a4c57cb250823b26788c1926a2a9c2737a5542bfa21.mkv"></video>	</button>
+			
+		</div>
+		
+		<div id="hiddenContent25" class="hidden">
+		
+			<button class="my-button"><video width="320" height="320" controls class="my-button2">
+	<source src="https://cdn.satellite.earth/b3e5d63c8f7502b9a79d1a539353efcdc178753e52590787aeb7af06350eea83.mkv"></video>	</button>
+	</div>
+		
+		<div id="hiddenContent26" class="hidden">
+		
+			<button class="my-button"><video width="320" height="320" controls class="my-button2">
+	<source src="https://cdn.satellite.earth/559b61b151423f1c607c5756ba7858b19bf4b1e708fe658fe0906811284ec655.mp4"></video>	</button>
+	  				</div>
+					
+			<div id="hiddenContent27" class="hidden">
+		
+			<button class="my-button"><video width="320" height="320" controls class="my-button2">
+	<source src="https://cdn.satellite.earth/c866ed64412a039a74b180473b9d6b684da21ad86e9d66fccaca72d3cb502a11.mp4"></video>	</button>
+	
+	
+		
+		</div>
+			  <div id="hiddenContent28" class="hidden">
+		
+			<button class="my-button"><video width="320" height="320" controls class="my-button2">
+	<source src="https://cdn.satellite.earth/d0ce7f3463f024be66d0e5c2cdeb79882c324534527682953af4fdfb618f6fc9.mp4"></video>	</button>
+	
+		</div>
+		</div>
+		<div class="app-tab" id="app6-tab" style="display: none;">
+            <div id="hiddenContent18" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button2">
+	<source src="https://nostr.build/av/7c4d03d76586d2a6fb0bc9d73ce2713d3d8113592a7a9148b29dc52e94dd1798.mp4">
+	</video></button>
+	
+		
+			
+	</div>
+				<div id="hiddenContent19" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button2">
+	<source src="https://nostr.build/av/111707189383365bb156fb89cbfbc063a7eeb1c25a95ea26cb03d55f51e916b0.mov">
+	</video></button>
+		
+	</div>
+	<div id="hiddenContent20" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button2">
+	<source src="https://v.nostr.build/Alno.mov">
+	</video></button>
+		</div>
+
+		
+        </div>
+		
+    </div>
+
+    <div class="sidebar2">
+	 
+  
+       <button class="my-button5"><b>Descr</b></button>
+        <div class="descr-tab" id="descr1" style="display: none;">
+			 
+           
+           <br>
+			<button class="my-button5">App on Nostr Update</button>
+			<!--hidden!--><br><br>
+			
+			<button onclick="toggleContent('hiddenContent1')"class="my-button4">Swamstr</button>
+			
+			<button onclick="toggleContent('hiddenContent10')"class="my-button4">Damus</button>
+			<button onclick="toggleContent('hiddenContent11')"class="my-button4">Damus</button>
+		
+			<source src="https://cdn.jb55.com/s/follow-hashtags-2.mp4"/></video>
+			</button>
+	
+	<br><br><button onclick="toggleContent('hiddenContent2')"class="my-button4">Habla highliter</button>
+	
+	<button onclick="toggleContent('hiddenContent3')"class="my-button4">Lume</button>
+	<button onclick="toggleContent('hiddenContent22')"class="my-button4">Lume</button><br><br>
+	<button onclick="toggleContent('hiddenContent23')"class="my-button4">Pinstr.app</button>
+		<button onclick="toggleContent('hiddenContent24')"class="my-button4">Coracle</button>	
+			
+			
+			
+			<!--hidden!-->
+			</p>
+        </div>
+		
+		
+        <div class="descr-tab" id="descr2" style="display: none;">
+            
+            <br><button class="my-button5">Project Update</button><br><br>
+			<button onclick="toggleContent('hiddenContent4')"class="my-button4">nostr/Universe</button>
+	
+			
+	
+	<button onclick="toggleContent('hiddenContent5')"class="my-button4">Nip90 2</button>
+	
+	<button onclick="toggleContent('hiddenContent6')"class="my-button4">Nostrnet.work</button>
+	
+	<button onclick="toggleContent('hiddenContent13')"class="my-button4">Nostrnet.work</button>
+	
+		
+		</div>	
+			
+			
+        
+		
+		
+    <div class="descr-tab" id="descr3" style="display: none;">
+          
+           <br><button class="my-button5">Other Videos</button><br><br>
+			<button onclick="toggleContent('hiddenContent7')"class="my-button4">Show/hidden 1</button>
+				
+			
+	
+	<button onclick="toggleContent('hiddenContent8')"class="my-button4">Show/hidden 2</button>
+	
+	<button onclick="toggleContent('hiddenContent9')"class="my-button4">Show/hidden 3</button>
+	<div id="hiddenContent9" class="hidden">
+		</div>
+        </div>
+		
+		 <div class="descr-tab" id="descr4" style="display: none;">
+            
+           <br><button class="my-button5">Project short</button><br><br>
+			<button onclick="toggleContent('hiddenContent12')"class="my-button4">NostrNet</button>
+	
+	
+		
+	
+	<button onclick="toggleContent('hiddenContent14')"class="my-button4">Show/hidden 3</button>
+	<div id="hiddenContent14" class="hidden">
+		
+		</div>
+		</div>
+		
+		<div class="descr-tab" id="descr5" style="display: none;">
+           
+            <br><button class="my-button5">test_podcast</button><br><br>
+			<button onclick="toggleContent('hiddenContent15')"class="my-button4">Audio</button>
+	<br><br><div id="hiddenContent15" class="hidden">
+		<audio controls >
+  <source src="https://dl.98iran.org/downloads/00/1401/08/128/Dara%20-%20Hamvatan%20%5B%2098IRAN%20%5D.mp3" type="audio/mpeg">
+  Il tuo browser non supporta l'elemento audio.
+</audio>
+		</div>
+	<br>		
+	
+	<button onclick="toggleContent('hiddenContent16')"class="my-button4">CDN 16</button>
+	
+	<button onclick="toggleContent('hiddenContent17')"class="my-button4">CDN Test31 17</button><br>
+	
+	<button onclick="toggleContent('hiddenContent25')"class="my-button4">CDN Test1 25</button>
+	
+	<button onclick="toggleContent('hiddenContent26')"class="my-button4">CDN Test2 26</button> <br>
+	
+	<button onclick="toggleContent('hiddenContent27')"class="my-button4">CDN Test4 27</button>
+	
+	<button onclick="toggleContent('hiddenContent28')"class="my-button4">CDN Test6 28</button>
+	
+	</div>
+	
+	<div class="descr-tab" id="descr6" style="display: none;">
+          <br>  <button class="my-button5">test 2</button><br><br>
+            
+	<button onclick="toggleContent('hiddenContent18')"class="my-button4">Show Art 18</button>
+	
+	<button onclick="toggleContent('hiddenContent19')"class="my-button4">Video 19</button><br>
+	<br>
+	<button onclick="toggleContent('hiddenContent20')"class="my-button4">Show/hidden 20</button>
+		
+		<button onclick="toggleContent('hiddenContent21')"class="my-button4">Show/hidden 21</button>
+	<div id="hiddenContent21" class="hidden">
+		<p>Test</p>
+		</div>	
+		</div>
+		
+		
+    </div>
+
+    <script>
+        function showApp(appId) {
+            // Nascondi tutte le schede delle app
+            var appTabs = document.getElementsByClassName('app-tab');
+            for (var i = 0; i < appTabs.length; i++) {
+                appTabs[i].style.display = 'none';
+            }
+
+            // Mostra la scheda dell'app selezionata
+            var selectedApp = document.getElementById(appId + '-tab');
+            selectedApp.style.display = 'block';
+
+            // Nascondi tutte le descrizioni delle app
+            var descrTabs = document.getElementsByClassName('descr-tab');
+            for (var j = 0; j < descrTabs.length; j++) {
+                descrTabs[j].style.display = 'none';
+            }
+
+            // Mostra la descrizione dell'app selezionata
+            var selectedDescr = document.getElementById('descr' + appId.slice(-1));
+            selectedDescr.style.display = 'block';
+			
+			
+        }
+    </script>
+	
+	<!--hidden script !-->
+	<script>
+		function toggleContent(elementId) {
+			var x = document.getElementById(elementId);
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+	</script>
+	
+	
+	<!-- Select language -->
+<script>
+const languageSelect = document.getElementById('language-select');
+const translateElements = document.querySelectorAll('.translate');
+
+languageSelect.addEventListener('change', () => {
+  const selectedLanguage = languageSelect.value;
+
+  translateElements.forEach(element => {
+    const translation = element.getAttribute(`data-${selectedLanguage}`);
+    if (translation) {
+      element.textContent = translation;
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>
