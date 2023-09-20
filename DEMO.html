@@ -9,6 +9,13 @@
     width: 100px;
     height: 40px;
   }
+  .my-button5 {
+	height:40px;
+	 background-color: darkgrey;
+	border-radius: 10%;
+	border: 2 px solid grey;
+	Font-size:25px;
+	}
   .my-button2 {
     width: 150px;
     height: 100px;
@@ -30,7 +37,7 @@
 </style>
 <style>
   body {
-    background-color: gray;
+    background-color: grey;
   }
 </style>
 <style><!--light-->
@@ -60,7 +67,7 @@ body {
 <button class="my-button3"onclick="impostaTema('dark')">Dark</button>
 <button class="my-button3" onclick="impostaTema('semilight')">Semilight</button>
 <button class="my-button3"onclick="impostaTema('light')">light</button>
-<button class="my-button3"><a href="https://nostrools.netlify.app/nostrandbot"target="_blank">nostRandbot</a></button>
+&emsp;&emsp;<button class="my-button5"><a href="https://nostrools.netlify.app/nostrandbot"target="_blank">nostRandbot</a></button>
 <script>
 function impostaTema(tema) {
   document.body.className = tema;
@@ -92,6 +99,7 @@ function impostaTema(tema) {
 		<label for="testo"style="font-size:30px">Enter npub o nsec:</label>
 		<input type="text" id="testo" name="testo"><br><br>
 		<button type="button" onclick="cancellaTesto()"style="font-size:30px">login</button>
+		
 	</form><script>
 		function cancellaTesto() {
 			var testo = document.getElementById("testo").value;
@@ -104,18 +112,29 @@ function impostaTema(tema) {
 	<p><h1>Create an Account</h1> 
 		
 	
-	<button onclick="generateKey()"style="font-size:30px">Generate  a Key</button>
-<script>function generateKey() {
-  var length = 32; // Lunghezza della chiave
-  var alphabet = "npub1e08fhgecn6zykl3aagvd5ln33j7upx7yp9scf9ardj5z950avfsqwem3jm"; // Set di caratteri
-  var key = "";
-
-  for (var i = 0; i < length; i++) {
-    key += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+	<button onclick="generateKey()" style="font-size: 30px">Generate a Key</button><br><br>
+<button  id="key"></button><br><br>
+<button  id="keys"></button>
+<script>
+  function generateKey() {
+    var length = 28; // Lunghezza della chiave
+    var alphabet = "0123456789abcdefghijklmnopqrstuvwxyz"; // Set di caratteri
+    var key = "";
+    var keys = ""; // Inizializza la variabile keys con 
+	 key += "npub";
+	 keys += "nsec";
+    for (var i = 0; i < length; i++) {
+      key +=  alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+      keys += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    }
+	key += "....";
+	 keys += "...";
+    document.getElementById("key").innerHTML = key; 
+    document.getElementById("keys").innerHTML = keys; 
   }
+</script>
 
-  alert(key); // Visualizza la chiave generata
-}</script></p>
+</p>
   <button onclick="closeDialog1()"style="font-size:30px">Close</button>
 </dialog>
 
@@ -125,7 +144,7 @@ function impostaTema(tema) {
 	<div> <label for="npub"  style="font-size:30px">npub:</label> <input type="text" id="npub" name="npub" value="npub1e08fhgecn6zykl3aagvd5ln33j7upx7yp9scf9ardj5z950avfsqwem3jm"> 
 	<button type="button" onclick="copiaChiave('npub')"style="font-size:30px">Copy</button> </div> 
 	<br><br> <div> <label for="nsec"  style="font-size:30px">nsec:</label> 
-	<input type="text" id="nsec" name="nsec" readonly value="nsec1e08fhgecn6zykl3aagvd5ln33j7upx7yp9scf9ardj5z950avfsqwem3jmb"> 
+	<input type="text" id="nsec" name="nsec" readonly value="***********************************************"> 
 	<button type="button" onclick="copiaChiave('nsec')"style="font-size:30px">Copy</button> </div> 
 	<br> <button type="button" onclick="salvaChiavi()"style="font-size:30px">I have saved my keys, continue</button> 
 	<script> function copiaChiave(id) { var chiave = document.getElementById(id).value; navigator.clipboard.writeText(chiave); }
@@ -199,7 +218,7 @@ evt.currentTarget.className += " active";
   <label for="zapOnly"style="font-size:30px">Zap-only:</label>
   <input type="checkbox" id="zapOnly" class="my-button3" name="zapOnly"><br>
 
-  <br><input type="submit"  class="my-button3" value="Save as HTML script">
+  <br><input type="submit"  class="my-button3" value="Update">
 
   &emsp;<button onclick="closeDialog3()"style="font-size:30px">Close</button></p></p>
 </dialog> </form>
