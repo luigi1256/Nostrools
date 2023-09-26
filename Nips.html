@@ -250,7 +250,19 @@ nav ul li a {
 	
     <div id="NIP1-description" class="description" >
       <h2>NIP 17</h2>
-      <p >Event Metadata <br><a href="https://github.com/nostr-protocol/nips/pull/605"> Source</a>&emsp;&emsp;
+      <p >Event Metadata 
+	  <button>
+	  2) (Proposed) NIP 17: Event Metadata ℹ️<br>
+When clients are displaying a note published by a user, there are often things about that note which would be useful to display to users reading that note. E.g. how many comments, reposts, and reactions there are. These are often computationally and time intensive operations for a client since they’ll need to query many relays to get a reasonably accurate count.
+
+This NIP proposes that relays could optionally add such information as metadata on each note as it is returned to clients so they do less work to get that information. Both clients and relays would benefit from needing to do less work to give users the same, good experience.
+
+Author: arthurfranca
+	  </button>
+	  <button><br> <a href="https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-09-24"target="_blank"style="text-decoration: none">Source</a> NostReport weekly report</button> 
+	  
+	  <br><a href="https://github.com/nostr-protocol/nips/pull/605"> Source</a>&emsp;&emsp;
+	  
 	  <a href="https://github.com/arthurfranca/nips/blob/nip-17/17.md"target="_blank"style="text-decoration: none">Text</a>
 	  </p>
     </div>
@@ -274,7 +286,23 @@ nav ul li a {
     <div id="NIP4-description" class="description">
       <h2>NIP 34</h2>
       <p>NIP-34 - Algorithmic Filter #579
-	  <br><br> <a href="https://github.com/nostr-protocol/nips/pull/579"target="_blank"style="text-decoration: none">Source</a>
+	  <button>3) <b>(Proposed) NIP 34: Algorithmic Filter 🔍</B><br>
+		One of the possibilities that makes Nostr great
+		is the chance at algorithmic choice. 
+		People may want no algorithm, or a 
+		light algorithm to dedupe their feed
+        of the same note being reposted by a dozen people, or a heavier algorithm to curate their feed and help them discover new content.
+
+This NIP proposes a way for relays to support generic algorithms for ordering notes so that clients can query for notes from relays in a way specified by the indicated algorithm. There is also a concept of “seen at” which will allow users to tell relays they’ve seen a note so that it won’t show up in future algorithmic queries for notes.
+
+This is still under development and refinement, but looks very promising.
+
+PS - Yes this is also NIP 34, so whichever gets merged first gets the number I guess?
+
+Author: arthurfranca
+<button><a href="https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-09-24"target="blank"style="text-decoration: none">Source of Article</a> NostReport weekly report</button>
+	  </button>
+	  <br><br> <button><a href="https://github.com/nostr-protocol/nips/pull/579"target="_blank"style="text-decoration: none">Source Git Hub</a></button>
 	  	  </p>
     </div>
 	<div id="NIP5-description" class="description">
@@ -381,6 +409,4 @@ nav ul li a {
   
   </body>
 </html>
-
-
 
