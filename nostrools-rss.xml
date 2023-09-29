@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+
+  <channel>
+    <title>Nostrools-rss</title>
+    <link>https://nostrools.netlify.app/</link>
+    <description>Aggiornamenti dal tuo sito web</description>
+    <lastBuildDate>Fri, 29 Sep 2023 05:30:00 GMT</lastBuildDate> 
+    <item>
+      <title>Rss feed</title>
+      <link>https://nostrools.netlify.app/nostrools</link>
+      <description>Descrizione dell'articolo 1</description>
+      <pubDate>Fri, 29 Sep 2023 05:30:00 GMT</pubDate>
+	<guid isPermaLink="true">https://nostrools.netlify.app/nostrools</guid>
+	
+   
+	</item>
+    
+  </channel>
+</rss>
