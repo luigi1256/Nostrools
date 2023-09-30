@@ -5,13 +5,13 @@
   <channel>
     <title>Nostrools-rss</title>
     <link>https://nostrools.netlify.app/</link>
-    <description>Aggiornamenti dal tuo sito web</description>
+    <description>Updates from the website</description>
     <lastBuildDate>Fri, 29 Sep 2023 05:30:00 GMT</lastBuildDate> 
     <item>
       <title>Rss feed</title>
       <link>https://nostrools.netlify.app/nostrools</link>
-      <description>Descrizione dell'articolo 1</description>
-      <pubDate>Fri, 29 Sep 2023 05:30:00 GMT</pubDate>
+      <description>Nostrools 30 Sep</description>
+      <pubDate>Sat, 30 Sep 2023 04:35:00 GMT</pubDate>
 	<guid isPermaLink="true">https://nostrools.netlify.app/nostrools</guid>
 	
    
