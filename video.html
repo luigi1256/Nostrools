@@ -97,7 +97,7 @@
 	Font-size:30px;
 	}
 	.my-button4 {
-	height:80px;
+	height:50px;
 	border-radius: 10%;
 	border: 2 px solid grey;
 	Font-size:25px;
@@ -329,9 +329,35 @@ function filtra() {
 		<source src="https://coracle.us-southeast-1.linodeobjects.com/music-player.mov"></video>
 		</button>
 		</div>
-		
+		<div id="hiddenContent43" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://video.nostr.build/5234e9aee623c87fee29f9d980ee7cfa0303f9a46d6f6bb988113ab32c044161.mov"></video>
+		</button>
+		</div>	
+		<div id="hiddenContent45" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://v.nostr.build/elqq.mp4"></video>
+		</button>
+		</div>
+		<div id="hiddenContent47" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://data.zap.stream/stream/cc314029-cc16-4fbd-94ff-b456725e96a4.m3u8"type="application/x-mpegURL">></video>
+		</button>
+		</div>
+		 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+           <script>
+        if (Hls.isSupported()) {
+            var video = document.getElementById('video');
+            var hls = new Hls();
+            hls.loadSource('https://data.zap.stream/stream/cc314029-cc16-4fbd-94ff-b456725e96a4.m3u8');
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = 'https://data.zap.stream/stream/cc314029-cc16-4fbd-94ff-b456725e96a4.m3u8';
+        }
+    </script>
+    
 
-
+   
 		</div>
         <div class="app-tab" id="app2-tab" style="display: none;">
            
@@ -364,7 +390,14 @@ function filtra() {
 		<button class="my-button"><video width="320" height="320" controls class="my-button2">
 		<source src="https://vods.utxo.one/tutorials/nostr/home-strfry-relay-final.mp4"></video>
 		</div>
-		
+		<div id="hiddenContent44" class="hidden">
+		<button class="my-button"><video width="320" height="320" controls class="my-button2">
+		<source src="https://cdn.satellite.earth/689d920a6923886a64a6b4f53810d822dca47bcdb5ae86b9449e545d19650433.mov"></video>
+		</div>
+		<div id="hiddenContent48" class="hidden">
+		<button class="my-button"><video width="320" height="320" controls class="my-button2">
+		<source src="https://m.primal.net/HMZz.mp4"></video>
+		</div>
 		
 		 </div>
         <div class="app-tab" id="app3-tab" style="display: none;">
@@ -379,10 +412,13 @@ function filtra() {
 			
 			<iframe src="https://www.listennotes.com/podcasts/zenstr-seth-jEmrHpLFA0B/embed/" height="300px" width="300px" class="my-button2"></iframe>
 			</div>
-			<br>
-			<div id="hiddenContent37" class="hidden">
+			<div id="hiddenContent9" class="hidden">test
+			</div>
 			
-			<iframe src="https://video.nostr.build/d65478a1c83caf06a137ad1b212a72e3fb7bdd574bb7346a1a466b6a52276f06.mp4" height="300px" width="300px" class="my-button2"></iframe>
+			<div id="hiddenContent37" class="hidden">
+			<button class="my-button"><video width="300" height="300" controls class="my-button2">
+		    <source src="https://video.nostr.build/d65478a1c83caf06a137ad1b212a72e3fb7bdd574bb7346a1a466b6a52276f06.mp4"></video>
+					
 			</div>
 			
 			
@@ -472,7 +508,11 @@ function filtra() {
 	<source src="https://bucket.thesamecat.io/minetest-chasm.mp4">
 	</video></button>
 		</div>
-		
+		<div id="hiddenContent46" class="hidden">
+		<button class="my-button"><video width="300" height="300" controls class="my-button2">
+	<source src="https://video.nostr.build/2aaaf8167180c93a8813ee1f067502a866e9dfb9a2115f3598abac4e0811e0d2.mov">
+	</video></button>
+		</div>
 		
         </div>
 		
@@ -489,12 +529,12 @@ function filtra() {
 			<button class="my-button5">App on Nostr Update</button>
 			<!--hidden!--><br><br>
 			
-			<button onclick="toggleContent('hiddenContent1')"class="my-button4">Swamstr</button>
-			<div class="options">
+				<div class="options">
           <button class="toggle-button">Damus</button>
           <div class="options-content">
             <button onclick="toggleContent('hiddenContent10')"class="my-button4">Damus-1</button>
 			<button onclick="toggleContent('hiddenContent11')"class="my-button4">Damus-2</button>
+			<button onclick="toggleContent('hiddenContent47')"class="my-button4">Damus-3</button>
 		
 			
             </div>
@@ -506,17 +546,21 @@ function filtra() {
 		
 			</div>
 			</div>
-			
+			<br><button onclick="toggleContent('hiddenContent1')"class="my-button4">Swamstr</button>
+		
 	
-	<br><br><button onclick="toggleContent('hiddenContent2')"class="my-button4">Habla highliter</button>
+	<button onclick="toggleContent('hiddenContent2')"class="my-button4">Habla highliter</button>
+	<button onclick="toggleContent('hiddenContent43')"class="my-button4">Habla NWC</button>
 	
-	<button onclick="toggleContent('hiddenContent23')"class="my-button4">Pinstr.app</button>
+	<br><button onclick="toggleContent('hiddenContent23')"class="my-button4">Pinstr.app</button>
 		<button onclick="toggleContent('hiddenContent24')"class="my-button4">Coracle</button>	
 			<button onclick="toggleContent('hiddenContent39')"class="my-button4">Coracle</button>
 	
 			<button onclick="toggleContent('hiddenContent29')"class="my-button4">Amethyst</button>	
-				<button onclick="toggleContent('hiddenContent38')"class="my-button4">Amwethyst</button><br><br>
+				<button onclick="toggleContent('hiddenContent38')"class="my-button4">Amethyst</button>
 				<button onclick="toggleContent('hiddenContent30')"class="my-button4">YakiHonne</button>	
+			<button onclick="toggleContent('hiddenContent45')"class="my-button4">Nostrudel time-mute</button>	
+			
 			<!--hidden!-->
 			</p>
         </div>
@@ -525,27 +569,32 @@ function filtra() {
         <div class="descr-tab" id="descr2" style="display: none;">
             
             <br><button class="my-button5">Project Update</button><br><br>
-			<button onclick="toggleContent('hiddenContent4')"class="my-button4">nostr/Universe</button>
+			<button onclick="toggleContent('hiddenContent4')"class="my-button4">Spring.site</button>
 	
 			
 	
 	<button onclick="toggleContent('hiddenContent5')"class="my-button4">Nip90 2</button>
 	
-	<button onclick="toggleContent('hiddenContent6')"class="my-button4">Nostrnet.work</button>
-	
-	<button onclick="toggleContent('hiddenContent13')"class="my-button4">Nostrnet.work</button>
-	<button onclick="toggleContent('hiddenContent40')"class="my-button4">Nostrnet.work +cal</button>
 	<div class="options">
 	<button class="toggle-button">Relay Guide</button>
 			<div class="options-content">
 	<button onclick="toggleContent('hiddenContent41')"class="my-button4">Relay Guide</button>
-	<br> <p class="my-button4">Btw, forgot to mention in the tutorial,<br><br> make sure you install the dn package before you boot up the relay 🙏</p>	
+	<br> <p class="my-button4">Btw, forgot to mention in the tutorial,make sure you install the dn package before you boot up the relay 🙏</p>	
+			</div>
+		<button class="toggle-button">Nostrnet.work</button>
+			<div class="options-content">
+	<button onclick="toggleContent('hiddenContent6')"class="my-button4">Nostrnet.work</button>
 	
-		</div>
-		
+	<button onclick="toggleContent('hiddenContent13')"class="my-button4">Nostrnet.work</button>
+	<button onclick="toggleContent('hiddenContent40')"class="my-button4">Nostrnet.work +cal</button>
+			</div>
 		
 			
 			</div>
+			<br><br><br>
+			<button onclick="toggleContent('hiddenContent44')"class="my-button4">Nostr.cooking</button>
+			<button onclick="toggleContent('hiddenContent48')"class="my-button4">Nos-dav</button>
+	
 			</div>
 			
         
@@ -561,8 +610,7 @@ function filtra() {
 	<button onclick="toggleContent('hiddenContent8')"class="my-button4">Show/hidden 2</button>
 	
 	<button onclick="toggleContent('hiddenContent9')"class="my-button4">Show/hidden 3</button>
-	<div id="hiddenContent9" class="hidden">
-		</div>
+	
 		<button onclick="toggleContent('hiddenContent37')"class="my-button4">Search problem</button>
 	
         </div>
@@ -591,7 +639,13 @@ function filtra() {
   Il tuo browser non supporta l'elemento audio.
 </audio>
 		</div>
-	<br>		
+		<button onclick="toggleContent('hiddenContent42')"class="my-button4">Audio---</button>
+		<div id="hiddenContent42" class="hidden">
+		
+		<audio controls >
+		<source src="https://api.stemstr.app/download/64a176760dd586d64fb02f8e9bbf518cf61e7f2c6908f77989085199fe1aa22b.wav"type="audio/mpeg"><
+	</audio>		
+	<br>	</div>	
 	
 	<button onclick="toggleContent('hiddenContent16')"class="my-button4">CDN 16</button>
 	
@@ -620,7 +674,8 @@ function filtra() {
 	
 		<button onclick="toggleContent('hiddenContent31')"class="my-button4">Show/hidden 31</button>
 	
-		
+		<button onclick="toggleContent('hiddenContent46')"class="my-button4">fireworks 46</button>
+	
 		</div>	
 		</div>
 		
