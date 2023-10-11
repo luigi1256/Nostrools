@@ -160,6 +160,7 @@ function impostaTema(tema) {
   margin-top: 10px;
   background-color: #cbcbce;
    width:400px;
+   
 }
 
 .toggle-button {
@@ -169,14 +170,16 @@ function impostaTema(tema) {
   border: none;
   cursor: pointer;
   font-size: 30px;
- 
+	
 }
 .options-content {
   display: none;
+  
   margin-top: 10px;
   padding: 10px;
   background-color: #f9f9f9;
   font-size: 25px;
+  height:200px;
   
 }
 
@@ -341,7 +344,7 @@ function filtra() {
 		</div>
 		<div id="hiddenContent47" class="hidden">
 	<button class="my-button"><video width="300" height="300" controls class="my-button">
-		<source src="https://data.zap.stream/stream/cc314029-cc16-4fbd-94ff-b456725e96a4.m3u8"type="application/x-mpegURL">></video>
+		<source src="https://data.zap.stream/stream/cc314029-cc16-4fbd-94ff-b456725e96a4.m3u8"type="application/x-mpegURL"></video>
 		</button>
 		</div>
 		 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -355,7 +358,11 @@ function filtra() {
             video.src = 'https://data.zap.stream/stream/cc314029-cc16-4fbd-94ff-b456725e96a4.m3u8';
         }
     </script>
-    
+    <div id="hiddenContent49" class="hidden">
+	<button class="my-button"><video width="300" height="300" controls class="my-button">
+		<source src="https://m.primal.net/HMsu.mp4"></video>
+		</button>
+		</div>
 
    
 		</div>
@@ -398,7 +405,11 @@ function filtra() {
 		<button class="my-button"><video width="320" height="320" controls class="my-button2">
 		<source src="https://m.primal.net/HMZz.mp4"></video>
 		</div>
-		
+		<div id="hiddenContent50" class="hidden">
+		<button class="my-button"><video width="320" height="320" controls class="my-button2">
+		<source src="https://video.nostr.build/89efea1ddc77cd65b33e7dc31cbc081b25b32fdf8cd7c5bf9ee3bf900805b3de.mov
+		"></video>
+		</div>
 		 </div>
         <div class="app-tab" id="app3-tab" style="display: none;">
             
@@ -560,8 +571,9 @@ function filtra() {
 				<button onclick="toggleContent('hiddenContent38')"class="my-button4">Amethyst</button>
 				<button onclick="toggleContent('hiddenContent30')"class="my-button4">YakiHonne</button>	
 			<button onclick="toggleContent('hiddenContent45')"class="my-button4">Nostrudel time-mute</button>	
+			<button onclick="toggleContent('hiddenContent49')"class="my-button4">Primal</button>	
 			
-			<!--hidden!-->
+			
 			</p>
         </div>
 		
@@ -579,7 +591,7 @@ function filtra() {
 	<button class="toggle-button">Relay Guide</button>
 			<div class="options-content">
 	<button onclick="toggleContent('hiddenContent41')"class="my-button4">Relay Guide</button>
-	<br> <p class="my-button4">Btw, forgot to mention in the tutorial,make sure you install the dn package before you boot up the relay 🙏</p>	
+	 <p class="my-button4">Btw, forgot to mention in the tutorial,make sure you install <br>the dn package before you boot up the relay 🙏</p>	
 			</div>
 		<button class="toggle-button">Nostrnet.work</button>
 			<div class="options-content">
@@ -594,6 +606,7 @@ function filtra() {
 			<br><br><br>
 			<button onclick="toggleContent('hiddenContent44')"class="my-button4">Nostr.cooking</button>
 			<button onclick="toggleContent('hiddenContent48')"class="my-button4">Nos-dav</button>
+			<button onclick="toggleContent('hiddenContent50')"class="my-button4">$Prism + Listr</button>
 	
 			</div>
 			
