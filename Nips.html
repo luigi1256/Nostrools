@@ -163,6 +163,7 @@ nav ul li a {
 	
 	
 	 <div class="NIP" onclick="showDescription('NIP8-description')">NIP 37</div>
+	  <div class="NIP" onclick="showDescription('NIP21-description')">NIP 41</div>
 	<!-- App  -->
     <div class="NIP" onclick="showDescription('NIP6-description')">NIP 43</div>
 	
@@ -177,7 +178,7 @@ nav ul li a {
     <div class="NIP" onclick="showDescription('NIP9-description')">NIP 91</div>
   
 	<!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP10-description')">NIP 96</div>
+  
 	</div>
   
 
@@ -188,6 +189,7 @@ nav ul li a {
 	
 	<!-- App 1 -->
 	Open NIPs<br><br>
+	  <div class="NIP" onclick="showDescription('NIP10-description')">NIP 96</div>
     <div class="NIP" onclick="showDescription('NIP12-description')">NIP 100 </div>
     
     <!-- App 2 -->
@@ -213,10 +215,10 @@ nav ul li a {
   <!-- App  -->
    
 	<!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP20-description')">NIP </div>
+    <div class="NIP" onclick="showDescription('NIP20-description')">NIP 108</div>
 	
   <!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP21-description')">NIP </div>
+   
  
 	
 	 <div class="NIP" onclick="showDescription('NIP22-description')">NIP </div>
@@ -251,11 +253,9 @@ nav ul li a {
       <h2>NIP 17</h2>
       <p >Event Metadata #605 status: Open
 	  <button> NIP 17: Event Metadata <br>
-When clients are displaying a note published by a user, there are often things about that note which would be useful to display to users reading that note. E.g. how many comments, reposts, and reactions there are. These are often computationally and time intensive operations for a client since they’ll need to query many relays to get a reasonably accurate count.
+A relay can add information to the note to give it some context.
 
-This NIP proposes that relays could optionally add such information as metadata on each note as it is returned to clients so they do less work to get that information. Both clients and relays would benefit from needing to do less work to give users the same, good experience.
 
-Author: arthurfranca
 	  </p>
 	 <br> <a href="https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-09-24"target="_blank"style="text-decoration: none">Source</a> NostReport weekly report
 	  
@@ -285,19 +285,12 @@ Author: arthurfranca
       <h2>NIP 34</h2>
       <p>NIP-34 - Algorithmic Filter #579 status:Open
 	  <button> <b>NIP 34: Algorithmic Filter 🔍</B><br>
-		One of the possibilities that makes Nostr great
-		is the chance at algorithmic choice. 
-		People may want no algorithm, or a 
-		light algorithm to dedupe their feed
-        of the same note being reposted by a dozen people, or a heavier algorithm to curate their feed and help them discover new content.
+		This NIP proposes a way for relays to support generic
+		algorithms for ordering notes so that clients can query
+		for notes from relays in a way specified by the indicated 
+		algorithm. 
 
-This NIP proposes a way for relays to support generic algorithms for ordering notes so that clients can query for notes from relays in a way specified by the indicated algorithm. There is also a concept of “seen at” which will allow users to tell relays they’ve seen a note so that it won’t show up in future algorithmic queries for notes.
 
-This is still under development and refinement, but looks very promising.
-
-PS - Yes this is also NIP 34, so whichever gets merged first gets the number I guess?
-
-Author: arthurfranca
 <button><a href="https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-09-24"target="blank"style="text-decoration: none">Source of Article</a> NostReport weekly report</button>
 	  </button>
 	  <br><br> <button><a href="https://github.com/nostr-protocol/nips/pull/579"target="_blank"style="text-decoration: none">Source Git Hub</a></button>
@@ -313,19 +306,13 @@ Author: arthurfranca
     <div id="NIP6-description" class="description">
       <h2>NIP 43</h2>
       <p>NIP-43 - Fast Authentication #571 status:Open
-	  <button>NIP 43: Fast Auth between clients and relays<br>
-		Some relays are member-only. There has to be some way for relays to 
-		verify the content being sent/requested is from an authorized user 
-		(one of the members). Most methods for this are clunky and slow. 
-		This NIP proposes a faster method for auth between clients and relays. 
-		From what I can tell when clients open a connection to a relay they’ll open it 
-		with an “authorization” query parameter on the end of the relay url. <br>
-		That query param will actually be an encoded Nostr event whose payload has the<br> 
-		necessary info for the relay to authenticate the user opening the connection.<br>
-		Kinda looks like an auth header like you’d see in an http request but shoehorned<br> 
-		into a query parameter since websockets (which are used for connections to relays) 
-		don’t traditionally support headers. <br>
-		Author: aruthurfranca</p><BR>
+	  <button>NIP 43: Fast Auth between clients and relays
+		<br>This NIP proposes a faster method for auth between clients and relays. 
+		Clients open a connection to a relay they’ll open it with an “authorization” query parameter on the end of the relay url. 
+		That query param will actually be an encoded Nostr event whose payload
+		has the	necessary info for the relay to authenticate the user 
+		opening the connection.
+		</p><BR>
 		<p>
 		
 	 <a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-08"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly
@@ -353,14 +340,14 @@ Author: arthurfranca
 	  <a href "https://github.com/nostr-protocol/nips/pull/609"target="_blank"style="text-decoration: none">Source</a> GitHub</p>
 		 <h2> NIP 91BIS </h2>
 	  <p>NIP 91: IoT Sensors and Intents #817 status:Open<br>
-<button>Right now many “Internet of Things” devices require you to report 
-that data from the IoT sensor to the device maker’s servers and write 
-integrations with their ecosystem to take action based on that information.
-This NIP reserves a set of event kinds for IoT sensors reporting data (8000 - 8999). For example 8003 would be for thermometers to report temperature in celsius as a number, separate from 8005 which would allow reporting a location as an array of two numbers: longitude and latitude.
-This NIP would allow developers to offer IoT devices that report to 
-Nostr relays which gives you more control over the data and 
-the process of taking action based on that data.
-Author: fiatjaf, BlackCoffee, arcbtc</p><p><br>
+<button>This NIP reserves a set of event kinds for IoT 
+sensors reporting data (8000 - 8999). 
+For example 8003 would be for thermometers 
+to report temperature in celsius as a number, 
+separate from 8005 which would allow reporting 
+a location as an array of two numbers: longitude and latitude.
+
+</p><p><br>
 <a href "https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-10-15"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.15.2023
 
 <br><a href "https://github.com/nostr-protocol/nips/pull/817/"target="_blank"style="text-decoration: none">Source</a> GitHub</p>
@@ -376,18 +363,12 @@ Author: fiatjaf, BlackCoffee, arcbtc</p><p><br>
 	  <a href="https://github.com/nostr-protocol/nips/pull/618"target="_blank"style="text-decoration: none">Source</a></p>
 		<h2>NIP 96 BIS </h2>
 		<p>NIP 96: HTTP File Storage #547 status:Open
-		<br><button>1) (Proposed) NIP 96: HTTP File Storage
-One of the challenges of Nostr is where to store files (images, videos, PDFs, etc). 
-Storing them on relays could bloat relays and lead to more centralization.
-This NIP proposes a protocol to help third parties offer file hosting services 
-to Nostr users. 
-This NIP defines the necessary shape of the API of a third party 
+		<br><button>NIP 96: HTTP File Storage
+<br>This NIP proposes a protocol to help third parties offer file hosting services 
+to Nostr users. Also defines the necessary shape of the API of a third party 
 offering file hosting services, so that these services can be easily
 used by Nostr clients to serve the content to users.
-The proposal also defines an optional way for users to specify which 
-File Storage servers they’d like the client to upload content to.
-Author: arthurfranca, Semisol, staab, v0l, bndw, michaelhall923, 
-fishcakeday, quentintaranpino </p><p>
+</p><p>
 <a href "https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-10-15"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.15.2023
 
 <br><a href="https://github.com/nostr-protocol/nips/pull/547/"target="_blank"style="text-decoration: none">Source</a> GitHub</p>
@@ -436,21 +417,12 @@ fishcakeday, quentintaranpino </p><p>
     <div id="NIP18-description" class="description">
       <h2>NIP 107</h2>
       <p>NIP 107: Nostr IoT #814 status:Open
-	  <button>In conjunction with NIP 91, this NIP will enable a robust 
+	  <button><br>In conjunction with NIP 91, this NIP will enable a robust 
 	  IoT ecosystem on Nostr.
 	  This NIP’s goal is to help facilitate the development of Nostr clients 
 	  that are IoT controllers. That way a user and a device can essentially 
 	  “DM” each other data and commands.
-	  For example a user could install an IoT device that’s a switch for a light. 
-	  There would be a Nostr client where you can “register” the new device and 
-	  authorize some list of Nostr users that can utilize the device
-	  Once registered any authorized device user would be able to toggle 
-	  the light on and off from a Nostr client that supports IoT operations. 
-	  This is entirely done via Nostr DMs, so you can do this from anywhere 
-	  as long as you control the private key of a user that the device 
-	  recognizes as a controller, and the data transferred and the commands 
-	  are encrypted.
-	  Author: arcbtc, BlackCoffee</p><p>
+	   </p><p>
 	  <br><a href="https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-10-15"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.15.2023
 
 	<br><a href="https://github.com/nostr-protocol/nips/pull/814/"target="_blank"style="text-decoration: none">Source</a> GitHub</p>
@@ -476,13 +448,35 @@ fishcakeday, quentintaranpino </p><p>
     </div>
 	<!-- Descrizione App 20 -->
     <div id="NIP20-description" class="description">
-      <h2>NIP </h2>
-      <p>example</p>
+      <h2>NIP 108 </h2>
+      <p> NIP 108: Lightning Gated Content
+	  <button>This NIP introduces general purpose lightning 
+	  gated content. They’d essentially be selling 
+	  the decryption key through this process. There would be a third party 
+	  “gate server” which would accept requests for the decryption key, 
+	  which would present the requestor with an invoice. 
+	 
+      
+      
+	   <p><br><a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-22"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.22.2023
+ </p></button>
     </div>
 	<!-- Descrizione App 21 -->
     <div id="NIP21-description" class="description">
-      <h2>NIP </h2>
-      <p>example </p>
+      <h2>NIP 41</h2>
+      <p>NIP 41: Simple Key Migration
+<button>This NIP introduces two new kinds of events: 
+An event where you authorize (with your current Nostr account’s keys) 
+potential future Nostr accounts may migrate to in case of a compromise 
+of your current account. 
+(Kind 1776) An event to actually announce 
+a migration to one of the pre-authorized accounts. 
+(Kind 1777)
+Both must have OpenTimestamp attestations to prove 
+the “created” timestamp on the events are accurate. 
+</p>
+	  <p><br><a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-22"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.22.2023
+ </p></button>
     </div>
 	<div id="NIP22-description" class="description">
       <h2>NIP </h2>
