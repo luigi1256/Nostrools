@@ -31,7 +31,7 @@
   position: relative;
   left:200px;
   width:400px;
-  grid-template-columns: repeat(2, 1fr); /* 4 colums con larghezza uguale */
+  grid-template-columns: repeat(2, 1fr); /* 2 colums con larghezza uguale */
   gap: 10px; /* Space tra i bottoni */
 }
 .button-grid1 {
@@ -42,7 +42,13 @@
   grid-template-columns: repeat(1, 1fr); /* 1 colums con larghezza uguale */
   gap: 10px; /* Space tra i bottoni */
 }
-
+.button-note {
+  display: grid;
+  position: relative;
+   width:415px;
+  grid-template-columns: repeat(1, 1fr); /* 1 colums con larghezza uguale */
+  gap: 10px; /* Space tra i bottoni */
+}
 .button-grid4 {
   display: grid;
   position: relative;
@@ -222,13 +228,16 @@ nostr:npub1e09suzmq9mp6nt0ud9ttl03790qjx70wzwlc2pwwghcusvwju54qs0c800        <br
 <button> <img src="https://image.nostr.build/83e4892a89e94f6090cf866c4b0a1c11a18f2fd07c6cca4ed98cce207eb57a38.jpg" width="550px" height="400px"/>
 		<br><img src="https://image.nostr.build/91772da5bd26c8412f41ced526c55da55b436411f0faa507f9702bc14e0835fb.jpg" width="550px" height="400px"/>
 		<br><img src="https://image.nostr.build/2fed59ed726b5235aacc633fe589bdd5689df5368e3b76295a3f125aa3e3bd22.jpg" width="550px" height="400px"/>
-		<br> <a href="https://github.com/SnowCait/nostter/milestone/1"><h2>Nostter Milestone v1</h2></a>
+		<br> <a href="https://github.com/SnowCait/nostter/milestone/1"><h2>Nostter Milestone v1 ✔️</h2></a>
 
 		</button>
-		<br><button><br>
+		<br>
+		<div class="button-note">
+		<div><button><br>
   
    nostr:note1wkhg43uglxnmq227ha2r6l6jczeppsd98ush6edzdhge7tyuc0kqtnye0w  </button>
-		<script src= "https://cdn.jsdelivr.net/gh/btcapsule/nostr-tags@latest/nostr-tags.js"></script>
+	</div><div><button>	nostr:note18svglkhc3d45j0a37vkx7pa8t7ylh0f3adwvxqdzl8xaaje2yweql3v4l5 </button>
+		</div></div><script src= "https://cdn.jsdelivr.net/gh/btcapsule/nostr-tags@latest/nostr-tags.js"></script>
 
    
 	</div><br><br><br><br></div>
