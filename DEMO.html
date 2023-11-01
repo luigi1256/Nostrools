@@ -28,6 +28,14 @@
     height: 40px;
 	font-size:30px;
   }
+  .my-buttonb {
+    width: 250px;
+	font-size:25px;
+	padding-left:30px;
+	background-color: var(--background-color);
+    color: var(--text-color);
+	font-weight: bold;
+	}
 </style>
 <style>
   .dialog {
@@ -146,29 +154,17 @@ function impostaTema(tema) {
 	<br><br> <div> <label for="nsec"  style="font-size:30px">nsec:</label> 
 	<input type="text" id="nsec" name="nsec" readonly value="***********************************************"> 
 	<button type="button" onclick="copiaChiave('nsec')"style="font-size:30px">Copy</button> </div> 
-	<br> <button type="button" onclick="salvaChiavi()"style="font-size:30px">I have saved my keys, continue</button> 
+	<br><br>
 	<script> function copiaChiave(id) { var chiave = document.getElementById(id).value; navigator.clipboard.writeText(chiave); }
 function salvaChiavi() {
 var npub = document.getElementById("npub").value;
 var nsec = document.getElementById("nsec").value;
-// Aggiungi qui la logica per salvare le chiavi
-alert("Keys saved!");
-document.getElementById("salvaChiavi").value = "";
+
 }
 
 </script>
- <h1>Pick a username</h1> 
-		<form> <label for="testo8"  style="font-size:30px">In nostr there are nickname:</label> 
-		<input type="text" id="testo8" name="testo8"><br><br> 
-		<button type="button" id="loginButton8" onclick="cancellaTesto4()"style="font-size:30px">Next</button> 
-		</form> 
-		<script> function cancellaTesto4() { 
-		var testo = document.getElementById("testo8").value; 
-		if (testo.trim() !== "") { alert("Save!"); document.getElementById("testo8").value = "";
-		}
-	} 
-	</script></p><br>
-  <button onclick="closeDialog2()"style="font-size:30px">Close</button>
+ 
+  <br><button onclick="closeDialog2()"style="font-size:30px">Close</button>
 </dialog>
 <dialog id="myDialog3" class="dialog">
   <h2>dialog 3</h2>
@@ -260,15 +256,17 @@ evt.currentTarget.className += " active";
   <p><h1>Nostr-key Nip-07</h1> 
 	<p><h2>Nostr Signer Extension,
 This extension allows you to sign Nostr events on web-apps without having to give them your keys.
-</p><p></h2>
-<h3>
-Alby  <img src="https://avatars.githubusercontent.com/u/90630635?s=200&v=4" width="50px" height="50px"/>
+</p><p></h2><button onclick="closeDialog8()"style="font-size:30px">Close</button>
+<h3><button class="my-buttonb">
+Alby  <img src="https://avatars.githubusercontent.com/u/90630635?s=200&v=4" width="50px" height="50px"/><br><br>
 Blockcore  <img src="https://avatars.githubusercontent.com/u/53176002?s=200&v=4"width="50px" height="50px"/><br><br>
-Flamingo <img src="https://lh3.googleusercontent.com/73J47fHLOsHG4QK-QSl9O59XhhjqTK4hARO6ir_8b2B0EgOJytcfyK5_-MNo349HCgtHhCmSigxjoPP5A8DmB_F-nWY=w128-h128-e365-rj-sc0x00ffffff" width="50px" height="50px"/>
+Nostore <img src="https://image.nostr.build/b273cbefb73eaace05bdafb054c93a267756b31a27501c65690021f0a5599e23.jpg"width="50px" height="50px"/><br><br> 
 nos2x <img src="https://lh3.googleusercontent.com/8mm7IxpiAOulzNPyyvILMAWHuRI6VqYpfIpDYU094vTGy6XOlTPswAEj-bQ325E8-RpSo-Sbhs9umF1drHC5Od7UpA=w128-h128-e365-rj-sc0x00ffffff" width="50px" height="50px"><br><br>
-</q></p></h3>
-	<a HREF="https://github.com/aljazceru/awesome-nostr#browser-extensions" ><h2>Source</h2></a></p>
-  <button onclick="closeDialog8()"style="font-size:30px">Close</button>
+keys.band <img src="https://lh3.googleusercontent.com/yTNMwZlP4CBbO2zGasDL2Fgt4eepCou0WsTbWCn4KYlcGIsnfMYC2YrAzT8nTaIF0_eNJeds8b8h6nip1NOEU5iXRLs=w128-h128-e365-rj-sc0x00ffffff"width="50px" height="50px"><br><br>
+AKA extension <img src="https://lh3.googleusercontent.com/HNdF4BkwNJXbypmVb8RLo9ymCVaGAAGrHtArKnYv7Qq7ymIUNWyExvs0qFK_LezhCnO7gDTdbA6MvYrrcK2-vAJ2vQ=w128-h128-e365-rj-sc0x00ffffff"width="50px" height="50px"><br><br>
+</q></p></button></h3>
+	<a HREF="https://github.com/aljazceru/awesome-nostr#nip-07-browser-extensions" ><h2>Source</h2></a></p>
+  
 </dialog>
 <dialog id="myDialog9" class="dialog">
   <h2>Dialog 9</h2>
@@ -376,7 +374,7 @@ nos2x <img src="https://lh3.googleusercontent.com/8mm7IxpiAOulzNPyyvILMAWHuRI6Vq
 Welcome, this is a summary, an initial approach to Nostr.<br><br>
 
 Tab 1: Simulating the generation of a private key associated with a public key.<br>
-Tab 2: Copying both keys, possibility to use a username.<br>
+Tab 2: Copying both keys, possibility to export.<br>
 
 Tab 3: Adjusting the profile settings of a typical Nostr client, there are unfamiliar things, wait.<br><br>
 Tab 4: Nostr upside-down. Each note is a JSON event, here you can better understand, or at least get a first idea.<br>
@@ -394,7 +392,7 @@ Tab 9: The best apps, clients, and tools of Nostr. Take a look.</p>
     <p style="font-size:30px">
 Benvenuto questo è un sommario, un primo approccio a nostr<Br><br>
 Tab 1: Simulazione della generazione di una chiave privata associata a una chiave pubblica<br>
-Tab 2: Copia di entrambi le chiavi, possibilità di utilizzare un nome utente<br><br>
+Tab 2: Copia di entrambi le chiavi, possibilità di esportare<br><br>
 Tab 3: Sistemazione delle impostazioni del profilo di un tipico client nostr, ci sono delle cose non familiari aspetta<br>
 Tab 4: Nostr sotto-sopra. Ogni nota è un evento json, qua puoi comprendere meglio, o almeno farti una prima idea.<br><br>
 Tab 5: Configurazione di un indirizzo Nostr, la chiave pubblica (pubkey) è difficile da ricordare, gruppi e altre domande<br>
