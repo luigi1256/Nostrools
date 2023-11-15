@@ -12,7 +12,10 @@
       background-color: darkgrey;
       padding: 10px;
     }
-    
+    .space
+	{ 
+	padding-left:50px;
+	}
     
     .NIP {
       cursor: pointer;
@@ -37,7 +40,7 @@
       color: #333;
     }
     p {
-      color: #666;
+      color: #E6E6FA;
       
       background-color: #f2f2f2;
     }   
@@ -78,9 +81,9 @@
       color: #333;
     }
     p {
-      color: #666;
-      
-      background-color: #f2f2f2;
+      color: #E6E6FA;
+      background-color: grey;
+     
     }   
 	 .grey-button {
     background-color: grey;
@@ -92,7 +95,14 @@
     cursor: pointer;
   } 
 	  
-	  
+	button {
+    background-color: grey;
+    color: black;
+    padding: 20px 25px;
+    border-radius: 4px;
+    font-size: 30px;
+    cursor: pointer;
+  }   
 	  
 	  
 	  
@@ -125,9 +135,8 @@ nav ul li a {
   font-size: 25px;
 }
 </style>
-  
- 
-  <script>
+
+	 <script>
     
     function showDescription(id) {
       var descriptions = document.getElementsByClassName("description");
@@ -138,6 +147,10 @@ nav ul li a {
       description.style.display = "block";
     }
   </script>
+	
+	
+ 
+ 
 </head>
 <style>div {color: lightblue; }</style>
 <style>button {font-size:30px;}</style>
@@ -221,7 +234,7 @@ nav ul li a {
    
  
 	
-	 <div class="NIP" onclick="showDescription('NIP22-description')">NIP </div>
+	 <div class="NIP" onclick="showDescription('NIP22-description')">Nip 90 extra</div>
  </div>
 	
 	
@@ -460,12 +473,12 @@ used by Nostr clients to serve the content to users.
       
 	   <p><br><a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-22"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.22.2023
  </p></button>
-    </div>
+   </p> </div>
 	<!-- Descrizione App 21 -->
-    <div id="NIP21-description" class="description">
+    <div id="NIP21-description" class="description" >
       <h2>NIP 41</h2>
-      <p>NIP 41: Simple Key Migration
-<button>This NIP introduces two new kinds of events: 
+      <p >NIP 41: Simple Key Migration
+<button >This NIP introduces two new kinds of events: 
 An event where you authorize (with your current Nostr account’s keys) 
 potential future Nostr accounts may migrate to in case of a compromise 
 of your current account. 
@@ -479,28 +492,52 @@ the “created” timestamp on the events are accurate.
  </p></button>
     </div>
 	<div id="NIP22-description" class="description">
-      <h2>NIP </h2>
-      <p>example </p>
-    </div>
+    <h2 class="space">Nip 90</h2>
+      <p class="space" class="grey-button">NIP-90 Data Vending Machine (DVM) kinds 
+	  <br><a href="https://www.data-vending-machines.org/">
+	  Link Events to 5000 to 7000</a><br><br>
+	  <button>
+	  Data vending machine Nip is a request aggregator in which "particularry bots" compete with each other in a market and the user asks (work request) and chooses (payment) based on various aspects.
+	  </button>
+	  <br>
+	  <br>Text: kind 5000, 5001, 5002, 5050
+	  <br>Image: kind 5100
+	  <br>Video: kind 5200, 5201
+	  <br>Discover: kind 5300, 5301
+	  <br>Analytics: kind 5400
+	  </p>
+		</button>
+	</div>
 	
-    <h2>Recent additions</h2>
+	
+    <h2 class="space">Recent additions</h2>
    &emsp;&emsp;<button class="grey-button"><br><a href="https://github.com/nostr-protocol/nips/blob/master/38.md"target="_blank"style="text-decoration: none">Nip-38: User status</a> <a href="https://nostatus.vercel.app/"target="_blank">nostatus</a>
 															<br><a href="https://github.com/nostr-protocol/nips/blob/master/48.md"target="_blank"style="text-decoration: none">Nip-48: Proxy tags</a> 
 															<br><a href="https://github.com/nostr-protocol/nips/blob/master/75.md"target="_blank"style="text-decoration: none"> Nip-72: Communities</a> <a href="https://flycat.club/communities"target="_blank">Flycat</a></button>
   															<br><br>&emsp;&emsp;<button class="grey-button">
 															<br><a href="https://github.com/nostr-protocol/nips/blob/master/75.md"target="_blank"style="text-decoration: none">Nip-75: Zap Goals</a> <a href="https://goals-silk.vercel.app/"target="_blank">Zapgoals</a>
 															<br><a href="https://github.com/nostr-protocol/nips/blob/master/84.md"target="_blank"style="text-decoration: none">Nip-84: Highlights</a> <a href="https://highlighter.com/"target="_blank">Highlighter</a>
-															<br><a href="https://github.com/nostr-protocol/nips/blob/master/90.md"target="_blank"style="text-decoration: none">Nip-90: Data Vending Machine</a> <a href="https://vendata.io/"target="_blank">Vendata.io</a>  </button>
+															<br><a href="https://github.com/nostr-protocol/nips/blob/master/90.md"target="_blank"style="text-decoration: none">Nip-90: Data Vending Machine</a> <a href="https://vendata.io/"target="_blank">Vendata.io</a> 
+
+
+
+
+															<br><a href="https://github.com/nostrocket/NIPS"target="_blank"style="text-decoration: none">Nostrocket Nips</a> <a href="https://nostrocket.org/"target="_blank">NostRocket</a> 
+
+															</button>
 															<br><br>&emsp;&emsp;<button class="grey-button"><a href="https://www.e2encrypted.com/nostr/nips/" target="_blank"style="text-decoration: none"><h1>NIPs Source<br> e2encrypted</h1></a></button>
    <br><br>&emsp;&emsp;<button class="grey-button"><br><br><br> <div class="NIP" onclick="showDescription('NIP19-description')">Sherry Lessons</div></button>
    <br><br>&emsp;&emsp;<button class="grey-button"><a href="https://nostr-nips.com/" target="_blank"style="text-decoration: none"><h1>NIPs Source<br> nostr-nip.com</h1></a></button>
-  <h2>Old Table</h2>
+  <h2 class="space">Old Table</h2>
  </div>
   <br>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<iframe src="https://nostr.band/note1zrxr7fynk32ldlwklu8w8xsagfgfm3ktlewhyzsg5xyayzl8qu8seckyja?embed" width="60%" height="300" style="border:1px solid black;">
   
 
 
+	
+	
+		
 </body>
 
 </html>
