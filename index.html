@@ -95,7 +95,7 @@
 			
     .box {
       width: 500px; 
-      height: 100px; 
+      height: 150px; 
       background-color: var(--background-color);
 	  font-size:30px;
 	  font-weight:bold;
@@ -184,6 +184,43 @@ body {
 
 
 </style>
+				
+<style>
+.dialog {
+  display: none;
+  position: absolute;
+  left:600px;
+  top:50px;
+  background-color: 	#c0c0c0;
+  color: #fff;
+  padding: 10px;
+  min-width:100px;
+  max-width: 500px;
+  z-index: 1; /* Aggiungi un indice di profondità per gestire la sovrapposizione */
+  font-size: 25px;
+}
+
+/* Stile dell'indicatore di posizione */
+.location-marker {
+  width: 300px;
+  height: 60px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Aggiungi spazio tra gli indicatori di posizione */
+}
+
+/* Mostra la finestra di dialogo quando si passa sopra l'indicatore */
+.location-marker:hover {
+  z-index: 2; /* Porta l'indicatore in primo piano */
+}
+
+.location-marker:hover + .dialog {
+  display: block;
+}
+
+</style>
+
+				
+				
   <div class="space">
 <button class="my-button883"onclick="impostaTeme('dark')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"></path></svg></button>
 <button class="my-button883"onclick="impostaTeme('semilight')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"></path></svg></button>
@@ -205,10 +242,26 @@ function impostaTeme(teme) {
     		        <a href="http://nostrools.netlify.app/bookmarks.html" target="_blank">Bookmarks</a>
     		        <a href="https://nostrools.netlify.app/nips" target="_blank">Nips</a>
     		        <a href="https://nostrools.netlify.app/demo" target="_blank">Demo</a>
-			<a href="https://github.com/luigi1256/Nostrools"target="_blank"><img src="https://icons.iconarchive.com/icons/iconka/cat-shadows/256/cat-shadow-icon.png" width="40px" height="40px"/> </a>
-			<a href="https://nostrools.netlify.app/video.html"target="_blank"><img src="https://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/256/Button-1-play-icon.png" width="40px" height="40px"/></a>
+			<a href="https://github.com/luigi1256/Nostrools"target="_blank" style="text-decoration: none"><img src="https://icons.iconarchive.com/icons/iconka/cat-shadows/256/cat-shadow-icon.png" width="40px" height="40px"/> </a>
+			<a href="https://nostrools.netlify.app/video.html"target="_blank" style="text-decoration: none"><img src="https://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/256/Button-1-play-icon.png" width="40px" height="40px"/></a>
 			
 	
+		<div class="location-marker"  data-dialog="dialog1">
+</div>
+
+<div class="dialog" id="dialog1">
+  <div class="dialog-content" id="dialogContent">
+  <br> 15 November_____<br>
+  <br> Projects________<br>
+  <br> Clients Tools___<br>
+  <br> Events__________<br>
+  <br> ________________<br>
+  <br> ________________<br>
+  <br> ________________<br>
+  <br> ________________<br>
+  <br> ________________<br>
+  <br> ________________<br>
+  </div></div>
 		
      	
 		</div>
@@ -815,6 +868,7 @@ evt.currentTarget.className += " active";
             	 <br><br><A HREF="https://github.com/mmyoungman/nostr_backup" ADD_DATE="1699427343"target="_blank" >mmyoungman/nostr_backup</A>
                  <br><br><A HREF="https://hono-nostr-auth-demo.vercel.app/" ADD_DATE="1699450955"target="_blank" >hono-nostr-auth-demo.vercel.app</A> Nip-98
                  <br><br><A HREF="https://codeberg.org/weex/noswot" ADD_DATE="1699726686"target="_blank">weex/noswot noswot on Codeberg.org</A><br>A web of trust made from nostr follows and reports
+             <br><br><br><A HREF="https://github.com/dextryz/lemon" ADD_DATE="1699989631"target="_blank">dextryz/lemon</A> A nostr CLI done the unix way
             
 		
             
@@ -1490,6 +1544,8 @@ Projects or groups</h2>
        			    <br><br><br><A HREF="https://github.com/swentel/nostr-php" ADD_DATE="1698162527" target="_blank">swentel/nostr-php </A>PHP helper library for Nostr
       				<br><br><A HREF="https://github.com/NicholasBHubbard/Net-Nostr" ADD_DATE="1699426899"target="_blank" >NicholasBHubbard/Net-Nostr</A> Perl implementation of the Nostr protocol
           			<br><br><A HREF="https://github.com/wilsonsilva/nostr" ADD_DATE="1699861966" target="_blank">wilsonsilva/nostr</A> Asynchronous Nostr client Languages Ruby
+         			<br><br><A HREF="https://github.com/Sebastix/nuxstr" ADD_DATE="1699964726" target="_blank" >Sebastix/nuxstr Starter template for building a Nostr client</A> with the Nuxt Vue framework and Nostr Dev Kit
+                	    <br><br><br><A HREF="https://github.com/AutonomousOrganization/futr2" ADD_DATE="1699989532" target="_blank" >AutonomousOrganization/futr2</A> nohstr (nostr in Haskell)
          
             
 	</button>
@@ -1581,9 +1637,10 @@ Projects or groups</h2>
 		<br><br><A HREF="https://snort.social/e/nevent1qqsxfs22uyl2l0auehlmp3uhfsah60azlsz0dl6a9zmggk4ryyzq9nspz4mhxue69uhhyetvv9ujumn0wd68ytnzvuhsygzmqxp6kmp7xg4lf4qudvawlxzk9g2ys3ahfx25xunu25u6z9zk8cpsgqqqqqqska0vfg" target="_blank" ADD_DATE="1698383575">Starting a #NostrNovember movement to get Nostriches to do a Casual Meetup regionally.</A>
      		<br><br><br><br><A HREF="https://snort.social/e/nevent1qqs8w3em5xjv7ag3tgghayxgwx3un9rzxw9y59zyh8ulej9v5l4jsqqpp4mhxue69uhkummn9ekx7mqzypxnns3m8vpmlx2ffh6l8g2fc7gg4cduwstgql7adv62xxyxa2hz2qcyqqqqqqgf0rfd4" ADD_DATE="1698962936" target="_blank">Nostr Advent Calendar 2023</A> By 🎅
           	<br><br><br><br><A HREF="https://428lab.connpass.com/event/300313/" ADD_DATE="1699081663" target="_blank">New Age Distributed SNS Study Group-connpass</A><br>Nostr & Bluesky 8 December 19 00 22 30 Tokyo
-           	<br><br><br><A HREF="https://www.flockstr.com/event/naddr1qqyryvfhxscrqcf5qgsw3mfhnrr0l6ll5zzsrtpeufckv2lazc8k3ru5c3wkjtv8vlwngksrqsqqql9ngpzpwr" target="_blank"ADD_DATE="1699709518">YDC1 Making Money with Yondar Development </A> Flockstr 14 November
-        	<br><br><br><A HREF="https://njump.me/nevent1qqsytjh7jfnpuf7h26g5wer2dmzrfsvgmdjj3eu5tee2zuz7syxm06gppamhxue69uhk2tnwdaejumr0dspzp5c8vs65wup4xl0aa7q3c002jmcln6zvsfy7yqp4xsjeyj5epr8cqvzqqqqqqyamfz56"target="_blank" ADD_DATE="1699861241">Nostr Conf General Survey Please let us know where &amp; when you’d like to see</A> mcshane
-        
+           	<br><br><br><A HREF="https://njump.me/nevent1qqsytjh7jfnpuf7h26g5wer2dmzrfsvgmdjj3eu5tee2zuz7syxm06gppamhxue69uhk2tnwdaejumr0dspzp5c8vs65wup4xl0aa7q3c002jmcln6zvsfy7yqp4xsjeyj5epr8cqvzqqqqqqyamfz56"target="_blank" ADD_DATE="1699861241">Nostr Conf General Survey Please let us know where &amp; when you’d like to see</A> mcshane
+        	<br><br><br><A HREF="https://njump.me/nevent1qqsvlavu0zhny0xs4psgyeatvyap9kpehm95c80r9mysnvll9kdvprszemymn" ADD_DATE="1699973278"target="_blank">This Friday is the Kickoff of NostrPHX meetup! Let’s get hyper local Nostriches. ...</A>
+                <br><br><br><A HREF="https://www.flockstr.com/event/naddr1qqyxvcenx43rycfeqgsfd0a5z8qdvc26l5qhpzd5g9r0v2ay4mltaspguvcv00vehuljl2grqsqqql9n2rpnqk" ADD_DATE="1700032667"target="_blank">Nostr November NorCal Meetup</A> On Flockstr
+          
             
                 
            
@@ -1626,7 +1683,8 @@ Projects or groups</h2>
            	<br><br><br><br><A HREF="https://snort.social/e/nevent1qqs9apg8ry47th8pv0f5fnas0wur69479sw7u70znsjgkq4pym3pcrcpz4mhxue69uhhyetvv9ujumn0wd68ytnzvuhsygq36zmxw3ug0w56d56ty04nz2rnwj69kxsmzc02c4xtrq798cqw7upsgqqqqqqsz2dy59" ADD_DATE="1698331802"target="_blank">1 november Bitcoin Nostr meet upm salt Lake City UT</A>
                 <br><A HREF="https://www.meetup.com/meetup-group-zuyvgaos/events/296943681?utm_medium=email&utm_source=sendgrid&utm_campaign=event_announce_en" ADD_DATE="1698331887"target="_blank">Nostvember Bitcoin Meetup!!, Wed, Nov 1, 2023, 6:00 PM  </A>Meetup
                 <br><br><br><br><A HREF="https://www.meetup.com/bitcoinpark/events/292518506/" target="_blank">Nostrville 2023 , Thu, Nov 9, 2023, 10:00 AM | Meetup</A>
-              
+              	<br><br><br><A HREF="https://www.flockstr.com/event/naddr1qqyryvfhxscrqcf5qgsw3mfhnrr0l6ll5zzsrtpeufckv2lazc8k3ru5c3wkjtv8vlwngksrqsqqql9ngpzpwr" target="_blank"ADD_DATE="1699709518">YDC1 Making Money with Yondar Development </A> Flockstr 14 November
+        	
 		
 		</div></div>
 		<a href="#top">
