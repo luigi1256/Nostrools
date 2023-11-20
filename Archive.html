@@ -22,13 +22,13 @@ body {
 }
 
 .index {
-  width: 30%;
+  width: 200px;
   background-color: #b2b2b2;
   padding: 20px;
   font-size:22px;
 }
 .index2{
-  width: 450px;
+  width: 400px;
   left:1000px;
   background-color: #b2b2b2;
   padding: 20px;
@@ -111,11 +111,16 @@ a {
 	  min-height: 100px;
 	 
     }
+	.space {
+     padding: 20px;
+} 
 </style>
 </head>
 <body>
   <div class="container" >
+  
     <aside class="index">
+	<div class="button-grid1-left">
       <ul>
 		
         <b><li><a href="#item1">November 23'</a></li>
@@ -124,14 +129,14 @@ a {
 		<li><a href="#item21">Report And Collections</a></li>
         <li><a href="#item2">Clients</a></li>
         <li><a href="#item3"></a></li>
-		<li><a href="#item17"></a></li>
-        <li><a href="#item2"></a></li>
+		<li><a href="#item17">lightning</a></li>
+        <li><a href="#item21">test</a></li>
         <li><a href="#item3"></a></li>
 		
         
 		</b>
       </ul>
-	  <hr><br>
+	  
 	  <style>
 :root {
   --background-color: grey; 
@@ -141,8 +146,7 @@ a {
   background-color: var(--background-color);
   height:60px;
   width:60px;
-
-}
+  }
 
 .dark {
   --background-color: #1F1F1F;
@@ -161,22 +165,173 @@ body {
 	
 
 }
+figure {
+  border: thin #E6E6FA solid;
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  max-width: 320px;
+  margin: auto;
+  
+}
+
+img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  text-align:center;
+  max-width: 300px;
+}
+.my-button {
+  background-color: darkgrey;
+  color: #fff;
+  border: 5px;
+ text-align:center;
+  width:340px;
+  height:250px;
+  font-size:25px;
+}
+.my-button-left {
+  background-color: grey;
+  color: #fff;
+  border: 2px;
+ text-align:center;
+  width:150px;
+  height:30px;
+  font-size:22px;
+}
+
+
 	
 
 </style>
-<button class="my-button883"onclick="impostaTeme('dark')"><b>Dark</b></button>
-<button class="my-button883"onclick="impostaTeme('semilight')"><b>Silver</b></button>
-<button class="my-button883" onclick="impostaTeme('light')"><b>Light</b></button>
-<br><br><hr>
+<style>
+	
+.button-grid {
+  display: grid;
+  position: relative;
+  width:700px;
+  grid-template-columns: repeat(4, 1fr); /* 4 colums con larghezza uguale */
+  gap: 10px; /* Space tra i bottoni */
+}
+.button-grid5 {
+  display: grid;
+  position: relative;
+  
+  width:700px;
+  grid-template-columns: repeat(5, 1fr); /* 5 colums con larghezza uguale */
+  gap: 10px; /* Space tra i bottoni */
+}
+.button-grid1 {
+  display: grid;
+  position: relative;
+   width:250px;
+  grid-template-columns: repeat(1, 1fr); /* 1 colums con larghezza uguale */
+  gap: 20px; /* Space tra i bottoni */
+}
+.button-grid2 {
+  display: grid;
+   width:200px;
+  grid-template-columns: repeat(2, 1fr); /* 2 colums con larghezza uguale */
+  gap: 10px; /* Space tra i bottoni */
+}
+.button-grid1-left {
+  display: grid;
+   width:200px;
+  grid-template-columns: repeat(1, 1fr); /* 1 colums con larghezza uguale */
+  gap: 20px; /* Space tra i bottoni */
+}
+.button-grid3 {
+  display: grid;
+  position: relative;
+    width:700px;
+  grid-template-columns: repeat(3, 1fr); /* 3 colums con larghezza uguale */
+  gap: 20px; /* Space tra i bottoni */
+}
+.button {
+  background-color: darkgrey;
+  color: #fff;
+     width:150px;
+	 min-height:40px;
+
+  text-align: left;
+}
+.button2 {
+  background-color: darkgrey;
+  color: #fff;
+     width:110px;
+
+  text-align: left;
+}
+.mybutton {
+  background-color: darkgrey;
+  color: #fff;
+  width:30px;
+  border: none;
+  text-align: left;
+  font-size:25px;
+}
+
+ 
+</style>
+<div><i><h3>Feedback</h3></i>
+<button class="button"><img src="https://img.freepik.com/free-photo/top-view-arrangement-with-different-feelings_23-2148860304.jpg" width="145px" height="100px"/>
+</button></div><div>
+<label class="button2"for="access-key"><b>Access key:</b></label><br>
+<input class="button"type="password" id="access-key" />
+<button class="button"id="access-button">Login</button>
+<p id="error-message" ></p></div>
+	<script>
+  document.getElementById('access-button').addEventListener('click', function() {
+    var accessKey = document.getElementById('access-key').value;
+
+    
+    if (isValidAccessKey(accessKey)) {
+      
+      alert('Access allowed. feedback page on formstr.app [click OK]');
+		 window.open('https://formstr.app/#/forms/1a41eb13627edf5d7358d25b0a511b78c1d1c0e5009b9af40f25554ced1d15f2', '_blank');
+   
+      
+    } else {
+     
+      document.getElementById('error-message').textContent = 'Invalid access key.';
+    }
+  });
+
+  function isValidAccessKey(key) {
+ 
+  var Minimumlength = 32;
+  var Maximumlength = 64;
+  var incipt = "nsec"; 
+
+  if (key.length < Minimumlength || key.length > Maximumlength) {
+    return false;
+  }
+
+ 
+  return key.startsWith(incipt);
+}
+
+</script></div>
+    </aside>
+	
+
+    <main><div class="space">
+	<button class="my-button883"onclick="impostaTeme('dark')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"></path></svg></button>
+<button class="my-button883"onclick="impostaTeme('semilight')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"></path></svg></button>
+<button class="my-button883" onclick="impostaTeme('light')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg></button>
+</div>
+
 <script>
 function impostaTeme(teme) {
   document.body.className = teme;
 }
-</script>
-    </aside>
-	
-
-    <main>
+</script><div class="button-grid1">
        <div id="item1" class="list-item">
 	  
 	  <h1>November</h1><br></div>
@@ -189,24 +344,35 @@ function impostaTeme(teme) {
           <div class="options-content">
             <p>Name:</p>
             <p>Unconference in Tokyo and Honk Kong</p>
-            <p><a href=""target="_blank">Link</a></p>
+           
         <button class="toggle-button">Pics</button>
 		 <div class="options-content">
-            <p>Test:</p>
-            <p>Test2</p>
-            <p><a href=""target="_blank">Link</a></p>
+            <figure><img src="https://image.nostr.build/8218c25cd1159866787257cbf36383588c59ce9f45cc9e107fb860e8c3beefbd.jpg">
+			<figcaption>Nostrasia TYO
+		</figcaption>
+		<img src="https://i.nostr.build/QV0X.jpg">
+		<figcaption>Nostrasia TYO
+		</figcaption>
+		<img src="https://i.nostrimg.com/fa6e4d2801800275d549964a6701869af88b8ce887de1d05f4a57bd79a5b1989/file.jpeg">
+		<figcaption>Nostrasia TYO
+		</figcaption>
+		<img src="https://image.nostr.build/5754c03d39c48bef63cf6b077c79a56fd1db03f1f94934be38f4dcf9ebcd651d.jpg">
+		<figcaption>Nostrasia TYO
+		</figcaption>
+		</figure>
+            
         </div>
 		<button class="toggle-button">Video</button>
 		 <div class="options-content">
             <p>Test:</p>
             <p>Test2</p>
-            <p><a href=""target="_blank">Link</a></p>
+           
         </div>
 		<button class="toggle-button">Post</button>
 		 <div class="options-content">
-            <p>Test:</p>
-            <p>Test2</p>
-            <p><a href=""target="_blank">Link</a></p>
+            <p><a href="https://habla.news/a/naddr1qq8xummnd35j6v3sxgenzvfsxypzqhcppl47wv97gtgccwlehuapxhusvgwu2ushtdwr2uge2vawjattqvzqqqr4gu6sp5j2"target="_blank">Summarize day 1</a></p>
+            <p><a href="https://habla.news/u/rira224@rira224.github.io/nosli-20231101banquet">#Nostrasia Day1 Banquet</a></p>
+            
         </div>
 		</div>
       </div></div>
@@ -224,20 +390,22 @@ function impostaTeme(teme) {
 		 <div class="options-content">
             <p>Test:</p>
             <p>Test2</p>
-            <p><a href=""target="_blank">Link</a></p>
+           
         </div>
 		<button class="toggle-button">Video</button>
 		 <div class="options-content">
-            <p>Test:</p>
-            <p>Test2</p>
-            <p><a href=""target="_blank">Link</a></p>
+            <p class="my-button">Nostrville<video width="300" height="300" controls class="my-button" >
+				 <source src="https://m.primal.net/HQHe.mp4"></video></p><br>
+				 All Podcast Plebchain radio <a href="https://fountain.fm/episode/hxd48pX4NEhEs6u5mspR">Episode35</a>
+				 <br>
+            <p><a href="https://fountain.fm/episode/gpHpCbbsX5pJ7ceiKMTb">Podcast</a> Open House: Nostr November</p>
+         
         </div>
 		<button class="toggle-button">Post</button>
 		 <div class="options-content">
-            <p>Test:</p>
+            <p><a href="https://habla.news/a/naddr1qqxnzd3e8yurjd35xuurwvfnqgs98k45ww24g26dl8yatvefx3qrkaglp2yzu6dm3hv2vcxl822lqtgrqsqqqa28tg539d"target="_blank">nostr, lists, and web of trust</a><br>Pretty Good</p>
             <p>Test2</p>
-            <p><a href=""target="_blank">Link</a></p>
-        </div>
+            </div>
 		</div>
       </div> </div>
 	<br>
@@ -249,7 +417,7 @@ function impostaTeme(teme) {
           <div class="options-content">
             <p>Name:</p>
             <p>Bolt.fun Hackathon</p>
-            <p><a href=""target="_blank">Link</a></p>
+           
         </div></div>
       </div>
         
@@ -263,27 +431,25 @@ function impostaTeme(teme) {
           <div class="options-content">
             <p>Little meet up</p>
             <p>Global</p>
-            <p><a href="" target="_blank">Link</a></p>
+            
          
       </div></div></div>
 	  
 	   <div id="item3" class="list-item">
 	  
-	  <h1>December</h1><br></div>
-	   <h2></h2>
-        <p></p>
-        <div class="options"><div class="tweet">
+	  <h1>December</h1></div>
+	     <div class="options"><div class="tweet">
           <button class="toggle-button">test</button>
           <div class="options-content">
             <p>test</p>
             <p></p>
-            <p><a href="" target="_blank">Link</a></p>
+            
          
-      </div></div></div>
+      </div></div></div></div>
 	  
 	  
 	  
-	  <br> <div id="item2" class="list-item">
+	   <div id="item2" class="list-item">
 	    <h1>Clients</h1><br></div>
 
      
@@ -382,12 +548,15 @@ function impostaTeme(teme) {
           <div class="options-content">
             <p>App to create events</p>
             <p>and show to others people</p>
-            <p><a href="" target="_blank">Link</a></p>
+            
           </div>&emsp;&emsp; <button class="toggle-button">Nostr</button>
           <div class="options-content">
             <p>Name:</p>
             <p>Cal.nostrnet.work</p>
-            <p><a href="https://cal.nostrnet.work/" target="_blank">Repo-Link</a></p>
+            <p><a href="https://cal.nostrnet.work/" target="_blank">Repo-Link</a></p><br>
+			<p>Name:</p>
+            <p>Flockstr</p>
+            <p><a href="https://www.flockstr.com/explore" target="_blank">Repo-Link</a></p>
         </div>
       </div></div>
 	   <br><div id="item3" class="list-item">
@@ -398,11 +567,11 @@ function impostaTeme(teme) {
           <div class="options-content">
             <p>Meet up and conference</p>
             <p>Meeting</p>
-            <p><a href="" target="_blank">Link</a></p>
+            
           </div>&emsp;&emsp; <button class="toggle-button">Nostr</button>
           <div class="options-content">
             <p>Name:</p>
-            <p>Confstr</p>
+            <p>Comingle</p>
             <p><a href="" target="_blank">Repo-Link</a></p><br>
 			<p>Name:</p>
             <p>inmytown</p>
@@ -679,7 +848,7 @@ function impostaTeme(teme) {
             <p><a href="" target="_blank">Repo-Link</a></p>
 			<br>
 			<p>Name:</p>
-            <p>Snub</p>
+            <p>NostRocket</p>
             <p><a href="" target="_blank">Repo-Link</a></p>
 			<br>
 			<p>Name:</p>
@@ -931,7 +1100,10 @@ function impostaTeme(teme) {
             <p>nostress</p>
             <p><A HREF="" target="_blank"style="text-decoration: none">Link</A>
               		</p><br>
-			<p>Flycat.club</p>
+			<p>Flycat.club Long Form</p>
+            <p><A HREF="" target="_blank"style="text-decoration: none">Link</A>
+              		</p><br>
+			<p>Njump.me Note</p>
             <p><A HREF="" target="_blank"style="text-decoration: none">Link</A>
               		</p><br>
 		
@@ -990,6 +1162,9 @@ function impostaTeme(teme) {
       </div>
 	
 	</div></div>
+	<div id="item21" class="list-item">
+	Test
+	</div>
 	</main>
 	<div class="index2">
   <p><h2><a href="#test"><img src="https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-go-next-view-icon.png" width="50px" height="50px"</p>
