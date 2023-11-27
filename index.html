@@ -41,11 +41,12 @@
   }
 				</style>
 	<style>
-  .grey-button {
+ .grey-button {
     background-color: #1c1837;
     color: white;
-    padding: 20px 25px;
-    border: none;
+    max-width:50%;
+	padding: 10px 15px;
+	margin-left: 50px;
     border-radius: 4px;
     font-size: 30px;
     cursor: pointer;
@@ -77,6 +78,15 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+	  
+    }
+		.container2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+	  font-weight: bold;
+	  margin-left: 50px;
+		text-align: justify;
 	  
     }
 
@@ -252,11 +262,11 @@ function impostaTeme(teme) {
 
 <div class="dialog" id="dialog1">
   <div class="dialog-content" id="dialogContent">
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>
+  <br> New Tools_______<br>
+  <br> Ideas Ai Bot Others<br>
+  <br> Ideas Clients 2_<br>
+  <br> Resources_______<br>
+  <br> Clients_________<br>
   <br> ________________<br>	  
   <br> ________________<br>
   <br> ________________<br>
@@ -771,7 +781,8 @@ evt.currentTarget.className += " active";
              		<br><br><A HREF="https://chromewebstore.google.com/detail/nostr-connect/ampjiinddmggbhpebhaegmjkbbeofoaj?hl=en&pli=1" ADD_DATE="1700809013" target="_blank">Nostr Connect</A> still early
              	    <br><br><br><A HREF="https://heya.fund/" ADD_DATE="1700832841"target="_blank">Heya! funds</A> Fund causes and goals with lightning
                    	<br><br><A HREF="https://github.com/SovrynMatt/Nostr-Website-Button-Design" target="_blank"ADD_DATE="1700897098" >SovrynMatt/Nostr-Website-Button-Design</A>  High definition JPEG and SVG versions of Nostr icon/logo attempt.
-               
+               		<br><br><A HREF="https://links.formstr.app/" ADD_DATE="1701005542" target="_blank">Links on formstr.app</A>
+           
           
           
                
@@ -785,13 +796,17 @@ evt.currentTarget.className += " active";
          
 				</p> </div>
 	<div id="Ideas" class="tabcontent"> <br>
-		&emsp;&emsp;<button class="grey-button"><b><a href="#discussion">Discussion</a>
-		<br><br><b><a href="#project"style="text-decoration: none">Projects</a>
-		<br><br><b><a href="#BoT"style="text-decoration: none">AI BoT, Tools & Others</a></button>
-		<br><br>&emsp;&emsp;&emsp;&emsp;<a href="#Clients2"style="text-decoration: none"><img src="clients2.jpg" height="60px" weidth="60px"title="idea clients"/></a>
-		&emsp;&emsp;&emsp;&emsp;<a href="#Sponsor"style="text-decoration: none"><img src="Support.png" alt="Image" height="60" width="60" title="Sponsor"/></a>
-		<h2>&emsp;Ideas</h2> <p class="testo"><font size="7">
+		<h2 class="space">Ideas</h2> <p class="testo"><font size="7">
+		<button class="grey-button">
+				<div class="container">
+				
+		<div><b><a href="#discussion">Discussion</a></div>
+		<div><a href="#project"style="text-decoration: none">Projects</a></div>
+		<div><b><a href="#BoT"style="text-decoration: none">AI BoT, Tools & Others</a></div>
+		</div><a href="#Clients2"style="text-decoration: none"><img src="clients2.jpg" height="60px" weidth="60px"title="idea clients"/></a></div>
+		<div><a href="#Sponsor"style="text-decoration: none"><img src="Support.png" alt="Image" height="60" width="60" title="Sponsor"/></a></div>
 		
+		</div></button>
 		<b>
 				
 		
@@ -991,7 +1006,8 @@ evt.currentTarget.className += " active";
             <br><br><br><A HREF="https://tasktiger.io/" target="_blank"> tasktiger.io</A>DVM
 		<br><br><A HREF="https://github.com/patlee12/ChoreBit"  target="_blank">patlee12/ChoreBit </A>A NOSTR Application with bitcoin/lightning payments.
                 <br><br><A HREF="https://github.com/nitroxgas/nostrmachine" ADD_DATE="1699550844"target="_blank">nitroxgas/nostrmachine</A> A repository focused in IoT projects using Nostr protocol
-              
+              	<br><br><A HREF="https://github.com/UTXOnly/zap_server" ADD_DATE="1700926656"target="_blank">UTXOnly/zap_server </A> An LNURL server to fetch invoices from a tor hosted lightning node, specifically made for NOSTR zaps
+             
 	<br><br><br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> shocknet/Lightning.Pub<A HREF="https://github.com/shocknet/Lightning.Pub"target="_blank"style="text-decoration: none"><br>Enable WebApps from your Lightning node</A> [Sponsor]
                 <br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> jiftechnify/nosaray<A HREF="https://github.com/jiftechnify/nosaray"target="_blank"style="text-decoration: none"><br>Wayback Machine for Nostr</A> 
 		<br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> <A HREF="https://github.com/toastr-space"target="_blank"style="text-decoration: none">toastr.space</A>
@@ -1043,7 +1059,8 @@ evt.currentTarget.className += " active";
                 <br><A HREF="https://habla.news/a/naddr1qq9rzd3e8qcnwd35xq6szrthwden5te0dehhxtnvdakqz9rhwden5te0wfjkccte9ehx7um5wghxyeczyqn6nmn7m32gdzpd0txkrenrrlcc5z0fndhwtezeqmcaphrqcc047qcyqqq823cz2asm9" ADD_DATE="1698470551"target="_blank">Add &quot;sort by proof of work&quot; to a major client</A>
             	<br><br><A HREF="https://nostr-graveyard.vercel.app/" target="_blank" ADD_DATE="1698676536" >Graveyard</A> Unfollow inactive people 👻
             <br><br><br><A HREF="https://github.com/TsukemonoGit/nostr-bookamrk-viewer5" target="_blank" ADD_DATE="1700204540">TsukemonoGit/nostr-bookamrk-viewer5</A> (under development）
-               
+               	<br><br><A HREF="https://github.com/shinpallini/nostr-client-study" ADD_DATE="1701018855"target="_blank">shinpallini/nostr-client-study</A> This is a study repository for implementing Nostr client applications.
+                
 		
 		
 		
@@ -1381,7 +1398,8 @@ Projects or groups</h2>
 		     <br><br><A HREF="https://nostrlobby.com/Resources/"target="_blank"> nostr-Resources</A> nostrlobby
           	     <br><br><A HREF="https://en.m.wikipedia.org/wiki/Nostr"target="_blank">Nostr headword on Wikipedia</A>
      		 <br><br><br><A HREF="https://github.com/orthzar/awesome-nostr-possibilities" ADD_DATE="1699513659" target="_blank">orthzar/awesome-nostr-possibilities  </A><br>Nostr will fail
-          	
+          	     <br><br><A HREF="https://pinstr.app/p/npub1l77twp5l02jadkcjn6eeulv2j7y5vmf9tf3hhtq7h7rp0vzhgpzqz0swft/Nostr%20Apps" ADD_DATE="1700912725"target="_blank" >Pinstr</A> Nostr Apps
+          
 				</button>
                 		
           
@@ -1406,7 +1424,17 @@ Projects or groups</h2>
 	 
 	 </p> </div>
 	<div id="Other Tools" class="tabcontent"> <h2 class="space">Other Tools</h2></font><p class="testo"><font size="7">
-                <button class="dark-button text-left">
+                 <button class="grey-button">
+				<div class="container2">
+				
+				<div>Genral Tools</div>
+				<div>Social</div>
+				<div>Community</div>
+				<div>Bitcoin</div>
+				</div></button>
+		
+		
+		<button class="dark-button text-left">
 				<h2>General Tools</h2>
 		  <A HREF="https://telegra.ph/" target="_blank"style="text-decoration: none">Telegraph</A>
 		  <br><br><A HREF="https://nostr.band/npub1exv22uulqnmlluszc4yk92jhs2e5ajcs6mu3t00a6avzjcalj9csm7d828" target="_blank"style="text-decoration: none">Simplex on Nostr, "messaging platform"</A>
@@ -1658,7 +1686,10 @@ Projects or groups</h2>
         		    <br><br><br><A HREF="https://github.com/ryogrid/algia-web" ADD_DATE="1698311443"target="_blank">ryogrid/algia-web</A> A small resource consumption oriented Nostr Web client
                			<br><br><A HREF="https://github.com/Munawarah-App/Munawarah" ADD_DATE="1698431075"target="_blank" >Munawarah-App/Munawarah</A><br>Munawarah is an Islamic social app based on Nostr
         			<br><br><A HREF="https://github.com/innovatario/yondar-mono" ADD_DATE="1698866491"target="_blank" >innovatario/yondar-mono</A> Monorepo for all things Yondar, Maps tag
-            
+            		    <br><br><br><A HREF="https://shockwallet.app/" ADD_DATE="1700930907"target="_blank" >SHOCKWALLET</A>
+               			    <br><A HREF="https://stacker.news/items/328510" ADD_DATE="1700931083" target="_blank">Founder of Shocknet, creators of Lightning.Video and ShockWallet </A>... AMA \ stacker news ~bitcoin
+		
+       
          
 	</button>
 				
