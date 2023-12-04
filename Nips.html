@@ -185,14 +185,17 @@ nav ul li a {
 	
 	
 	
+	<div class="NIP" onclick="showDescription('NIP23-description')">NIP-85</div>
+	
+		<div class="NIP" onclick="showDescription('NIP25-description')">NIP-87</div>
+	</div>
    
 	
   <!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP9-description')">NIP 91</div>
+    
   
 	<!-- App  -->
-  
-	</div>
+    
   
 
   
@@ -202,6 +205,7 @@ nav ul li a {
 	
 	<!-- App 1 -->
 	Open NIPs<br><br>
+	<div class="NIP" onclick="showDescription('NIP9-description')">NIP 91</div>
 	  <div class="NIP" onclick="showDescription('NIP10-description')">NIP 96</div>
     <div class="NIP" onclick="showDescription('NIP12-description')">NIP 100 </div>
     
@@ -346,6 +350,19 @@ A relay can add information to the note to give it some context.
 	  <a href="https://github.com/nostr-protocol/nips/pull/637"target="_blank"style="text-decoration: none">Source</a> GitHub
 	  </p>
     </div>
+	<div id="NIP23-description" class="description">
+      <h2>NIP 85</h2>
+      <p>NIP-85:Labels review <br> #879
+	  <a href="https://github.com/nostr-protocol/nips/pull/879"target="_blank"style="text-decoration: none">Source</a> GitHub
+	  </p>
+    </div>
+	<div id="NIP25-description" class="description">
+      <h2>NIP 87</h2>
+      <p>NIP-87:Add Closed Communities #875<br>
+	  <a href=""target="_blank"style="text-decoration: none">Source</a> GitHub
+	  </p>
+    </div>
+	
 	<!-- Descrizione App 9 -->
     <div id="NIP9-description" class="description">
       <h2>NIP 91</h2>
@@ -394,7 +411,9 @@ used by Nostr clients to serve the content to users.
 	<!-- Descrizione App 12 -->
     <div id="NIP12-description" class="description">
       <h2>NIP 100</h2>
-      <p>example</p>
+      <p>NIP100:Android Signer Application<br> #868 status:Open<br>
+	  <a href="https://github.com/nostr-protocol/nips/pull/868/"target="_blank"style="text-decoration: none">Source</a> GitHub
+	  </p>
     </div>
 	<!-- Descrizione App 13 -->
     <div id="NIP13-description" class="description">
@@ -489,7 +508,13 @@ Both must have OpenTimestamp attestations to prove
 the “created” timestamp on the events are accurate. 
 </p>
 	  <p><br><a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-22"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.22.2023
- </p></button>
+ </p>
+  </button>
+  <button class="my-button">
+  Nip-41 video (kind0.io) <a href="https://njump.me/nevent1qqsphpf7jgffzvf5a46lp5l7vhxsqf8snv409w3tttafmnhztpp4usg0cjspm">Source</A> note
+  <video width="600" height="300" controls class="my-button2">
+	<source src="https://cdn.satellite.earth/3f1bf208810669bd3a9eaa7a0b9c7ff2d75d1abc893a6b2db8463d6f4923d083.mp4">
+	</video></button>
     </div>
 	<div id="NIP22-description" class="description">
     <h2 class="space">Nip 90</h2>
@@ -511,7 +536,8 @@ the “created” timestamp on the events are accurate.
 	
 	
     <h2 class="space">Recent additions</h2>
-   &emsp;&emsp;<button class="grey-button"><br><a href="https://github.com/nostr-protocol/nips/blob/master/38.md"target="_blank"style="text-decoration: none">Nip-38: User status</a> <a href="https://nostatus.vercel.app/"target="_blank">nostatus</a>
+	 &emsp;&emsp;<button class="grey-button"><br><a href="https://github.com/nostr-protocol/nips/pull/897"target="_blank"style="text-decoration: none"><del>Nip-22:  “created_at”</del></a> 
+															<br><a href="https://github.com/nostr-protocol/nips/blob/master/38.md"target="_blank"style="text-decoration: none">Nip-38: User status</a> <a href="https://nostatus.vercel.app/"target="_blank">nostatus</a>
 															<br><a href="https://github.com/nostr-protocol/nips/blob/master/48.md"target="_blank"style="text-decoration: none">Nip-48: Proxy tags</a> 
 															<br><a href="https://github.com/nostr-protocol/nips/blob/master/75.md"target="_blank"style="text-decoration: none"> Nip-72: Communities</a> <a href="https://flycat.club/communities"target="_blank">Flycat</a></button>
   															<br><br>&emsp;&emsp;<button class="grey-button">
