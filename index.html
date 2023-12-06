@@ -20,6 +20,10 @@
   color: #87CEFA;
 			
 }
+		h3 {
+  color: #87CEFA;
+			
+}
 		</style>
 	<title>Nostrools</title>
 			<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
@@ -117,38 +121,7 @@
 </head>
 
   
-<!-- eleven 11 style -->	
 	
-	<style>
-nav {
-  background: #3a316f; 
-  padding: 10px 0; 
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3); /* Ombra leggera */
-  width: 800px;	
-}
-
-nav ul {
-  list-style: none; 
-  display: flex; 
-  justify-content: left; 
-}
-
-nav ul li {
-  margin: 0 20px; 
-  }
-
-nav ul li a {
-  color: white; 
-  text-decoration: none; 
-  padding: 5px 10px; 
-  border-radius: 5px; 
-}
-nav ul li a {
-  color: white; 
-  font-size: 25px;
-}
-</style>
-	<!-- menù!-->	
 <style>
 	:root {
   --background-color: #F9F6F1; 
@@ -187,6 +160,11 @@ nav ul li a {
   --background-color: #3A3A3A;
   --text-color: #FFFFFF;
 }
+
+.light {
+  --background-color: #F9F6F1; 
+  --text-color: #000000;
+  }
 
 body {
   background-color: var(--background-color);
@@ -227,6 +205,12 @@ body {
 .location-marker:hover + .dialog {
   display: block;
 }
+a[style="text-decoration: none"]{
+ color:grey;
+}
+a:hover{
+ color:red;
+}
 
 </style>
 
@@ -262,14 +246,14 @@ function impostaTeme(teme) {
 
 <div class="dialog" id="dialog1">
   <div class="dialog-content" id="dialogContent">
-  <br> 04 December     <br>
-  <br> Tools BOT       <br>
-  <br> Ideas Projects  <br>
-  <br> ________________<br>	 
-  <br> ________________<br>	 	  
-  <br> ________________<br>	  
-  <br> ________________<br>	  
+  <br> 06 December     <br>
+  <br> Websites Games  <br>
   <br> ________________<br>
+  <br> hackathon       <br>
+  <br> ________________<br>	 	  
+  <br> Ideas proposals <br>	  
+  <br> ________________<br>	  
+  <br> Relays          <br>
   <br> ________________<br>
   <br> ________________<br>
   <br> ________________<br>
@@ -321,7 +305,7 @@ evt.currentTarget.className += " active";
 	
  				<button class="dark-button text-left">
   			        <br><A HREF="https://twitter.com/level39/status/1632240522952687616?cursor=EwAAAPAEHBkWgICziYKH8aYtJQISFQQAAA#r" title="Thread about Nostr" target="_blank"style="text-decoration: none">Nostr is 👍, but there are limitations</A><br>Level39
-                                <br><br><A HREF="https://anilsaidso.gumroad.com/l/nostr" target="_blank" style="text-decoration: none"title="A beginner-level intro to nostr">An Intro to Nostr</A> anilsaidso
+                                <br><br><A HREF="https://anilsaidso.gumroad.com/l/nostr" target="_blank" style="text-decoration: none"title="A beginner-level intro to nostr"class="red">An Intro to Nostr</A> anilsaidso
 	  			<br><br><A HREF="https://studentofbitcoin.gumroad.com/l/nostrforbeginners"style="text-decoration: none" target="_blank">NOSTR for Beginners</A> curator <a href="https://nostr.com/npub1f7ptem2ztp9x4n7w62n90ddv40z0jrt4490d8lug3uasfwyjsccqkknerm"target="_blank">studentofbitcoin<a>  
 			    <br><br><br><A HREF="https://www.heynostr.com/" target="_blank" style="text-decoration: none" title="Webpage on Nostr">Hey Nostr! (Welcome Guide)</A> curator Karnage
                                 <br><br><A HREF="https://getnostr.xyz/"target="_blank" style="text-decoration: none">Get Nostr, What's nostr?</A>
@@ -329,7 +313,7 @@ evt.currentTarget.className += " active";
           		        <br><br><A HREF="https://nostradamic.com/notes-and-other-stuff-transmitted-by-relays"target="_blank" style="text-decoration: none">NOSTR Intro, Nostradamic</A>
            		    <br><br><br><A HREF="https://drive.proton.me/urls/72H0TYTYBM#6EUoznhGNPn1" target="_blank">The slides from Baltic Honeybadger Conference 2023 </A> Derek Ross, Purple pill
 				<br><br><A HREF="https://github.com/reecehunter/learn-nostr" ADD_DATE="1700289010"target="_blank">reecehunter/learn-nostr</A> Documentation on everything I learn about the Nostr protocol.
-          			<br><br><A HREF="https://drive.google.com/file/d/1NLb9XvSZiIjng-OTtzEi_3KXjBUZdTc8/view" ADD_DATE="1700754643"target="_blank" >Current Guide 3.pdf </A>Google Drive
+          			<br><br><A HREF="https://drive.google.com/file/d/1NLb9XvSZiIjng-OTtzEi_3KXjBUZdTc8/view" cADD_DATE="1700754643"target="_blank" >Current Guide 3.pdf </A>Google Drive
              
 				<br><h2 class="space">Language guides</h2>   
 				<br><A HREF="https://habla.news/a/naddr1qqxnzd3cxy6rjv3hx5cnyde5qyvhwumn8ghj7mn0wd68ytn0wah8xcmpd3jjummjvuhsz9mhwden5te0wfjkccte9ehx7um5wghxyctwvshsygrlts45uj9qa8lv5caydvfumwpy386qyquc6c9zqu9fdr92sxxht5psgqqqw4rs5kwz0w"  target="_blank" title="Habla post"style="text-decoration: none">This guide of Nostr also in French and in Russian</A><br>curator <a href="https://nostr.com/npub10awzknjg5r5lajnr53438ndcyjylgqsrnrtq5grs495v42qc6awsj45ys7"target="_blank">Tony</a>
@@ -469,6 +453,8 @@ evt.currentTarget.className += " active";
                			<br><br><A HREF="https://twitter.com/D_plus__plus/status/1716572414304309481" ADD_DATE="1698213128"target="_blank" >D++ su X: &quot;My first hardware game, Bitcorn Hole</A>
               		    <br><br><br><A HREF="https://github.com/miron/NeonCore" ADD_DATE="1698311587">miron/NeonCore </A><br>Terminal based Cyberpunk Tabletop RPG with Nostr as database
            			<br><br><A HREF="https://seedle39.com/" ADD_DATE="1700677799"target="_blank">Seedle39</A>
+					<br><br><A HREF="https://www.youtube.com/watch?v=hfmqemzYgWE" ADD_DATE="1701760585" target="_blank">プロジェクトcarmiesプレビュー - YouTube</A>
+                    <br><A HREF="https://circle-ay.info/?postid=8" ADD_DATE="1701760596" target="_blank">No.8 - Circle-AY.Info (rmation)</A>
               
 				</button>
 		</div>
@@ -502,6 +488,8 @@ evt.currentTarget.className += " active";
                 				<br><br><A HREF="https://github.com/aljazceru/sciencestr" target="_blank"target="_blank">aljazceru/sciencestr</A> Nostr bot that answers scientific questions
 					    <br><br><br><A HREF="https://www.bitshop.org/" ADD_DATE="1697574501"target="_blank">Bitshop</A>
             					<br><br><A HREF="https://speakerdeck.com/studiokaiji/hostr-decentralized-web-hosting-solution-on-nostr?slide=15" ADD_DATE="1698575299" target="_blank">Hostr, Decentralized Web Hosting Solution on Nostr</A> Speaker Deck
+								<br><A HREF="https://h.hostr.cc/e/a15ed14c9dd18d6d4ec29a7b85c56096520ae8f0e22d37883f9d99d974d18bc7" ADD_DATE="1701759865"target="_blank">hostr でつくる単発 HTML - Nostr (2) Advent Calendar 2023/12/5</A>
+        
 						<hr>
          				    <br><br><br><A HREF="https://njump.me/nevent1qqszl29cm9ku39s0fd8r0ea9ev2jza0n0h6hud9mjgc4pd9tw4p2gmgpz3mhxue69uhhyetvv9ujumn0wd68ytnzvuq3samnwvaz7tmjv4kxz7fwdehhxamgv4ex2tnrdaksklpxru" ADD_DATE="1701103427"target="_blank">🚀 Exciting news, builders! BitBlockBoom is hosting the ultimate hackathon on ...</A>
       
@@ -871,7 +859,8 @@ evt.currentTarget.className += " active";
                 <br><br><A HREF="https://twitter.com/ImperviousAi/status/1729521295686250801" ADD_DATE="1701193796"target="_blank" >We created a new type of #nostr message, called 2999</A> Impervious.ai su X
                 <br><br><A HREF="https://njump.me/nevent1qqswrg0npkv2ysgqnne6wgaxk9yuavsj4hg28kgccm45w5y2deylkpgzypl62m6ad932k83u6sjwwkxrqq4cve0hkrvdem5la83g34m4rtqegyrjgnx" ADD_DATE="1701336508" target="_blank">I&#39;m writing a JS framework based on NDK and React for quickly developing nostr web ...</A>
             <br><br><br><A HREF="https://njump.me/nevent1qqsdd4g7tt5m35pelg5nt4q3dvw4flvkmjqww3wygn5at4vyymeurycpr4mhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet5qgs9pk20ctv9srrg9vr354p03v0rrgsqkpggh2u45va77zz4mu5p6ccn693lp" ADD_DATE="1701369375" target="_blank" >I&#39;ve build a weird thing LNURL -&gt; Cashu -&gt; Nostr bridge.</A> If you zap my new Lightning ...
-          
+				<br><br><A HREF="https://stacker.news/items/338487" ADD_DATE="1701797803" target="_blank"> nQuiz, a Quiz platform, powered by Nostr and Bitcoin</A> stacker news ~bitcoin
+             
                           
              
 
@@ -1339,6 +1328,8 @@ Projects or groups</h2>
        			    <br><br><br><A HREF="https://github.com/akiomik/nostr-noop-relays" ADD_DATE="1700568573"target="_blank">akiomik/nostr-noop-relays</A> A collection of noop relay implementations for Nostr
        				<br><br><A HREF="https://github.com/Start9Labs/nostr-rs-relay-startos" ADD_DATE="1701293639"target="_blank" >Start9Labs/nostr-rs-relay-startos</A>
                 		<br><br><A HREF="https://github.com/0xtrr/onion-service-nostr-relays" ADD_DATE="1701294000"target="_blank">0xtrr/onion-service-nostr-relays </A> A list of nostr relays exposed as onion services
+              <br><br><br><A HREF="https://github.com/jiftechnify/strfrui" target="_blank"ADD_DATE="1701777216" >jiftechnify/strfrui: </A> A framework for writing strfry&#39;s event sifter (write policy) plugin in Go.
+               <br><A HREF="https://github.com/hoytech/strfry/blob/master/docs/plugins.md"target="_blank" ADD_DATE="1701778046" >strfry/docs/plugins.md at master · hoytech/strfry</A>
         
 		
 				</button>
