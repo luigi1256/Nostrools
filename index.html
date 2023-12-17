@@ -15,7 +15,10 @@
 		
 </style>
   <style>
-
+		h1 {
+  color: #87CEFA;
+  font-size: 3rem;
+  }
 		h2 {
   color: #87CEFA;
 			
@@ -83,8 +86,9 @@
 	<style>
     .container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
+	  width:700px;
 	  
     }
 		.container2 {
@@ -119,6 +123,15 @@
 	  font-weight:bold;
 	  padding-left:30px;
 	  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); 
+    }
+	.box2 {
+      width: 400px; 
+      height: 150px; 
+      background-color: var(--background-color);
+	  font-size:28px;
+	  font-weight:bold;
+	  padding-left:30px;
+	  box-shadow: 0px 0px 1px rgba(0, 2, 0, 0.3); 
     }
   </style>
 </head>
@@ -181,7 +194,7 @@ body {
 .dialog {
   display: none;
   position: absolute;
-  left:600px;
+  left:900px;
   top:50px;
   background-color: 	#c0c0c0;
   color: #fff;
@@ -264,30 +277,39 @@ function impostaTeme(teme) {
 		
      	
 		</div>
-			  <center>            
+			          
 </header>
-	<style>.testo {  font-size: 30px}</STYLE>
+	<style>.testo {  font-size: 30px}
+
+	</STYLE>
 	
 	 
-		<p class="testo"><b><font size="6"><h2 class="space">List of folders</h2></b></font></p><p>
-	<div class="tab">&emsp;<button  class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Guides')"><img src="guide manual.png" alt="Image" height="60" width="60"  title="Guides"/></button>
-	&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Websites')"><img src="websites.png" alt="Image" height="60" width="60" title="Websites"/></button> 
-	&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Next')"><img src="hackaton.png" alt="Image" height="60" width="60" title="Hackaton"/></button> 
-	&emsp;<button class="testo" style="width: 100px; height: 80px; "class="tablinks" onclick="openTab(event, 'Tools')"><img src="Tools.png" alt="Image" height="60" width="60" title="Tools"/></button>
-	<br><br>&emsp;<button class="testo" style="width: 100px; height: 80px; "class="tablinks" onclick="openTab(event, 'Ideas')"><img src="ideas.png" alt="Image" height="60" width="60" title="Ideas"/></button>
-	&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Updates')"><img src="updates.png" alt="Image" height="60" width="60" title="Updates"/></button> 
-	&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Blog')"><img src="Blog.png" alt="Image" height="60" width="60"  title="Blog"/></button> 
-	&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Relays')"><img src="Relay.png" alt="Image" height="60" width="60"  title="Relays"/></button>
-	<br><br>&emsp;<button class="testo" style="width: 100px; height: 80px; "class="tablinks" onclick="openTab(event, 'Audio Channels')"><img src="audio channels.gif" alt="Image" height="60" width="60" title="Audio Channels"/></button>
-	&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Data on Nostr')"><img src="data on nostr.png" alt="Image" height="60" width="60"  title="Data on Nostr"/></button>
-	&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'tools guides')"><img src="bookmark tools guides.png" alt="Image" height="60" width="60"  title="Tools Guides"/> </button>
-	&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Other Tools')"><img src="other tools.png" alt="Image" height="60" width="60" title="Other Tools"/></button>
-	<br><br>&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Client')"><img src="clients.png" alt="Image" height="60" width="60" title="Client"/></button>
-		&emsp;<button class="testo" style="width: 100px; height: 80px;"><a href="https://nostrools.netlify.app/zapbutton"target="_blank" style="text-decoration: none"><img src="developer.png"alt="Image" height="60" width="60"title="zapbutton"></a></button>
-		&emsp;<button class="testo" style="width: 100px; height: 80px; " class="tablinks" onclick="openTab(event, 'Events')"><img src="Events.jpg" alt="Image" height="60" width="60" title="Events"/></button>
-		&emsp;<button class="testo" style="width: 100px; height: 80px;"><a href="https://nostrools.netlify.app/archive"target="_blank" style="text-decoration: none"><img src="archive.png"alt="Image" height="60" width="60"title="Archive"></a></button>
-		
+		<b><h1 class="space"class="testo">List of folders</h1></b><p>
+	<div class="tab" >
+	<div class="container">
+	
+	<div>&emsp;<button  class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'Guides')"><img src="guide manual.png" alt="Image" height="60" width="100"  title="Guides"/></button>
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; "class="tablinks" onclick="openTab(event, 'Websites')"><img src="websites.png" alt="Image" height="60" width="100" title="Websites"/></button> 
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'Next')"><img src="hackaton.png" alt="Image" height="60" width="100" title="Hackaton"/></button> 
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; "class="tablinks" onclick="openTab(event, 'Tools')"><img src="Tools.png" alt="Image" height="60" width="100" title="Tools"/></button>
+	
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; "class="tablinks" onclick="openTab(event, 'Ideas')"><img src="ideas.png" alt="Image" height="60"width="100" title="Ideas"/></button>
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'Updates')"><img src="updates.png" alt="Image" height="60" width="100" title="Updates"/></button> 
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'Blog')"><img src="https://github.com/luigi1256/Nostrools/blob/gh-pages/Blog.png?raw=true" alt="Image" height="60" width="100"  title="Blog"/></button> 
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'Relays')"><img src="Relay.png" alt="Image" height="60" width="100"  title="Relays"/></button>
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; "class="tablinks" onclick="openTab(event, 'Audio Channels')"><img src="audio channels.gif" alt="Image" height="60" width="100" title="Audio Channels"/></button>
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; "class="tablinks" onclick="openTab(event, 'Data on Nostr')"><img src="data on nostr.png" alt="Image" height="60"width="100"  title="Data on Nostr"/></button>
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'tools guides')"><img src="bookmark tools guides.png" alt="Image" height="60" width="100"  title="Tools Guides"/> </button>
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'Other Tools')"><img src="other tools.png" alt="Image" height="60" width="100" title="Other Tools"/></button>
+	</div><div>&emsp;<button class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'Client')"><img src="clients.png" alt="Image" height="60" width="100" title="Client"/></button>
+	</div><div>	&emsp;<button class="testo" style="width: 200px; height: 100px; "><a href="https://nostrools.netlify.app/zapbutton"target="_blank" style="text-decoration: none"><img src="developer.png"alt="Image" height="60" width="100"title="zapbutton"></a></button>
+	</div><div>	&emsp;<button class="testo" style="width: 200px; height: 100px; " class="tablinks" onclick="openTab(event, 'Events')"><img src="Events.jpg" alt="Image" height="60" width="100" title="Events"/></button>
+	</div><div>	&emsp;<button class="testo" style="width: 200px; height: 100px; "><a href="https://nostrools.netlify.app/archive"target="_blank" style="text-decoration: none"><img src="archive.png"alt="Image" height="60" width="100"title="Archive"></a></button>
 	</div>
+	</div>	
+	</div>
+	
+	
 	</p>
 	<script>function openTab(evt, tabName) {
 var i, tabcontent, tablinks;
@@ -364,11 +386,13 @@ evt.currentTarget.className += " active";
 				</button>
 	</p> </b></div> 
 <div id="Websites" class="tabcontent"><br>
-	<button class="grey-button"><b><a class="space/2" href="#shop"style="text-decoration: none">Shop</a></button>
-	<button class="grey-button"><a class="space/2"href="#games"style="text-decoration: none">Games</a></b></button>
-<h2 class="space">Websites</h2></font> <p class="testo"><font size="7"><b>
-		
-				<button class="dark-button text-left">
+	<h2 class="space">Websites</h2></font> <p class="testo"><font size="7"><b>
+		<button class="dark-button text-left">
+		<div class="box2">
+		<h2>Subfolders</h2><a class="space" href="#shop"style="text-decoration: none">Shop & Payments</a>
+	<a class="space" href="#games"style="text-decoration: none">Games</a></b>
+		</div>
+				
                 		<br>V4V<A HREF="https://value4value.info/"  target="_blank" style="text-decoration: none"> A New Way to Think about Value</A>
 				<br><br>Go on walks<A HREF="https://plebwalks.com/" target="_blank" style="text-decoration: none"> Talk bitcoin & other stuff</A>
                 		<br><br>Stack Sats<A HREF="https://www.stacksats.how/guides" target="_blank" style="text-decoration: none"> Guides</A>
@@ -380,7 +404,7 @@ evt.currentTarget.className += " active";
 				</button>
 				<br><br><h2 class="space">Shop & Payments</h2><div id="shop">
 				<button class="dark-button text-left">
-				<br><br><A HREF="https://lightning.store/"  target="_blank" style="text-decoration: none">Lightning Store ⚡️</A>
+				<br><A HREF="https://lightning.store/"  target="_blank" style="text-decoration: none">Lightning Store ⚡️</A>
 				<br><br><A HREF="https://sixandlemon.com/collections/nostr" target="_blank" style="text-decoration: none">NOSTR T-shirt</A> Six &amp; Lemon
          			<br><br><A HREF="https://www.proofofink.com/" target="_blank" style="text-decoration: none">Proof of Ink</A>  Shop
           			<br><br><A HREF="https://sats.coffee/" target="_blank" style="text-decoration: none">Shop coffee with sats <img src="https://i0.wp.com/sats.coffee/wp-content/uploads/2023/01/Satoshi-Coffee-Co-Cup-Logo.png?fit=276%2C276&ssl=1"height="50" width="50" alt="Image"/></A>
@@ -508,14 +532,16 @@ evt.currentTarget.className += " active";
 
            
 	</button>
-		</center>    </b>  
+		   </b>  
 	       </p> </div>
 	<div id="Tools" class="tabcontent"><br>
-		&emsp;&emsp;<b><button class="grey-button"><a href="#chat"style="text-decoration: none">Chat</a>
-		&emsp;&emsp;<a href="#bot"style="text-decoration: none">Bot</a>
-		<br><br><a href="#newtools"style="text-decoration: none">New Tools</a></button></b>
-					<h2 class="space">Tools</h2> </font><p class="testo">&emsp;<font size="7">	
-			<button class="dark-button text-left">
+						<h2 class="space">Tools</h2> </font><p class="testo">&emsp;<font size="7">	
+		<button class="grey-button"><h2 class="space">Subfolders</h2>
+		<div class="space"></div><b><a  class="space/2"href="#chat"style="text-decoration: none">Chat</a>
+		<a href="#bot" class="space/2" style="text-decoration: none">Bot</a>
+		<a href="#newtools" class="space/2" style="text-decoration: none">New Tools</a></b>
+			</button>
+		<button class="dark-button text-left">
 			<br><b><A HREF="https://nostr.build/" target="_blank"style="text-decoration: none">Upload images<span style='font-size:30px;'> &#127924;</span></A>
 			<br><br><a HREF="https://picsur.org/upload"target="_blank"style="text-decoration: none">Picsur <span style='font-size:30px;'>&#127924;</span></a>
 			<br><br><A HREF="https://btcpay.nostr.build/apps/3wVEKS3ujs7H7a57DUbLDH4u891z/pos"target="_blank"style="text-decoration: none">nostr.build account options</A>
@@ -529,7 +555,7 @@ evt.currentTarget.className += " active";
               		<br><br>nostrtium<A HREF="https://github.com/pjv/nostrtium" target="_blank"style="text-decoration: none"> Post to Nostr from WordPress <img src="https://img.icons8.com/color/48/000000/goodnotes.png"alt="Image"/></A>
               		<br><br>nos.today<A HREF="https://nos.today/" ADD_DATE="1680455322"target="_blank"style="text-decoration: none"> Search engine nostr <img src="https://img.icons8.com/ios/50/null/google-web-search.png" alt="Image"/></A>
               		<br><br><A HREF="https://sps.bio/" target="_blank"style="text-decoration: none">Search Profile Search <img src="https://img.icons8.com/ios/50/null/google-web-search.png" alt="Image"/></A>
-          		<br><br>nostr:npub1vp8fdcyejd4pqjyrjk9sgz68vuhq7pyvnzk8j0ehlljvwgp8n6eqsrnpsw<br><A HREF="https://github.com/SamSamskies/advancednostrsearch" target="_blank"style="text-decoration: none">Advanced Nostr Notes Filter <img src="https://img.icons8.com/ios/50/null/google-web-search.png" alt="Image"/></A> <br>May 26th '23 
+          		<br><br><br><A HREF="https://github.com/SamSamskies/advancednostrsearch" target="_blank"style="text-decoration: none">Advanced Nostr Notes Filter <img src="https://img.icons8.com/ios/50/null/google-web-search.png" alt="Image"/></A> <br>May 26th '23 
            		<br><br><A HREF="https://nostrstuff.com/" target="_blank"style="text-decoration: none">Nostr Stuff <img src="https://img.icons8.com/ios/50/null/cmd.png" alt="Image"/></A>
               		<br><br><A HREF="https://nak.nostr.com/" target="_blank"style="text-decoration: none">nostr army knife <img src="https://nak.nostr.com/favicon.ico" alt="Image" height="42" width="42"alt="Image"/></A>
               		<br><br><A HREF="https://github.com/kdmukai/nostrtool"  target="_blank" style="text-decoration: none">NostrTool</A> <img width="50" height="50" src="https://img.icons8.com/hands/50/experimental-key-hands.png" alt="experimental-key-hands"/>
@@ -1538,8 +1564,7 @@ Projects or groups</h2>
 	  <br><br><A HREF="https://github.com/gethomepage/homepage"target="_blank">gethomepage/homepage </a><br>A highly customizable homepage (or startpage / application dashboard) 
           <br><br><A HREF="https://zk-phi.github.io/MEGAMOJI/" ADD_DATE="1697605612" target="_blank">MEGAMOJI - カスタム絵文字メーカー</A> make an emoj
           <br><br><A HREF="https://protomaps.com/" ADD_DATE="1698126246"target="_blank">Protomaps</A> A free and open source map of the world
-      <br><br><br><A HREF="https://thorium.rocks/" ADD_DATE="1698213271"target="_blank" >Thorium Browser</A>
-          <br><br><A HREF="https://una.io/features" ADD_DATE="1699451573"target="_blank" >UNA.IO Features</A> The Best Community Software Platform
+           <br><br><A HREF="https://una.io/features" ADD_DATE="1699451573"target="_blank" >UNA.IO Features</A> The Best Community Software Platform
           <br><br><A HREF="https://unleashed.chat/" ADD_DATE="1701270211" target="_blank">Unleashed Chat</A> One button to deploy your own chat
           <br><br><A HREF="https://searx.simplifiedprivacy.com/" ADD_DATE="1701884940" target="_blank">a free SearXNG Search Engine front end</A>
            
