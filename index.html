@@ -32,12 +32,12 @@
 			<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 			<link rel="icon" type="image/x-icon" href="https://github.com/luigi1256/Nostrools/blob/377a4579a61aa5a1356c9006450f081f13e6eceb/favicon.ico"/>
 			<link rel="shortcut icon" href="https://github.com/luigi1256/Nostrools/blob/377a4579a61aa5a1356c9006450f081f13e6eceb/favicon.ico" type="image/x-icon" />		
-<!-- toolbar -->
+
 <style>
 	.space{
 	padding-left:80px;
 	}
-	.space/2{
+		.space/2{
 	padding-left:40px;
 	}
   .purple-button {
@@ -81,6 +81,7 @@
 .text-left {
   text-align: left;
 }
+
 				</style>
 <!-- toolbar -->
 	<style>
@@ -122,6 +123,7 @@
 	  font-size:30px;
 	  font-weight:bold;
 	  padding-left:30px;
+	   padding-top:5px;
 	  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); 
     }
 	.box2 {
@@ -162,10 +164,18 @@
 .my-button885{
   background-color: var(--background-color);
   width:600px;
-  border:10px color:grey; 
+  border:10px color grey; 
   font-size:25px;	
 
 }
+.my-button886{
+  background-color: var(--background-color);
+  width:530px;
+  border: 1px solid  grey;
+  font-size:25px;
+  box-shadow: 0px 2px 0px rgba(15,15,15,0.6);  
+  }
+  
 .dark {
   --background-color: #1F1F1F;
   --text-color: #FFFFFF;
@@ -232,11 +242,14 @@ a:hover{
 
 				
 				
-  <div class="space">
+
+<button class="my-button886" ><a href="http://nostrools.netlify.app/"><div id="top"></div><img src="https://image.nostr.build/f8217042309bbaa17b158e45c090ef6050339fbd0bdf7cda5409e8eda61c05cb.png"width="100px"; height="100px";/></a>
+
 <button class="my-button883"onclick="impostaTeme('dark')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"></path></svg></button>
 <button class="my-button883"onclick="impostaTeme('semilight')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"></path></svg></button>
 <button class="my-button883" onclick="impostaTeme('light')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg></button>
-</div>
+</button>
+
 <script>
 function impostaTeme(teme) {
   document.body.className = teme;
@@ -247,31 +260,31 @@ function impostaTeme(teme) {
 
 	<body link="black">
 	<body vlink="grey">
-	<div class="box" >
+	<div class="box">
 	
-   			<a href="http://nostrools.netlify.app/">Home</a><div id="top"></div>
+   			
     		        <a href="http://nostrools.netlify.app/bookmarks.html" target="_blank">Bookmarks</a>
     		        <a href="https://nostrools.netlify.app/nips" target="_blank">Nips</a>
     		        <a href="https://nostrools.netlify.app/demo" target="_blank">Demo</a>
 			<a href="https://github.com/luigi1256/Nostrools"target="_blank" style="text-decoration: none"><img src="https://icons.iconarchive.com/icons/iconka/cat-shadows/256/cat-shadow-icon.png" width="40px" height="40px"/> </a>
 			<a href="https://nostrools.netlify.app/video.html"target="_blank" style="text-decoration: none"><img src="https://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/256/Button-1-play-icon.png" width="40px" height="40px"/></a>
 			
-	
+	</div>
 		<div class="location-marker"  data-dialog="dialog1">
 </div>
 
 <div class="dialog" id="dialog1">
   <div class="dialog-content" id="dialogContent">
+  <br> 19 December     <br>
+  <br> Guides-Post     <br>
+  <br> Hackathon       <br>
+  <br> Tools Share     <br>
+  <br> Tools New tools <br>  
   <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>  
+  <br> Ideas Projects  <br>	  
+  <br> Ideas AI Bot    <br>
   <br> ________________<br>	  
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>
+  <br> Blog            <br>
   <br> ________________<br>
   </div></div>
 		
@@ -382,7 +395,8 @@ evt.currentTarget.className += " active";
          		    <br><br><br><A HREF="https://habla.news/a/naddr1qqxnzd3exsmrvwfj8ycrsdf5qgs2yspdf86h5y96aha6fxjpwgk32w60rxeu5rfadjty5emnsds60pcrqsqqqa28xvzama" target="_blank">A newbie&#39;s guide to nostr</A> zd@zincdata.com
             			<br><br><A HREF="https://habla.news/a/naddr1qq8xummnd35j6v3sxgenzvfsxypzqhcppl47wv97gtgccwlehuapxhusvgwu2ushtdwr2uge2vawjattqvzqqqr4gu6sp5j2" ADD_DATE="1699286614" target="_blank">#Nostrasia Day1 Summary</A> Archive
           			<br><br><A HREF="https://sns.uwith.net/"target="_blank" ADD_DATE="1701162163">SNSいまどんな感じ？ Japanese wordART</A>
-          
+					<br><br><A HREF="https://earnfreebitcoin.io/nostr/" ADD_DATE="1702932744"target="_blank">Nostr Earning Guide</A> Maximizing BTC Rewards in December 2023
+
 				</button>
 	</p> </b></div> 
 <div id="Websites" class="tabcontent"><br>
@@ -492,10 +506,13 @@ evt.currentTarget.className += " active";
 		</p> </b> </div>
  <div id="Next" class="tabcontent"> <h2 class="space">Hackathon</h2></font> <p class="testo"><font size="7"> <b>
 						<button class="dark-button text-left">
-						<br><br><A HREF="https://habla.news/a/naddr1qqwxzmnwda6kucm9d4jkuapddanz6ctwdehh2mnrv4kk2mn5qgsg8kve59yxyhpa9wupntesvnq0dgfd0k5g769jc6fzrua8gct36xgrqsqqqa28aepjch"target="_blank">Sovereign Engineering</A> <br>An announcement of an announcement (Madeira)
-						<br><A HREF="https://bitcoinatlantis.com/"target="_blank">Bitcoin Atlantis, A Bitcoin conference in the Atlantic</A>
+								<br><A HREF="https://habla.news/a/naddr1qqwxzmnwda6kucm9d4jkuapddanz6ctwdehh2mnrv4kk2mn5qgsg8kve59yxyhpa9wupntesvnq0dgfd0k5g769jc6fzrua8gct36xgrqsqqqa28aepjch"target="_blank">Sovereign Engineering</A> <br>An announcement of an announcement (Madeira)
+								<br><A HREF="https://bitcoinatlantis.com/"target="_blank">Bitcoin Atlantis, A Bitcoin conference in the Atlantic</A>
 		        			<br><br><A HREF="https://habla.news/a/naddr1qqxnzdesxyengdfhxyunwv33qgsg8kve59yxyhpa9wupntesvnq0dgfd0k5g769jc6fzrua8gct36xgrqsqqqa284e43a8" ADD_DATE="1701362737"target="_blank">Meet the 1st Cohort "Siberia"</A> Madeira
-        					<hr>
+        				<br><br><br><A HREF="https://njump.me/nevent1qqszl29cm9ku39s0fd8r0ea9ev2jza0n0h6hud9mjgc4pd9tw4p2gmgpz3mhxue69uhhyetvv9ujumn0wd68ytnzvuq3samnwvaz7tmjv4kxz7fwdehhxamgv4ex2tnrdaksklpxru" ADD_DATE="1701103427"target="_blank">🚀 Exciting news, builders! BitBlockBoom is hosting the ultimate hackathon on ...</A>
+						    <br><br><br><A HREF="https://t.me/+PSLRjhj1FFs2ZjM8" ADD_DATE="1702572896"target="_blank">Telegram: Join Group ChatLNbits/Makerbits will be managing the hackspace at Bitcoin Atlantis</A>
+						
+							<hr>
          				    <br><br><br><A HREF="https://zap.stream/naddr1qqjrsc3jvgcxvwpe943xyd34956rqd3k95ukzvnx956rwvekvgmrgdeevv6rvq3qeaz6dwsnvwkha5sn5puwwyxjgy26uusundrm684lg3vw4ma5c2jsxpqqqpmxwznny26"target="_blank">Hack-Nostr-On Round 2 Demo Day zap.stream</A>
           					<br><br><A HREF="https://github.com/lnconsole/BeatzCoin" target="_blank">lnconsole/BeatzCoin: <br>Turn heart rate into sats mtfk</A>
                 		                <br><br><A HREF="https://github.com/viktorvsk/saltivka/"target="_blank">viktorvsk/saltivka </A><br>🇺🇦 Friendly Nostr Relay in Ruby with UI 
@@ -524,11 +541,10 @@ evt.currentTarget.className += " active";
 								<br><A HREF="https://github.com/studiokaiji/nostr-webhost" target="_blank">studiokaiji/nostr-webhost</A>
 								<br><br><A HREF="https://github.com/abhay-raizada/nostr-forms"target="_blank" >abhay-raizada/nostr-forms</A>
 								<br><br><br><A HREF="https://github.com/weavedb/weavedb" target="_blank">weavedb/weavedb </A><br>WeaveDB Decentralized NoSQL Database powered by Arweave
-            
-						<hr>
-         				    <br><br><br><A HREF="https://njump.me/nevent1qqszl29cm9ku39s0fd8r0ea9ev2jza0n0h6hud9mjgc4pd9tw4p2gmgpz3mhxue69uhhyetvv9ujumn0wd68ytnzvuq3samnwvaz7tmjv4kxz7fwdehhxamgv4ex2tnrdaksklpxru" ADD_DATE="1701103427"target="_blank">🚀 Exciting news, builders! BitBlockBoom is hosting the ultimate hackathon on ...</A>
-						    <br><br><br><A HREF="https://t.me/+PSLRjhj1FFs2ZjM8" ADD_DATE="1702572896">Telegram: Join Group ChatLNbits/Makerbits will be managing the hackspace at Bitcoin Atlantis</A>
-       
+            							<hr>
+							<br><br><br><A HREF="https://www.topbuilder.dev/" ADD_DATE="1702913260"target="_blank" >PlebLab</A> Top Builder Presented by Wolf
+							<br><A HREF="https://njump.me/nevent1qqs20f8lyhhhss5ulsel6ukwsy7tvru9ajphxshu47alsr8gtk4pvlqprpmhxue69uhhyetvv9ujumn0wdmksetjv5hxxmmdqy8hwumn8ghj7efwdehhxtnvdakqyg8veagxkrutkla86tlrkqxq6nertnr6mlmrre4jl7zvpvx02672fupsgqqqqqqsxgrwvz" ADD_DATE="1702913777"target="_blank">ANNOUNCING TOP BUILDER!</A> TopBuilder is an intense competition designed to discover innovators
+        
 
            
 	</button>
@@ -759,6 +775,7 @@ evt.currentTarget.className += " active";
     <br><br><A HREF="https://github.com/benthecarman/zapple-pay-backend"target="_blank">benthecarman/zapple-pay-backend</A>
 	<br><br><A HREF="https://github.com/SamSamskies/notalike"target="_blank">SamSamskies/notalike <br>Zaps nostr notes when you like them</A>
     <br><br><br><A HREF="https://github.com/ocknamo/shotr" target="_blank">ocknamo/shotr <br>short url service by nostr</A> 
+	        <br><A HREF="https://blogstack.io/naddr1qqxnzdesxgurxv3cx5mnvvpsqy8hwumn8ghj7efwdehhxtnvdakqzymhwden5te0wfjkcctev93xcefwdaexwq3qy6aja0kkc4fdvuxgqjcdv4fx0v7xv2epuqnddey2eyaxquznp9vqxpqqqp65wg4h77c" ADD_DATE="1702839369"target="_blank">blogstack Instant tip links to lightning address by `shotr`</A>
 	<br><br>penpenpng/share-on-nostr<A HREF="https://github.com/penpenpng/share-on-nostr"target="_blank"style="text-decoration: none"> Chrome extension to share URL of an active tab on Nostr</A><br>0.3.1 
         <br><br><A HREF="https://www.zapr.social/"target="_blank">Zapr (button to ZAP)</A>
 	<br><br><A HREF="https://github.com/jinglescode/nostr-url-shortener" target="_blank">jinglescode/nostr-url-shortener</A>
@@ -827,7 +844,9 @@ evt.currentTarget.className += " active";
 			<br><br><A HREF="https://njump.me/nevent1qqsqqqqqqqsm7swdfrwjxvp07eycmlg20xkp8vgpjuqnclnwt4fkaxsppamhxue69uhk2tnwdaejumr0dspzqy352eu9aeup2agu9qqyum80gwvwzft0jj5nhagljqqcu29ve0a5qvzqqqqqqyv0pyy4" ADD_DATE="1701417218"target="_blank">PoW WoW v0.1 is out! It is a distributed marketplace for event PoW. </A>
            	<br><br><A HREF="https://github.com/profullstack/follows-web" ADD_DATE="1702060336"target="_blank" >profullstack/follows-web</A>
                 <br><A HREF="https://stacker.news/items/343223" ADD_DATE="1702060482"target="_blank">The Nostr follower tool</A> stacker news ~nostr
-              
+				<br><br><br><A HREF="https://github.com/adamritter/light-nostr-client" ADD_DATE="1702728445"target="_blank" >adamritter/light-nostr-client</A> Lightweight Nostr client using rbr.bio as contacts / metadata data source
+					<br><br><A HREF="https://github.com/dtonon/stacker-beep" ADD_DATE="1702888880" target="_blank">dtonon/stacker-beep</A> A command line utility to be informed, with a beep, about new content of Stacker.news
+        
         
           
           
@@ -950,7 +969,8 @@ evt.currentTarget.className += " active";
          <br><A HREF="https://github.com/limina1/indextr-client"target="_blank" >limina1/indextr-client</A>
 		 <br><br><A HREF="https://github.com/nostrband/noauth" ADD_DATE="1701454946"target="_blank" >nostrband/noauth</A> Noauth, Nostr key manager
          <br><br><A HREF="https://github.com/Pleb5/bitcoin-troubleshoot" ADD_DATE="1701532695"target="_blank">Pleb5/bitcoin-troubleshoot</A> An app for bitcoiners to troubleshoot each other&#39;s technical issues for sats, using nostr
-           
+     <br><br><br><A HREF="https://github.com/verbiricha/ngine" ADD_DATE="1702919345"target="_blank">verbiricha/ngine</A> A nostr application framework
+              
 		    <hr>
 		<br><br>			
         <br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> ibz/servus<A HREF="https://github.com/ibz/servus"target="_blank"style="text-decoration: none">
@@ -1039,8 +1059,8 @@ evt.currentTarget.className += " active";
                 <br><br><A HREF="https://github.com/nitroxgas/nostrmachine" ADD_DATE="1699550844"target="_blank">nitroxgas/nostrmachine</A> A repository focused in IoT projects using Nostr protocol
               	<br><br><A HREF="https://github.com/UTXOnly/zap_server" ADD_DATE="1700926656"target="_blank">UTXOnly/zap_server </A> An LNURL server to fetch invoices from a tor hosted lightning node, specifically made for NOSTR zaps
             <br><br><br><A HREF="https://github.com/believethehype/nostrdvm" ADD_DATE="1701362303" target="_blank">believethehype/nostrdvm Framework to run NIP90 Nostr DVMs</A>
-                
-	<br><br><br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> shocknet/Lightning.Pub<A HREF="https://github.com/shocknet/Lightning.Pub"target="_blank"style="text-decoration: none"><br>Enable WebApps from your Lightning node</A> [Sponsor]
+                <br><br><A HREF="https://github.com/hzrd149/libretranslate-dvm" ADD_DATE="1702919288" target="_blank">hzrd149/libretranslate-dvm</A> A dumb Data Vending Machine that uses LibreTranslate to translate notes
+         <br><br><br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> shocknet/Lightning.Pub<A HREF="https://github.com/shocknet/Lightning.Pub"target="_blank"style="text-decoration: none"><br>Enable WebApps from your Lightning node</A> [Sponsor]
                 <br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> jiftechnify/nosaray<A HREF="https://github.com/jiftechnify/nosaray"target="_blank"style="text-decoration: none"><br>Wayback Machine for Nostr</A> 
 		<br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> <A HREF="https://github.com/toastr-space"target="_blank"style="text-decoration: none">toastr.space</A>
 		<br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/><A HREF="https://github.com/nobu-maeda/n3xb" target="_blank" style="text-decoration: none"> Naive Nostr NoKYC Exchange for Bitcoin</A>
@@ -1300,7 +1320,8 @@ Projects or groups</h2>
 				<br><br><A HREF="https://adventar.org/calendars/8880" ADD_DATE="1699284330" target="_blank">Nostr (2) Advent Calendar 2023 on Adventar</A> Creator Don
                 		<br><br><A HREF="https://adventar.org/calendars/8922" ADD_DATE="1699285548"target="_blank" >Monacard（モナカード）Advent Calendar 2023 on Adventar</A> Creator kotaroo
                 	<br><br><br><A HREF="https://github.com/studioTeaTwo/self-sovereign-blog" ADD_DATE="1702560526"target="_blank">studioTeaTwo/self-sovereign-blog</A>
-       
+						<br><br><A HREF="https://zapwebring.com/" ADD_DATE="1702907084" target="_blank">Zapwebring Get paid to advertise</A>
+      
           
             
 				</button>
