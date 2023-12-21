@@ -118,7 +118,8 @@
 			
     .box {
       width: 500px; 
-      height: 150px; 
+	  min-height:75px;
+      max-height: 150px; 
       background-color: var(--background-color);
 	  font-size:30px;
 	  font-weight:bold;
@@ -217,9 +218,12 @@ body {
 
 /* Stile dell'indicatore di posizione */
 .location-marker {
-  width: 300px;
-  height: 60px;
+  width: 450px;
+  height: 35px;
+  background-color:	#c0c0c0;
+  font-weight:bold;
   cursor: pointer;
+  font-size:25px;
   margin-bottom: 10px; /* Aggiungi spazio tra gli indicatori di posizione */
 }
 
@@ -270,22 +274,23 @@ function impostaTeme(teme) {
 			<a href="https://nostrools.netlify.app/video.html"target="_blank" style="text-decoration: none"><img src="https://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/256/Button-1-play-icon.png" width="40px" height="40px"/></a>
 			
 	</div>
-		<div class="location-marker"  data-dialog="dialog1">
+		<div class="location-marker"  data-dialog="dialog1">Dialog tab on the right >>>
 </div>
 
 <div class="dialog" id="dialog1">
   <div class="dialog-content" id="dialogContent">
-  <br> 			       <br>
-  <br> ________________<br>
-  <br> ________________<br> 
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br>
-  <br> ________________<br> 
-  <br> ________________<br>
-  <br> ________________<br>  
-  <br> 		           <br>
-  <br> ________________<br>
+  <br> <h2>21 December 🎅</h2> <br>
+  Guides		   <br> 
+  <br> 
+  <br> Websites shop   <br>
+  <br> 
+  <br> Ideas 		   <br> 
+  <br> Ideas Projects  <br>
+  <br> Ideas Clients   <br>  
+  <br> 
+  <br> blog			   <br>
+  <br> 
+  <br> Clients 		   <br>
   </div></div>
 		
      	
@@ -352,7 +357,8 @@ evt.currentTarget.className += " active";
            		    <br><br><br><A HREF="https://drive.proton.me/urls/72H0TYTYBM#6EUoznhGNPn1" target="_blank">The slides from Baltic Honeybadger Conference 2023 </A> Derek Ross, Purple pill
 				<br><br><A HREF="https://github.com/reecehunter/learn-nostr" ADD_DATE="1700289010"target="_blank">reecehunter/learn-nostr</A> Documentation on everything I learn about the Nostr protocol.
           			<br><br><A HREF="https://drive.google.com/file/d/1NLb9XvSZiIjng-OTtzEi_3KXjBUZdTc8/view" cADD_DATE="1700754643"target="_blank" >Current Guide 3.pdf </A>Google Drive
-             
+					<br><br><A HREF="https://github.com/fiatjaf/nostrexplained.com" ADD_DATE="1703085089"target="_blank" >fiatjaf/nostrexplained.com</A>
+           
 				<br><h2 class="space">Language guides</h2>   
 				<br><A HREF="https://habla.news/a/naddr1qqxnzd3cxy6rjv3hx5cnyde5qyvhwumn8ghj7mn0wd68ytn0wah8xcmpd3jjummjvuhsz9mhwden5te0wfjkccte9ehx7um5wghxyctwvshsygrlts45uj9qa8lv5caydvfumwpy386qyquc6c9zqu9fdr92sxxht5psgqqqw4rs5kwz0w"  target="_blank" title="Habla post"style="text-decoration: none">This guide of Nostr also in French and in Russian</A><br>curator <a href="https://nostr.com/npub10awzknjg5r5lajnr53438ndcyjylgqsrnrtq5grs495v42qc6awsj45ys7"target="_blank">Tony</a>
 			    <br><br><br><A HREF="https://nostr.com/note1zm03jgl0r5ajtwvm72t0ntj066ysdjhzzmegknnlc9w5a6ttr7yqq0seax" style="text-decoration: none" target="_blank">Nostr Guide in Italian</A> curator <a href="https://nostr.com/npub1ydxytlu95vwpn0m3pzn507nma8x5472u043pupcgpj3dvcamglfql6rlcw"target="_blank">Mir</a> 
@@ -463,11 +469,12 @@ evt.currentTarget.className += " active";
                    	    <br><br><br><A HREF="https://gesso.live/" target="_blank">Gesso - Where Artistry Comes Alive</A>
               			<br><br><A HREF="https://btcpay.nostr.build/apps/5HcE4o7M56JrgrzpHSeSzNrK7Ss/pos" target="_blank">#nostrasia Tokyo T-Shirt</A>
              			<br><br><A HREF="https://wolfertdan.threadless.com/collections/nostr" target="_blank">Shop the Nostr Collection Collection</A>
-           			<br><br><A HREF="https://zivazanka.com/shop/" target="_blank">Shop | ŽIVAZANKA HANDMADE</A>
-            		    <br><br><br><A HREF="https://hodlingapparel.com/products/nostrasia-t-shirt" target="_blank">Nostrasia T-Shirt, HODLing APPAREL</A>
+						<br><br><A HREF="https://zivazanka.com/shop/" target="_blank">Shop | ŽIVAZANKA HANDMADE</A>
+            		<br><br><br><A HREF="https://hodlingapparel.com/products/nostrasia-t-shirt" target="_blank">Nostrasia T-Shirt, HODLing APPAREL</A>
 	                   	<br><br><A HREF="https://geyser.fund/project/nostrprojectt"target="_blank">Nostr Project T </a>Geyser sherry &amp; water
               			<br><br><A HREF="https://pay.derekross.me/market/stalls/3EegMgRxAKGi4dMYuFpDcT"target="_blank" ADD_DATE="1698515165" >Ross Citadel</A> [sold out] <br>(next time make it 21 million!!!)
-             
+						<br><br><A HREF="https://store.line.me/stickershop/product/25181618/en" ADD_DATE="1703061631" target="_blank">The Ostrich Who Forgets Quickly</A> LINE stickers, LINE STORE
+         
               
             			</button>
            			</div>
@@ -902,7 +909,9 @@ evt.currentTarget.className += " active";
 			<br><br><A HREF="https://njump.me/nevent1qqsyyucgccgvaduyp4l09g4fpmsyqm9vjzxv3h7qm208dqe89cdfpesppamhxue69uhkummnw3ezumt0d5qs6amnwvaz7tmwdaejumr0dsq3gamnwvaz7tmjv4kxz7fwdehhxarj9e3xwqg4waehxw309ajkgetw9ehx7um5wghxcctwvsq3vamnwvaz7tmjv4kxz7fwwpexjmtpdshxuet5qgsph3c2q9yt8uckmgelu0yf7glruudvfluesqn7cuftjpwdynm2gyg7dlfd9" ADD_DATE="1701111716" target="_blank">Hey Nostr! User testers (normies only) wanted!! I&#39;m going to be doing some usability ...</A>
          	<br><br><A HREF="https://njump.me/nevent1qqswrg0npkv2ysgqnne6wgaxk9yuavsj4hg28kgccm45w5y2deylkpgzypl62m6ad932k83u6sjwwkxrqq4cve0hkrvdem5la83g34m4rtqegyrjgnx" ADD_DATE="1701336508" target="_blank">I&#39;m writing a JS framework based on NDK and React for quickly developing nostr web ...</A>
 	  	<br><br><br><A HREF="https://njump.me/nevent1qqsdd4g7tt5m35pelg5nt4q3dvw4flvkmjqww3wygn5at4vyymeurycpr4mhxue69uhkummnw3ez6ur4vgh8wetvd3hhyer9wghxuet5qgs9pk20ctv9srrg9vr354p03v0rrgsqkpggh2u45va77zz4mu5p6ccn693lp" ADD_DATE="1701369375" target="_blank" >I&#39;ve build a weird thing LNURL -&gt; Cashu -&gt; Nostr bridge.</A> If you zap my new Lightning ...
-		
+			<br><br><A HREF="https://resolvr.io/b/naddr1qp8kjmtsd3jk6etwwskkzttwdaehgu3dwpex7ar0vdhkcttxdaez6erfwd68y6tzw46xjmn894cx7errv9ehguedd9hz6ctww3jkumnpwphkgtf3v5unyv3hxc6nqctyvyqs6amnwvaz7tmwdaejumr0dspzqwlsccluhy6xxsr6l9a9uhhxf75g85g8a709tprjcn4e42h053vaqvzqqqr4vgcwznvj" ADD_DATE="1703084444" target="_blank">resolvr fiatjaf</A> podcasts in AntennaPod
+            <br><br><A HREF="https://resolvr.io/b/naddr1qqcxjmn5v4nhyct5v5kkummnw3ez66tww3hj66r5w3c8xenjv95kg7trv96z6ces8pnrgefkx43xywrzqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygpm7rrrljungc6q0tuh5hj7ue863q73qlheu4vywtzwhx42a7j9n5psgqqqw43q6wtnhz" ADD_DATE="1703084623"target="_blank" >resolvr fiatjaf</A>Integrate Nostr into https://fraidyc.at/
+       
 		  <h3 class="space">NIPs</h3>
 			Issue #522 <A HREF="https://github.com/nostr-protocol/nips/issues/522"target="_blank"style="text-decoration: none" title="Discussion"><br>algorithms on nostr that have a chance of working</A><br>May 14th '23
 		    <br><br>AreaLayer/NIP-xxx<A HREF="https://github.com/AreaLayer/NIP-xxx"target="_blank"style="text-decoration: none"><br>NIP for allow integration between peers lightning and Nostr</A>
@@ -1138,7 +1147,8 @@ evt.currentTarget.className += " active";
                 <br><A HREF="https://git.v0l.io/kieran/dtan" ADD_DATE="1701109665"target="_blank">Kieran/dtan </A> Distributed Torrent Archive on Nostr, DTAN 
             <br><br><br><A HREF="https://github.com/lightningames/astroblog-nostr" ADD_DATE="1701697441"target="_blank">lightningames/astroblog-nostr</A> astro blog that also posts to nostr blog sites
 			    <br><br><A HREF="https://github.com/ChristianChiarulli/nostrings.news" target="_blank"ADD_DATE="1702367226" >ChristianChiarulli/nostrings.news</A> I've got no strings to hold me down, to make me fret, or make me frown.
-          
+                <br><br><A HREF="https://nymble.world/#next" ADD_DATE="1703090659"  target="_blank">Nymble World Decentralized Social Media App</A>
+           
                
 		
 		
@@ -1146,7 +1156,8 @@ evt.currentTarget.className += " active";
 	<br><br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> MostroP2P/mostro-web<A HREF="https://github.com/MostroP2P/mostro-web"target="_blank"style="text-decoration: none"> Mostro web client</A>
                 <br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> monty888/monstr_terminal<A HREF="https://github.com/monty888/monstr_terminal"target="_blank"style="text-decoration: none"> some terminal apps for nostr using monstr</A>
            	<br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> arkin0x/cyberspace<A HREF="https://github.com/arkin0x/cyberspace"target="_blank"style="text-decoration: none"><br>A decentralized metaverse where all actions require proof-of-work</A><br>May 18th '23 
-            <br><br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> pj8912/nostrdev<A HREF="https://github.com/pj8912/nostrdev"target="_blank"style="text-decoration: none"><br>Simple nostr client built using php</A>
+			    <br><A HREF="https://yakihonne.com/article/naddr1qq25vwrnwucrqmj6wd04svrefeh9v622095hzq3qarkn0xxxll4llgy9qxkrncn3vc4l69s0dz8ef3zadykcwe7ax3dqxpqqqp65wzhp6kj" ADD_DATE="1703068895" target="_blank">Cyberspace and ONOSENDAI Progress Report 1</A> On Yakihonne, OpenSats Quarterly Update 
+             <br><br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/> pj8912/nostrdev<A HREF="https://github.com/pj8912/nostrdev"target="_blank"style="text-decoration: none"><br>Simple nostr client built using php</A>
 		<br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/><A HREF="https://github.com/bongatores/nostrSpace" target="_blank">bongatores/nostrSpace: <br>A nostr space very empty</A>
               	<br><br><img src="https://img.icons8.com/emoji/48/null/green-circle-emoji.png"/><A HREF="https://github.com/AsaiToshiya/nostr-poster"target="_blank">AsaiToshiya/nostr-poster</A> Nostr client idea
 		
@@ -1323,7 +1334,8 @@ Projects or groups</h2>
                 		<br><br><A HREF="https://adventar.org/calendars/8922" ADD_DATE="1699285548"target="_blank" >Monacard（モナカード）Advent Calendar 2023 on Adventar</A> Creator kotaroo
                 	<br><br><br><A HREF="https://github.com/studioTeaTwo/self-sovereign-blog" ADD_DATE="1702560526"target="_blank">studioTeaTwo/self-sovereign-blog</A>
 						<br><br><A HREF="https://zapwebring.com/" ADD_DATE="1702907084" target="_blank">Zapwebring Get paid to advertise</A>
-      
+						<br><br><A HREF="https://welcome.tunestr.io/" ADD_DATE="1703092041" target="_blank">About Tunestr.io</A>
+         
           
             
 				</button>
@@ -1795,7 +1807,10 @@ Projects or groups</h2>
             		    <br><br><br><A HREF="https://shockwallet.app/" ADD_DATE="1700930907"target="_blank" >SHOCKWALLET</A>
                			    <br><A HREF="https://stacker.news/items/328510" ADD_DATE="1700931083" target="_blank">Founder of Shocknet, creators of Lightning.Video and ShockWallet </A>... AMA \ stacker news ~bitcoin
 				 <br><br><A HREF="https://www.fmon.io/" ADD_DATE="1701437827" target="_blank">Find Me On NOSTR</A>
-         
+				 <br><br><A HREF="https://chronostr.pages.dev/" target="_blank"ADD_DATE="1703061738">chronostr</A> A scheduling adjustment and RSVP tool working on the Nostr.
+                 <br><A HREF="https://github.com/studiokaiji/chronostr" ADD_DATE="1703065989"target="_blank">studiokaiji/chronostr</A>
+             <br><br><br><A HREF="https://www.flare.pub/" ADD_DATE="1703144496"target="_blank">Flare.pub</A> a video sharing site built on Nostr! 
+           
        
          
 	</button>
