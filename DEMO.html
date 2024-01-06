@@ -4,10 +4,15 @@
   .my-button {
     width: 150px;
     height: 80px;
+	font-weight: bold;
+	align:center;
   }
   .my-button3 {
-    width: 100px;
+   	min-width: 80px;
+	 max-width: 120px;
     height: 40px;
+	border: 2 px solid grey;
+	Font-size:25px;
   }
   .my-button5 {
 	height:40px;
@@ -19,6 +24,8 @@
   .my-button2 {
     width: 150px;
     height: 100px;
+	font-weight: bold;
+	align:center;
   }
   a {
   color:black;
@@ -46,6 +53,9 @@
 <style>
   body {
     background-color: grey;
+  }
+  .space{
+  padding-left:50px;
   }
 </style>
 <style><!--light-->
@@ -85,19 +95,20 @@ function impostaTema(tema) {
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" integrity="sha384-yfs9q6j/s2QVp/hxWhxSbjTrtEnBu3S8SwvQfdgcD+4VfOEmVgs+Rf4aIbMDq/Qo" crossorigin="anonymous">
 <title>DEMO</title>
-<h1><b>Nostr:</b><br>
-<b>Note and other stuff transmitted by Relays</b></h1>
-
-<button onclick="openDialog1()"class="my-button"style="font-size:20px">&emsp;&emsp;Welcome</button>
-<button onclick="openDialog2()"class="my-button"style="font-size:20px">&emsp;&emsp;Keys</button>
-<button onclick="openDialog3()"class="my-button"style="font-size:20px">&emsp;&emsp;Profile</button>
-<button onclick="openDialog4()"class="my-button"style="font-size:20px">&emsp;&emsp;JSON</button><br><br>
-<button onclick="openDialog5()"class="my-button"style="font-size:20px">&emsp;&emsp;Nostr Address</button>
-<button onclick="openDialog6()"class="my-button"style="font-size:20px">&emsp;&emsp;LightNing Address</button>
-<button onclick="openDialog7()"class="my-button"style="font-size:20px">&emsp;&emsp;Relay Explorer</button>
-<button onclick="openDialog8()"class="my-button"style="font-size:20px">&emsp;&emsp;Nostr key to safety</button><br><br>
-<button onclick="openDialog9()"class="my-button2" style="font-size:20px" height="100px">&emsp;&emsp;Clients of Nostr | App| Blog| Tools</button>
-
+<h1 class="space" ><b>Nostr:</b>
+<b >Note and other stuff transmitted by Relays</b></h1>
+<div class="space"><button ><img src="https://image.nostr.build/a531bdc53de13acaac2d69d15143988f51c2990994be283882241e8ddb0f4d80.jpg" width="500px" height="500px"/>
+<img src="https://image.nostr.build/98a70cb1a7a5e6d03af8fd76d1dd61b99231db541c9d6e896c7d0811ae16adb9.jpg"width="500px" height="500px"/></button></div>
+<br><br><div class="space"><button onclick="openDialog1()"class="my-button"style="font-size:20px">Welcome</button>
+<button onclick="openDialog2()"class="my-button"style="font-size:20px">Keys</button>
+<button onclick="openDialog3()"class="my-button"style="font-size:20px">Profile</button>
+<button onclick="openDialog4()"class="my-button"style="font-size:20px">JSON</button><br><br></div>
+<div class="space"><button onclick="openDialog5()"class="my-button"style="font-size:20px">Nostr Address</button>
+<button onclick="openDialog6()"class="my-button"style="font-size:20px">LightNing Address</button>
+<button onclick="openDialog7()"class="my-button"style="font-size:20px">Relay Explorer</button>
+<button onclick="openDialog8()"class="my-button"style="font-size:20px">Nostr key to safety</button><br><br></div>
+<div class="space"><button onclick="openDialog9()"class="my-button" style="font-size:20px" >Apps Blog Tools</button>
+<button onclick="openDialog10()"class="my-button" style="font-size:20px" >Nostr Preview page</button></div>
 
 <body>
 <dialog id="myDialog1" class="dialog">
@@ -224,8 +235,8 @@ evt.currentTarget.className += " active";
   <p><h2>Examples</h2></p><br><br>
   <button><a href="https://nak.nostr.com/"><h2>Nak.Nostr link</h2></a></button><BR><BR>
   <iframe src="https://nak.nostr.com/" width="400" height="600" frameborder="0"></iframe>
-</body><br><br><button><a href="https://www.nostr.guru/"><h2>Nostr.guru link</h2></a></button><br><br>
-<iframe src="https://www.nostr.guru/" width="400" height="600" frameborder="0"></iframe><br><br>
+</body><br><br><button><a href="https://gateway.nostr.com/"><h2>Nostr gateway link</h2></a></button><br><br>
+<iframe src="https://gateway.nostr.com/" width="400" height="600" frameborder="0"></iframe><br><br>
 <iframe src="https://nostrtool.com/" width="400" height="600" frameborder="0"></iframe></p>
   <button onclick="closeDialog4()"style="font-size:30px">Close</button>
 </dialog>
@@ -234,8 +245,8 @@ evt.currentTarget.className += " active";
   <p><h1>Examples of Nip-05 Address</h1>
 	<a href="https://bitcoinnostr.com/#lfg"><h1>BitcoinNostr Link</h1></a><br><br> 
 	<iframe src="https://bitcoinnostr.com/#lfg" width="400" height="600" frameborder="0"></iframe>
-	<br><br><br><a href="https://nostrplebs.com/register"><h1>NostrPlebs Link</h1></a><br><br>
-	<iframe src="https://nostrplebs.com/register"width="400" height="600" frameborder="0"></iframe></p>
+	<br><br><br><a href="https://nostrcheck.me/"><h1>Nostrcheck.me Link</h1></a><br><br>
+	<iframe src="https://nostrcheck.me/"width="400" height="600" frameborder="0"></iframe></p>
   <button onclick="closeDialog5()"style="font-size:30px">Close</button>
 </dialog>
 
@@ -270,9 +281,15 @@ AKA extension <img src="https://lh3.googleusercontent.com/HNdF4BkwNJXbypmVb8RLo9
 </dialog>
 <dialog id="myDialog9" class="dialog">
   <h2>Dialog 9</h2>
-  <p><br><br><br><button><a  href="https://www.nostrapps.com/"><h1>NostrApps link</h1></a></button><br><br><iframe src="https://www.nostrapps.com/"width="500" height="600" frameborder="0"></iframe></td>
+  <p><br><br><br><button><a  href="https://www.nostrapps.com/"><h1>NostrApps link</h1></a></button><br><br><iframe src="https://www.nostrapps.com/"width="500" height="600" frameborder="0"></iframe>
 	</p>
   <button onclick="closeDialog9()"style="font-size:30px">Close</button>
+</dialog>
+<dialog id="myDialog10" class="dialog">
+  <h2>Dialog 10</h2>
+  <p><br><br><br><button><a href="https://njump.me/"><h1>Njump.me link</h1></a></button><br><br><iframe src="https://njump.me/"width="500" height="600" frameborder="0"></iframe>
+	</p>
+  <button onclick="closeDialog10()"style="font-size:30px">Close</button>
 </dialog>
 
 <script>
@@ -361,11 +378,20 @@ AKA extension <img src="https://lh3.googleusercontent.com/HNdF4BkwNJXbypmVb8RLo9
     var dialog = document.getElementById("myDialog9");
     dialog.close();
   }
+   function openDialog10() {
+    var dialog = document.getElementById("myDialog10");
+    dialog.showModal();
+  }
+
+   function closeDialog10() {
+    var dialog = document.getElementById("myDialog10");
+    dialog.close();
+  }
 </script>
 <br><br><p style="font-size:30px">
 <h1>&emsp;&emsp;click here, the triangle</h1></p>
 &emsp;&emsp;<details>
-  <summary>
+  <summary class="space">
     <button class="language-button" onclick="toggleLanguage()"style="font-size:30px">English summary</button>&emsp;&emsp;
     <button class="language-button" onclick="toggleLanguage()"style="font-size:30px">Italian summary</button>
   </summary>
@@ -384,8 +410,9 @@ Tab 6: If you're here for a zap, the easiest way is to have an lnAddress. Paste 
 
 Tab 7: Another interesting thing concerns the relays. We send messages and other things to servers and connect to various ones. Here's a relay explorer.<br>
 Tab 8: A slightly more secure but slower way to sign notes and other things.<br>
-
-Tab 9: The best apps, clients, and tools of Nostr. Take a look.</p>
+<br>
+Tab 9: The best apps, clients, and tools of Nostr. Take a look.<br>
+Tab 10: It is an easy way to preview a note and then open it with your preferred client/app.</p>
   </div>
   
   <div id="italiano-passi" style="display: none;">
@@ -393,13 +420,18 @@ Tab 9: The best apps, clients, and tools of Nostr. Take a look.</p>
 Benvenuto questo è un sommario, un primo approccio a nostr<Br><br>
 Tab 1: Simulazione della generazione di una chiave privata associata a una chiave pubblica<br>
 Tab 2: Copia di entrambi le chiavi, possibilità di esportare<br><br>
+
 Tab 3: Sistemazione delle impostazioni del profilo di un tipico client nostr, ci sono delle cose non familiari aspetta<br>
 Tab 4: Nostr sotto-sopra. Ogni nota è un evento json, qua puoi comprendere meglio, o almeno farti una prima idea.<br><br>
+
 Tab 5: Configurazione di un indirizzo Nostr, la chiave pubblica (pubkey) è difficile da ricordare, gruppi e altre domande<br>
 Tab 6: Se sei qui per fare uno zap, il modo più semplice è avere un lnAddress. Incollalo nelle impostazioni e sei pronto.<br><br>
+
 tab 7: Un'altra cosa interessante riguarda i relay. Noi inviamo messaggi e altre cose a dei server e ci colleghiamo a diversi di loro. Qui c'è un esploratore di relay<br>
 tab 8: Un modo per firmare le note e altre cose in modo leggermente più sicuro ma meno veloce<br><br>
-Tab 9: Le migliori app, client e strumenti di Nostr. Dai un'occhiata.  
+
+Tab 9: Le migliori app, client e strumenti di Nostr. Dai un'occhiata. 
+tab 10: È un modo semplice per visualizzare in anteprima una nota e quindi aprirla con il tuo client/app preferito. 
 </p>
   </div>
 </details>
