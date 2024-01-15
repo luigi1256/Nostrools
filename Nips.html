@@ -135,7 +135,27 @@ nav ul li a {
   font-size: 25px;
 }
 </style>
-
+<style>
+	.button-grid {
+  display: grid;
+  position: relative;
+  left:400px;
+  width:700px;
+  grid-template-columns: repeat(4, 1fr); /* 4 colums con larghezza uguale */
+  gap: 10px; /* Space tra i bottoni */
+}
+ .gray-button {
+    background-color: grey;
+	min-height:50px;
+	max-height:120px;
+    color: black;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 30px;
+    cursor: pointer;
+  } 
+</style>
 	 <script>
     
     function showDescription(id) {
@@ -253,16 +273,23 @@ nav ul li a {
   
   
   
-  <br><br><nav >
-  		<ul>
-   			 <li><a href=""></a><div id="top"></div></li>
+  <br><br>
+  		
+   			 <div><a href=""></a><div id="top"></div></div>
+			 <div class="button-grid">
+			 <div><img src="https://image.nostr.build/a6e8624d68a3b561dd863bf715f0cfe54322bf1f5b3ff6f8cad422de11ca5547.png" width="150px" height="150px"/></div>
+			 <div></div>
+			 <div><h1><button class="grey-button">Developers discover kinds events</button></h1></div>
+    		 <div></div>
 				
-					<li><h1><button class="grey-button" style="margin-left: 370px">Developers create kinds events</button></h1></li>
-    			 <li><a href="https://asaitoshiya.com/nostr-nips-before-recommendation/" target="_blank">NIPs JP</a></li>
-    			 <li><a href="https://github.com/nostr-protocol/nips" target="_blank">NIPs GitHUB</a></li>
-    			 <li><a href="https://github.com/Notes-Machine/NOSTR-Community-Standard"target="_blank"><h3>Standard</h3></a></li>
-			</ul>
-	</nav>	
+				
+				<div class="gray-button"><a href="https://asaitoshiya.com/nostr-nips-before-recommendation/" target="_blank">NIPs JP</a></div>
+    			<div  class="gray-button"><a href="https://github.com/nostr-protocol/nips" target="_blank">NIPs GitHUB</a></div>
+    			<div class="gray-button"a href="https://github.com/Notes-Machine/NOSTR-Community-Standard"target="_blank"><h3>Standard</h3></a></div>
+				<div class="gray-button"><a href="https://github.com/nostr-protocol/nips/issues/984"target="_blank">Roadmap</a> for NOSTR developers #984</div>
+				</button>
+		</div>
+	
   <div style="margin-left: 370px; padding: 10px;">
     <!-- Descrizione App 1 -->
 	
