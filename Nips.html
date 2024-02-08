@@ -2,13 +2,12 @@
 <html>
 <head>
   <title>NIPS</title>
+  
   <style>
     
     .sidebar {
-      width: 150px;
-      position: fixed;
-      top: 0;
-      left: 0;
+	position: fixed;
+      width: 300px;
       background-color: darkgrey;
       padding: 10px;
     }
@@ -106,34 +105,7 @@
 	  
 	  
 	  
-  <style>
-nav {
-  background: grey; 
-  padding: 1px 0; 
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Ombra leggera */
-  width: 100%;	
-}
-
-nav ul {
-  list-style: none; 
-  display: flex; 
-  justify-content: right; 
-}
-
-nav ul li {
-  margin: 0 10px; 
-  }
-
-nav ul li a {
-  color: darkblue; 
-  text-decoration: none; 
-  padding: 5px 5px; 
-  border-radius: 5px; 
-}
-nav ul li a {
-  color: black; 
-  font-size: 25px;
-}
+ 
 </style>
 <style>
 	.button-grid {
@@ -143,6 +115,14 @@ nav ul li a {
   width:700px;
   grid-template-columns: repeat(4, 1fr); /* 4 colums con larghezza uguale */
   gap: 10px; /* Space tra i bottoni */
+}
+	.button-grid1 {
+  display: grid;
+  position: relative;
+  left:20px;
+  width:700px;
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 30px; 
 }
  .gray-button {
     background-color: grey;
@@ -173,126 +153,115 @@ nav ul li a {
  
 </head>
 <style>div {color: lightblue; }</style>
-<style>button {font-size:30px;}</style>
+
 <body style="font-size:25px" link="darkgrey" vlink="purple"> 
-  <div class="sidebar">
-    <h1>NiPs</h1>
   
-    <!-- App 1 -->
-	Open NIPs<br><br>
+  <div class="button-grid">
+    
+  <div><h1>NiPs</h1></div>
+  <div><img src="https://image.nostr.build/a6e8624d68a3b561dd863bf715f0cfe54322bf1f5b3ff6f8cad422de11ca5547.png" width="150px" height="150px"/></div>
+  <div><button class="grey-button">Developers discover kinds events</button></div>
+  <div><a href=""></a><div id="top"></div></div>
+  	
+   			
+			 
+			 
+			 			
+				
+				<div class="gray-button"><a href="https://asaitoshiya.com/nostr-nips-before-recommendation/" target="_blank">NIPs List</a></div>
+    			<div  class="gray-button"><a href="https://github.com/nostr-protocol/nips" target="_blank">NIPs GitHUB</a></div>
+    			<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/issues/984"target="_blank">Roadmap</a> for NOSTR developers #984</div>
+				<div></div>
+				</button>
+		
+	
+   
+	
     <div class="NIP" onclick="showDescription('NIP1-description')">NIP 17</div>
     
-    <!-- App 2 -->
+    
     <div class="NIP" onclick="showDescription('NIP2-description')">NIP 24</div>
     
-    <!-- App 3 -->
+    
     <div class="NIP" onclick="showDescription('NIP3-description')">NIP 29</div>
   
-  <!-- App  -->
+ 
     <div class="NIP" onclick="showDescription('NIP4-description')">NIP 34</div>
 	
-  <!-- App  -->
+  
     <div class="NIP" onclick="showDescription('NIP5-description')">NIP 35</div>
 	
 	
 	 <div class="NIP" onclick="showDescription('NIP8-description')">NIP 37</div>
 	  <div class="NIP" onclick="showDescription('NIP21-description')">NIP 41</div>
-	<!-- App  -->
+	
     <div class="NIP" onclick="showDescription('NIP6-description')">NIP 43</div>
 	
-  <!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP7-description')">NIP 44</div>
+  
+    <div class="NIP" onclick="showDescription('NIP7-description')">NIP 44 ✔️</div>
 	
 	
 	
 	<div class="NIP" onclick="showDescription('NIP23-description')">NIP-85</div>
 	
 		<div class="NIP" onclick="showDescription('NIP25-description')">NIP-87</div>
+		<div class="NIP" onclick="showDescription('NIP9-description')">NIP 91</div>
+	  <div class="NIP" onclick="showDescription('NIP10-description')">NIP 96 ✔️</div>
+    <div class="NIP" onclick="showDescription('NIP12-description')">NIP 100 </div>
+    
+   
+    <div class="NIP" onclick="showDescription('NIP13-description')">NIP 101 </div>
+    
+   
+    <div class="NIP" onclick="showDescription('NIP14-description')">NIP 102 </div>
+  
+  
+    <div class="NIP" onclick="showDescription('NIP15-description')">NIP 103</div>
+	
+  
+    <div class="NIP" onclick="showDescription('NIP16-description')">NIP 105</div>
+	
+	
+	
+    <div class="NIP" onclick="showDescription('NIP17-description')">NIP 106</div>
+	
+  	
+	
+    <div class="NIP" onclick="showDescription('NIP18-description')">NIP 107</div>
+	
+  
+   
+	
+    <div class="NIP" onclick="showDescription('NIP20-description')">NIP 108</div>
+	
+  
+   
+ 
+	
+	 <div class="NIP" onclick="showDescription('NIP22-description')">Nip 90 ✔️ extra</div>
 	</div>
    
 	
-  <!-- App  -->
-    
   
-	<!-- App  -->
     
   
 
   
-  <body style="font-size:25px" link="grey" vlink="purple"> 
-  <div class="sidebar2">
-    <h1>NiPs</h1>
-	
-	<!-- App 1 -->
-	Open NIPs<br><br>
-	<div class="NIP" onclick="showDescription('NIP9-description')">NIP 91</div>
-	  <div class="NIP" onclick="showDescription('NIP10-description')">NIP 96</div>
-    <div class="NIP" onclick="showDescription('NIP12-description')">NIP 100 </div>
-    
-    <!-- App 2 -->
-    <div class="NIP" onclick="showDescription('NIP13-description')">NIP 101 </div>
-    
-    <!-- App 3 -->
-    <div class="NIP" onclick="showDescription('NIP14-description')">NIP 102 </div>
-  
-  <!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP15-description')">NIP 103</div>
-	
-  <!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP16-description')">NIP 105</div>
-	
-	
-	<!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP17-description')">NIP 106</div>
-	
   	
-	<!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP18-description')">NIP 107</div>
 	
-  <!-- App  -->
-   
-	<!-- App  -->
-    <div class="NIP" onclick="showDescription('NIP20-description')">NIP 108</div>
 	
-  <!-- App  -->
-   
+	
+	
+	
+	
+	
+  
+  
+  
  
-	
-	 <div class="NIP" onclick="showDescription('NIP22-description')">Nip 90 extra</div>
- </div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-  
-  
-  
-  <br><br>
-  		
-   			 <div><a href=""></a><div id="top"></div></div>
-			 <div class="button-grid">
-			 <div><img src="https://image.nostr.build/a6e8624d68a3b561dd863bf715f0cfe54322bf1f5b3ff6f8cad422de11ca5547.png" width="150px" height="150px"/></div>
-			 <div></div>
-			 <div><h1><button class="grey-button">Developers discover kinds events</button></h1></div>
-    		 <div></div>
-				
-				
-				<div class="gray-button"><a href="https://asaitoshiya.com/nostr-nips-before-recommendation/" target="_blank">NIPs JP</a></div>
-    			<div  class="gray-button"><a href="https://github.com/nostr-protocol/nips" target="_blank">NIPs GitHUB</a></div>
-    			<div class="gray-button"><a href="https://github.com/Notes-Machine/NOSTR-Community-Standard"target="_blank"><h3>Standard</h3></a></div>
-				<div class="gray-button"><a href="https://github.com/nostr-protocol/nips/issues/984"target="_blank">Roadmap</a> for NOSTR developers #984</div>
-				</button>
-		</div>
-	
   <div style="margin-left: 370px; padding: 10px;">
-    <!-- Descrizione App 1 -->
-	
+   
+	<div class="button-grid1">
     <div id="NIP1-description" class="description" >
       <h2>NIP 17</h2>
       <p >Event Metadata #605 status: Open
@@ -309,22 +278,22 @@ A relay can add information to the note to give it some context.
 	  
     </div>
     
-    <!-- Descrizione App 2 -->
+    
     <div id="NIP2-description" class="description">
       <h2>NIP 24</h2>
       <p>Rich Text Note #619 status:Closed<br><button>This NIP defines kinds for a "rich text note" <br>such as HTML and Markdown that are primarily displayed in "social" clients
 	  <br>&emsp;&emsp;<a href="https://github.com/nostr-protocol/nips/pull/619"target="_blank"style="text-decoration: none">Source</a> GitHub</p>
     </button></div>
     
-    <!-- Descrizione App 3 -->
+   
     <div id="NIP3-description" class="description">
-      <h2>NIP 29</h2>
+      <h2>NIP 29 Draft</h2>
       <p>NIP-29: Simple Group Chat #566 status:Closed<br><br>
 	  <a href="https://github.com/nostr-protocol/nips/pull/566"target="_blank"style="text-decoration: none">Source</a> GitHub
 	  </p>
 	      </div>
 		  
-		  <!-- Descrizione App 4 -->
+		 
     <div id="NIP4-description" class="description">
       <h2>NIP 34</h2>
       <p>NIP-34 - Algorithmic Filter #579 status:Open
@@ -339,6 +308,21 @@ A relay can add information to the note to give it some context.
 	  </button>
 	  <br><br> <button><a href="https://github.com/nostr-protocol/nips/pull/579"target="_blank"style="text-decoration: none">Source Git Hub</a></button>
 	  	  </p>
+		  
+		  <h2>NIP-34 Draft</h2>
+		 <p>NIP-34: Git stuff #997
+		 <button><a href="https://github.com/nostr-protocol/nips/pull/997"target="_blank"style="text-decoration: none">Source Git Hub</a></button>
+		 </p>
+
+
+
+
+
+
+
+
+
+
     </div>
 	<div id="NIP5-description" class="description">
       <h2>NIP 35</h2>
@@ -346,10 +330,10 @@ A relay can add information to the note to give it some context.
 	  <a href="https://github.com/nostr-protocol/nips/pull/607"target="_blank"style="text-decoration: none">Source</a> Github 
 	  </p>
     </div>
-	<!-- Descrizione App 6 -->
+	
     <div id="NIP6-description" class="description">
       <h2>NIP 43</h2>
-      <p>NIP-43 - Fast Authentication #571 status:Open
+      <p>NIP-43 - Fast Authentication #571 status:Closed
 	  <button>NIP 43: Fast Auth between clients and relays
 		<br>This NIP proposes a faster method for auth between clients and relays. 
 		Clients open a connection to a relay they’ll open it with an “authorization” query parameter on the end of the relay url. 
@@ -362,15 +346,18 @@ A relay can add information to the note to give it some context.
 	 <a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-08"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly
 	 <br><br><a href="https://github.com/nostr-protocol/nips/pull/571"target="_blank"style="text-decoration: none">Source</a></p>
     </div>
-	<!-- Descrizione App 7 -->
+	
     <div id="NIP7-description" class="description">
-      <h2>NIP 44</h2>
+      <h2>NIP 44 Merged</h2>
       <p>NIP44 encryption standard, revision 3 #746 status:Open<br>
 	  <a href="https://github.com/nostr-protocol/nips/pull/746"target="_blank"style="text-decoration: none">Source</a> GitHub
-	  
+	  <br>Private DM #978
+	  <a href="https://github.com/nostr-protocol/nips/pull/978"target="_blank"style="text-decoration: none">Source</a> GitHub
+	  <br> Allow custom salt on NIP-44 #1020
+	  <a href="https://github.com/nostr-protocol/nips/pull/1020"target="_blank"style="text-decoration: none">Source</a> GitHub
 	  </p>
     </div>
-	<!-- Descrizione App 8 -->
+	
     <div id="NIP8-description" class="description">
       <h2>NIP 37</h2>
       <p>NIP-37: general methods for dealing with lost keys #637  status:Open<br>
@@ -386,11 +373,11 @@ A relay can add information to the note to give it some context.
 	<div id="NIP25-description" class="description">
       <h2>NIP 87</h2>
       <p>NIP-87:Add Closed Communities #875<br>
-	  <a href=""target="_blank"style="text-decoration: none">Source</a> GitHub
+	  <a href="https://github.com/nostr-protocol/nips/pull/875"target="_blank"style="text-decoration: none">Source</a> GitHub</p>
 	  </p>
     </div>
 	
-	<!-- Descrizione App 9 -->
+	
     <div id="NIP9-description" class="description">
       <h2>NIP 91</h2>
       <p>NIP-91: Bech32 URL Query #609 status:Closed<br>
@@ -413,12 +400,12 @@ a location as an array of two numbers: longitude and latitude.
  
 
    </div>
-	<!-- Descrizione App 10 -->
+	
     <div id="NIP10-description" class="description">
       <h2>NIP 96</h2>
       <p>NIP-96: Code Collaboration over Nostr #618 status:Open<br>
 	  <a href="https://github.com/nostr-protocol/nips/pull/618"target="_blank"style="text-decoration: none">Source</a></p>
-		<h2>NIP 96 BIS </h2>
+		<h2>NIP 96 BIS Merged</h2> 
 		<p>NIP 96: HTTP File Storage #547 status:Open
 		<br><button>NIP 96: HTTP File Storage
 <br>This NIP proposes a protocol to help third parties offer file hosting services 
@@ -435,51 +422,51 @@ used by Nostr clients to serve the content to users.
 	
 	</div>
 	
-	<!-- Descrizione App 12 -->
+	
     <div id="NIP12-description" class="description">
       <h2>NIP 100</h2>
       <p>NIP100:Decentralized Advertising Network <br> (NOSTR-DAN) #956<br>
 	  <a href="https://github.com/nostr-protocol/nips/issues/956"target="_blank"style="text-decoration: none">Source</a> GitHub
 	  </p>
-	     <h2>NIP 100</h2>
-      <p>NIP100:Android Signer Application<br> #868 status:Open<br>
+	    
+      <p>Android Signer Application<br> #868 status:Open<br>
 	  <a href="https://github.com/nostr-protocol/nips/pull/868/ "target="_blank"style="text-decoration: none">Source</a> GitHub
 	  </p>
 
 	 
     </div>
-	<!-- Descrizione App 13 -->
+	
     <div id="NIP13-description" class="description">
       <h2>NIP 101</h2>
-      <p>NIP-101 : Event Compression and Encoding Support<br> #730 status:Open<br>
+      <p>NIP-101 : Event Compression and Encoding Support<br> #730 status:Closed<br>
 	  <a href="https://github.com/nostr-protocol/nips/pull/730"target="_blank"style="text-decoration: none">Source</a> GitHub
 	  </p>
 	  
 	 
     </div>
-	<!-- Descrizione App 14 -->
+	
     <div id="NIP14-description" class="description">
       <h2>NIP 102</h2>
       <p>example</p>
     </div>
-	<!-- Descrizione App 15 -->
+	
     <div id="NIP15-description" class="description">
       <h2>NIP 103</h2>
       <p>example</p>
     </div>
-	<!-- Descrizione App 16 -->
+	
     <div id="NIP16-description" class="description">
       <h2>NIP 105</h2>
 	  <p>NIP-105 API Service Marketplace #780 status:Open
       <br><a href="https://github.com/nostr-protocol/nips/pull/780">Source</a> Git Hub</p>
     </div>
-	<!-- Descrizione App 17 -->
+	
     <div id="NIP17-description" class="description">
       <h2>NIP 106</h2>
 	  <p>NIP-106 Decentralized Web Hosting on Nostr<br> #811 status:Open</p>
       <p><a href="https://github.com/nostr-protocol/nips/pull/811">Source</a> GitHub</p>
     </div>
-	<!-- Descrizione App 18 -->
+	
     <div id="NIP18-description" class="description">
       <h2>NIP 107</h2>
       <p>NIP 107: Nostr IoT #814 status:Open
@@ -499,7 +486,7 @@ used by Nostr clients to serve the content to users.
 	  
 	  
     </div>
-	<!-- Descrizione App 19 -->
+	
     <div id="NIP19-description" class="description">
       <h2>Sherry Lessons 🍓</h2>
   <p><h3>NIP day1 </h2>
@@ -515,7 +502,7 @@ used by Nostr clients to serve the content to users.
 	<!-- Descrizione App 20 -->
     <div id="NIP20-description" class="description">
       <h2>NIP 108 </h2>
-      <p> NIP 108: Lightning Gated Content
+      <p> NIP 108: Lightning Gated Content #827
 	  <button>This NIP introduces general purpose lightning 
 	  gated content. They’d essentially be selling 
 	  the decryption key through this process. There would be a third party 
@@ -525,6 +512,7 @@ used by Nostr clients to serve the content to users.
       
       
 	   <p><br><a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-22"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.22.2023
+	   <br><a href="https://github.com/nostr-protocol/nips/pull/827/"target="_blank">Source</a> Git Hub
  </p></button>
    </p> </div>
 	<!-- Descrizione App 21 -->
@@ -551,8 +539,8 @@ the “created” timestamp on the events are accurate.
 	</video></button>
     </div>
 	<div id="NIP22-description" class="description">
-    <h2 class="space">Nip 90</h2>
-      <p class="space" class="grey-button">NIP-90 Data Vending Machine (DVM) kinds 
+    <h2 >Nip 90</h2>
+      <p  class="grey-button">NIP-90 Data Vending Machine (DVM) kinds 
 	  <br><a href="https://www.data-vending-machines.org/">
 	  Link Events to 5000 to 7000</a><br><br>
 	  <button>
@@ -566,34 +554,47 @@ the “created” timestamp on the events are accurate.
 	  <br>Analytics: kind 5400
 	  </p>
 		</button>
-	</div>
+	</div></div>
 	
-	
-    <h2 class="space">Recent additions</h2>
-	 &emsp;&emsp;<button class="grey-button"><br><a href="https://github.com/nostr-protocol/nips/pull/897"target="_blank"style="text-decoration: none"><del>Nip-22:  “created_at”</del></a> 
-															<br><a href="https://github.com/nostr-protocol/nips/blob/master/38.md"target="_blank"style="text-decoration: none">Nip-38: User status</a> <a href="https://nostatus.vercel.app/"target="_blank">nostatus</a>
-															<br><a href="https://github.com/nostr-protocol/nips/blob/master/48.md"target="_blank"style="text-decoration: none">Nip-48: Proxy tags</a> 
-															<br><a href="https://github.com/nostr-protocol/nips/blob/master/75.md"target="_blank"style="text-decoration: none"> Nip-72: Communities</a> <a href="https://flycat.club/communities"target="_blank">Flycat</a></button>
-  															<br><br>&emsp;&emsp;<button class="grey-button">
-															<br><a href="https://github.com/nostr-protocol/nips/blob/master/75.md"target="_blank"style="text-decoration: none">Nip-75: Zap Goals</a> <a href="https://goals-silk.vercel.app/"target="_blank">Zapgoals</a>
-															<br><a href="https://github.com/nostr-protocol/nips/blob/master/84.md"target="_blank"style="text-decoration: none">Nip-84: Highlights</a> <a href="https://highlighter.com/"target="_blank">Highlighter</a>
-															<br><a href="https://github.com/nostr-protocol/nips/blob/master/90.md"target="_blank"style="text-decoration: none">Nip-90: Data Vending Machine</a> <a href="https://vendata.io/"target="_blank">Vendata.io</a> 
+	<div class="button-grid1">
+    <div><h2 class="space">Recent additions</h2></div>
+														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/pull/897"target="_blank"style="text-decoration: none"><del>Nip-22:  “created_at”</del></a> </div>
+														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/38.md"target="_blank"style="text-decoration: none">Nip-38: User status</a> <a href="https://nostatus.vercel.app/"target="_blank">nostatus</a></div>
+														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/46.md"target="_blank"style="text-decoration: none">NIP-46: Nostr Connect</a> </div>
+														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/48.md"target="_blank"style="text-decoration: none">Nip-48: Proxy tags</a> </div>
+														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/49.md"target="_blank"style="text-decoration: none">Nip-49: Private Key Encryption</a> </div>
+														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/59.md"target="_blank"style="text-decoration: none">Nip-59: Gift Wrap</a> </div>
+														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/75.md"target="_blank"style="text-decoration: none"> Nip-72: Communities</a> <a href="https://flycat.club/communities"target="_blank">Flycat</a></div>
+  														
+															<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/75.md"target="_blank"style="text-decoration: none">Nip-75: Zap Goals</a> <del><a href="https://goals-silk.vercel.app/"target="_blank">Zapgoals</a></del></div>
+															<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/84.md"target="_blank"style="text-decoration: none">Nip-84: Highlights</a> <a href="https://highlighter.com/"target="_blank">Highlighter</a></div>
+															<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/90.md"target="_blank"style="text-decoration: none">Nip-90: Data Vending Machine</a> <a href="https://vendata.io/"target="_blank">Vendata.io</a></div> 
+															<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/92.md"target="_blank"style="text-decoration: none">Nip-92: Media Attachments</a>  </div>
+															<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/96.md"target="_blank"style="text-decoration: none">Nip-96: HTTP File Storage Integration</a>  </div>
+													
 
 
-
-
-															<br><a href="https://github.com/nostrocket/NIPS"target="_blank"style="text-decoration: none">Nostrocket Nips</a> <a href="https://nostrocket.org/"target="_blank">NostRocket</a> 
-
-															</button>
-															<br><br>&emsp;&emsp;<button class="grey-button"><a href="https://www.e2encrypted.com/nostr/nips/" target="_blank"style="text-decoration: none"><h1>NIPs Source<br> e2encrypted</h1></a></button>
-   <br><br>&emsp;&emsp;<button class="grey-button"><br><br><br> <div class="NIP" onclick="showDescription('NIP19-description')">Sherry Lessons</div></button>
-   <br><br>&emsp;&emsp;<button class="grey-button"><a href="https://nostr-nips.com/" target="_blank"style="text-decoration: none"><h1>NIPs Source<br> nostr-nip.com</h1></a></button>
-  <h2 class="space">Old Table</h2>
- </div>
-  <br>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<iframe src="https://nostr.band/note1zrxr7fynk32ldlwklu8w8xsagfgfm3ktlewhyzsg5xyayzl8qu8seckyja?embed" width="60%" height="300" style="border:1px solid black;">
+															<div><h2>Other Stuff</h2></div>
+															<div class="grey-button"><a href="https://github.com/nostrocket/NIPS"target="_blank"style="text-decoration: none">Nostrocket Nips</a> <a href="https://nostrocket.org/"target="_blank">NostRocket</a> </div>
+															<div class="grey-button"><a href="https://github.com/nostur-com/nids/blob/main/02.md"target="_blank">NID-02 Website comments</a> nostur</div>
+															<div class="grey-button"><a href="https://github.com/stemstr/sips/blob/main/01.md"target="_blank">SIP-01 Music Track</a> stemstr</div>
+															</div>
+															<div class="button-grid1">
+															<div></div>
+															<div></div>
+															<div><hr></div>
+															<div class="grey-button"><a href="https://www.e2encrypted.com/nostr/nips/" target="_blank"style="text-decoration: none">NIPs Source e2encrypted</a></div>
+															<div class="grey-button"><div class="NIP" onclick="showDescription('NIP19-description')">Sherry Lessons</div></div>
+															<div class="grey-button"><a href="https://nostr-nips.com/" target="_blank"style="text-decoration: none">NIPs Source, nostr-nip.com</h1></a></div>
+															<div><hr></div>
+															</div>
+   
   
-
+ 
+  <h2 class="space">Old Table</h2>
+  <iframe src="https://njump.me/note1zrxr7fynk32ldlwklu8w8xsagfgfm3ktlewhyzsg5xyayzl8qu8seckyja?embed" width="600px" height="300" style="border:1px solid black;">
+  
+</div>
 
 	
 	
