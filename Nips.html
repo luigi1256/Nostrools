@@ -22,8 +22,33 @@
 	  font-size: 30px;
 	
     }
-    
-    
+	
+	<!--ARCHIVE!-->
+    .index {
+  width: 200px;
+  background-color: #b2b2b2;
+  padding: 20px;
+  font-size:22px;
+}
+.index ul {
+  list-style-type: none;
+}
+
+.index li {
+  margin-bottom: 10px;
+}
+
+.main {
+  flex-grow: 1;
+  width:20%;
+  padding: 20px;
+}
+
+.list-item {
+  margin-bottom: 30px;
+  padding-top:20px;
+}
+  <!--ARCHIVE!-->  
     .description {
       display: none;
       padding: 10px;
@@ -124,6 +149,13 @@
   grid-template-columns: repeat(1, 1fr); 
   gap: 30px; 
 }
+	.home {
+  display: grid;
+   left:20px;
+   grid-template-columns: repeat(4, 1fr); 
+  gap: 30px; 
+  font-weight:bold;
+}
  .gray-button {
     background-color: grey;
 	min-height:50px;
@@ -136,6 +168,7 @@
     cursor: pointer;
   } 
 </style>
+
 	 <script>
     
     function showDescription(id) {
@@ -155,31 +188,52 @@
 <style>div {color: lightblue; }</style>
 
 <body style="font-size:25px" link="darkgrey" vlink="purple"> 
-  
-  <div class="button-grid">
-    
-  <div><h1>NiPs</h1></div>
-  <div><img src="https://image.nostr.build/a6e8624d68a3b561dd863bf715f0cfe54322bf1f5b3ff6f8cad422de11ca5547.png" width="150px" height="150px"/></div>
+   <div class="home">
+   <div><h1>NiPs Page</h1></div>
+  <div class="grey-button"><img src="https://image.nostr.build/95df63fb125e89b25925b3e91d36850e58469b0b04b790138848b58f60d1a055.png" width="300px" height="150px"/></div>
   <div><button class="grey-button">Developers discover kinds events</button></div>
   <div><a href=""></a><div id="top"></div></div>
-  	
-   			
-			 
-			 
-			 			
-				
-				<div class="gray-button"><a href="https://asaitoshiya.com/nostr-nips-before-recommendation/" target="_blank">NIPs List</a></div>
+  </div>
+   <div class="home">
+		<div></div>
+        <div></div>
+        <div></div>
+		<div></div>
+		<div><a href="#item1">Numbers</a></div>
+		<div><a href="#item2">Recent Additions</a></div>
+		<div><a href="#item3">Resources</a></div>
+		<div></div>
+		<div><a href="#item4">Other Stuff</a></div>
+		<div><a href="#item5">Broken NIP</a></div>
+        <div><a href="#item6">OLD Table August 2023</a></div>
+        <div><a href="#item7"></a></div>
+        <div><a href="#item8"></a></div>
+        <div><a href="#item9"></a></div>
+   </div>
+   <div class="home">
+   <div></div><div></div><div></div><div></div>
+   <div class="gray-button"><a href="https://asaitoshiya.com/nostr-nips-before-recommendation/" target="_blank">NIPs List</a></div>
     			<div  class="gray-button"><a href="https://github.com/nostr-protocol/nips" target="_blank">NIPs GitHUB</a></div>
     			<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/issues/984"target="_blank">Roadmap</a> for NOSTR developers #984</div>
 				<div></div>
-				</button>
-		
-	
+   </div>
    
-	
-    <div class="NIP" onclick="showDescription('NIP1-description')">NIP 17</div>
+   </b>
+   
+		
+        
+      
+  <div class="home">
+  <div></div>
+  <div><div id="item1" >
+	  
+	  <h1>Numbers</h1><br></div></div>
+	  
+	  <div></div><div></div></div>
+  <div class="home" >
+  	<div class="NIP" onclick="showDescription('NIP1-description')">NIP 17</div>
     
-    
+    <div class ="NIP"onclick="showDescription('NIP27-description')">NIP 22</div>
     <div class="NIP" onclick="showDescription('NIP2-description')">NIP 24</div>
     
     
@@ -200,13 +254,15 @@
   
     <div class="NIP" onclick="showDescription('NIP7-description')">NIP 44 ✔️</div>
 	
+	<div class="NIP" onclick="showDescription('NIP26-description')">Nip 66</div>
 	
+	<div class="NIP" onclick="showDescription('NIP23-description')">NIP 85</div>
 	
-	<div class="NIP" onclick="showDescription('NIP23-description')">NIP-85</div>
-	
-		<div class="NIP" onclick="showDescription('NIP25-description')">NIP-87</div>
+		<div class="NIP" onclick="showDescription('NIP25-description')">NIP 87</div>
+		<div class="NIP" onclick="showDescription('NIP29-description')">NIP 88</div>
 		<div class="NIP" onclick="showDescription('NIP9-description')">NIP 91</div>
 	  <div class="NIP" onclick="showDescription('NIP10-description')">NIP 96 ✔️</div>
+	  <div class="NIP" onclick="showDescription('NIP28-description')">NIP 97</div>
     <div class="NIP" onclick="showDescription('NIP12-description')">NIP 100 </div>
     
    
@@ -240,31 +296,14 @@
 	
 	 <div class="NIP" onclick="showDescription('NIP22-description')">Nip 90 ✔️ extra</div>
 	</div>
-   
-	
-  
-    
-  
-
-  
-  	
-	
-	
-	
-	
-	
-	
-	
-  
-  
-  
  
-  <div style="margin-left: 370px; padding: 10px;">
+ 
+  <div style="margin-left: 200px; padding: 10px;">
    
 	<div class="button-grid1">
     <div id="NIP1-description" class="description" >
       <h2>NIP 17</h2>
-      <p >Event Metadata #605 status: Open
+      <p >Event Metadata #605 status: Open<br>
 	  <button> NIP 17: Event Metadata <br>
 A relay can add information to the note to give it some context.
 
@@ -277,6 +316,17 @@ A relay can add information to the note to give it some context.
 	  <a href="https://github.com/arthurfranca/nips/blob/nip-17/17.md"target="_blank"style="text-decoration: none">Text</a></p></button>
 	  
     </div>
+	<div id="NIP27-description" class="description" >
+      <h2>NIP 22</h2>
+      <p >
+	  <button><h2> NIP-22 Key Migration  #1056</h2><br>
+	  This is a key migration procedure that simply formalizes how we migrate keys today: 
+	  <br>via waiting for confirmations by friends of the key.<br>
+	  </p>
+	  <br><a href="https://github.com/nostr-protocol/nips/pull/1056/" target="_blank"> Source</a> GitHub
+	  
+	   
+    </div>
     
     
     <div id="NIP2-description" class="description">
@@ -288,7 +338,7 @@ A relay can add information to the note to give it some context.
    
     <div id="NIP3-description" class="description">
       <h2>NIP 29 Draft</h2>
-      <p>NIP-29: Simple Group Chat #566 status:Closed<br><br>
+      <p>NIP-29: Simple Group Chat #566 <br><br>
 	  <a href="https://github.com/nostr-protocol/nips/pull/566"target="_blank"style="text-decoration: none">Source</a> GitHub
 	  </p>
 	      </div>
@@ -296,24 +346,26 @@ A relay can add information to the note to give it some context.
 		 
     <div id="NIP4-description" class="description">
       <h2>NIP 34</h2>
-      <p>NIP-34 - Algorithmic Filter #579 status:Open
-	  <button> <b>NIP 34: Algorithmic Filter 🔍</B><br>
+      <p>
+	  <button>NIP-34 - Algorithmic Filter #579 status:Open<br>
+	  <b>NIP 34: Algorithmic Filter 🔍</B><br>
 		This NIP proposes a way for relays to support generic
 		algorithms for ordering notes so that clients can query
 		for notes from relays in a way specified by the indicated 
 		algorithm. 
 
 
-<button><a href="https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-09-24"target="blank"style="text-decoration: none">Source of Article</a> NostReport weekly report</button>
-	  </button>
-	  <br><br> <button><a href="https://github.com/nostr-protocol/nips/pull/579"target="_blank"style="text-decoration: none">Source Git Hub</a></button>
+<br><a href="https://habla.news/it/nostreport/Nostr-Tech-Weekly-2023-09-24"target="blank"style="text-decoration: none">Source of Article</a> NostReport weekly report
+	 
+	  <br><br> <a href="https://github.com/nostr-protocol/nips/pull/579"target="_blank"style="text-decoration: none">Source Git Hub</a>
 	  	  </p>
-		  
+		  <hr>
 		  <h2>NIP-34 Draft</h2>
-		 <p>NIP-34: Git stuff #997
-		 <button><a href="https://github.com/nostr-protocol/nips/pull/997"target="_blank"style="text-decoration: none">Source Git Hub</a></button>
+		 <p>NIP-34: Git stuff #997<br>
+		 The simplest possible git collaboration flow that has a chance of working.
+		 <br><a href="https://github.com/nostr-protocol/nips/pull/997"target="_blank"style="text-decoration: none">Source Git Hub</a>
 		 </p>
-
+		</button>
 
 
 
@@ -333,19 +385,28 @@ A relay can add information to the note to give it some context.
 	
     <div id="NIP6-description" class="description">
       <h2>NIP 43</h2>
-      <p>NIP-43 - Fast Authentication #571 status:Closed
-	  <button>NIP 43: Fast Auth between clients and relays
+      <p>
+	  <button>NIP-43 - Fast Authentication #571 status:Closed
+	  <br> NIP 43: Fast Auth between clients and relays
 		<br>This NIP proposes a faster method for auth between clients and relays. 
 		Clients open a connection to a relay they’ll open it with an “authorization” query parameter on the end of the relay url. 
 		That query param will actually be an encoded Nostr event whose payload
 		has the	necessary info for the relay to authenticate the user 
 		opening the connection.
-		</p><BR>
+		</p><br>
 		<p>
 		
 	 <a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-08"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly
 	 <br><br><a href="https://github.com/nostr-protocol/nips/pull/571"target="_blank"style="text-decoration: none">Source</a></p>
-    </div>
+    <hr>
+	<h2> NIP 43</h2>
+	Private DM #978 status: Open
+	<br>This direct message (DM) scheme between two participants is end-to-end encrypted, 
+	hides most metadata, has forward secrecy and aims to minimize spam.
+	<br><a href="https://github.com/nostr-protocol/nips/pull/978"target="_blank">Source</a> Git Hub
+	<a href="https://github.com/arthurfranca/nips/blob/priv-dm/43.md#session-channel"target="_blank">Text</a>
+	</button>
+	</div>
 	
     <div id="NIP7-description" class="description">
       <h2>NIP 44 Merged</h2>
@@ -355,6 +416,8 @@ A relay can add information to the note to give it some context.
 	  <a href="https://github.com/nostr-protocol/nips/pull/978"target="_blank"style="text-decoration: none">Source</a> GitHub
 	  <br> Allow custom salt on NIP-44 #1020
 	  <a href="https://github.com/nostr-protocol/nips/pull/1020"target="_blank"style="text-decoration: none">Source</a> GitHub
+	  <br><br><A HREF="https://github.com/paulmillr/nip44-implementations"target="_blank" >paulmillr/nip44-implementations</A> Collection of nostr NIP44 implementations in different languages
+                
 	  </p>
     </div>
 	
@@ -362,6 +425,12 @@ A relay can add information to the note to give it some context.
       <h2>NIP 37</h2>
       <p>NIP-37: general methods for dealing with lost keys #637  status:Open<br>
 	  <a href="https://github.com/nostr-protocol/nips/pull/637"target="_blank"style="text-decoration: none">Source</a> GitHub
+	  </p>
+    </div>
+	<div id="NIP26-description" class="description">
+      <h2>NIP 66</h2>
+      <p>NIP-66 Relay Discovery, Metadata and Monitoring System #230<br>
+	  <a href="https://github.com/nostr-protocol/nips/pull/230"target="_blank"style="text-decoration: none">Source</a> GitHub</p>
 	  </p>
     </div>
 	<div id="NIP23-description" class="description">
@@ -376,7 +445,13 @@ A relay can add information to the note to give it some context.
 	  <a href="https://github.com/nostr-protocol/nips/pull/875"target="_blank"style="text-decoration: none">Source</a> GitHub</p>
 	  </p>
     </div>
-	
+	<div id="NIP29-description" class="description">
+      <h2>NIP 88</h2>
+      <p>NIP-88: Discreet Log Contracts over Nostr #919<br>
+	  Still pretty heavy WIP but wanted to get it out there for other people's feedback in nostr and DLC communities.
+	  <br><a href="https://github.com/nostr-protocol/nips/pull/919"target="_blank">Source</a> GitHub</p>
+	  </p>
+    </div>
 	
     <div id="NIP9-description" class="description">
       <h2>NIP 91</h2>
@@ -421,7 +496,17 @@ used by Nostr clients to serve the content to users.
 		</p>
 	
 	</div>
-	
+	<div id="NIP28-description" class="description">
+      <h2>NIP 97</h2>
+      <p>NIP-97 Login with Nostr #1042<br>
+	  This NIP defines a flow for applications to request from a user that they control a private key for. 
+	  This enables logging into applications (such as paid relay/media hosting services) without having to use other flows which may be annoying to use or not available. 
+	  (DM codes, NIP-07 extensions)
+	  <br><a href="https://github.com/nostr-protocol/nips/issues/1042"target="_blank"style="text-decoration: none">Source</a> GitHub
+	  </p>
+	    
+      
+    </div>
 	
     <div id="NIP12-description" class="description">
       <h2>NIP 100</h2>
@@ -531,13 +616,15 @@ the “created” timestamp on the events are accurate.
 </p>
 	  <p><br><a href="https://habla.news/nostreport/Nostr-Tech-Weekly-2023-10-22"target="_blank"style="text-decoration: none">Source</a> Nostr Tech Weekly 10.22.2023
  </p>
-  </button>
-  <button class="my-button">
+  <hr>
+  
   Nip-41 video (kind0.io) <a href="https://njump.me/nevent1qqsphpf7jgffzvf5a46lp5l7vhxsqf8snv409w3tttafmnhztpp4usg0cjspm">Source</A> note
-  <video width="600" height="300" controls class="my-button2">
+  <br><br><video width="600" height="300" controls class="my-button2">
 	<source src="https://cdn.satellite.earth/3f1bf208810669bd3a9eaa7a0b9c7ff2d75d1abc893a6b2db8463d6f4923d083.mp4">
-	</video></button>
-    </div>
+	</video>
+	<p><a href="https://www.canva.com/design/DAF8SpwtDao/BlihN9zz00FdPvd4FSYpiQ/view?utm_content=DAF8SpwtDao&utm_campaign=designshare&utm_medium=link">slideshare</a> Nip-41 Identity managment
+    </p></button>
+	</div>
 	<div id="NIP22-description" class="description">
     <h2 >Nip 90</h2>
       <p  class="grey-button">NIP-90 Data Vending Machine (DVM) kinds 
@@ -557,7 +644,9 @@ the “created” timestamp on the events are accurate.
 	</div></div>
 	
 	<div class="button-grid1">
-    <div><h2 class="space">Recent additions</h2></div>
+    <div><div id="item2" >
+	  
+	  <h2 class="space">Recent additions</h2></div></div>
 														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/pull/897"target="_blank"style="text-decoration: none"><del>Nip-22:  “created_at”</del></a> </div>
 														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/38.md"target="_blank"style="text-decoration: none">Nip-38: User status</a> <a href="https://nostatus.vercel.app/"target="_blank">nostatus</a></div>
 														<div class="grey-button"><a href="https://github.com/nostr-protocol/nips/blob/master/46.md"target="_blank"style="text-decoration: none">NIP-46: Nostr Connect</a> </div>
@@ -574,26 +663,35 @@ the “created” timestamp on the events are accurate.
 													
 
 
-															<div><h2>Other Stuff</h2></div>
+															<div><div id="item4" ><h2>Other Stuff</h2></div></div>
 															<div class="grey-button"><a href="https://github.com/nostrocket/NIPS"target="_blank"style="text-decoration: none">Nostrocket Nips</a> <a href="https://nostrocket.org/"target="_blank">NostRocket</a> </div>
 															<div class="grey-button"><a href="https://github.com/nostur-com/nids/blob/main/02.md"target="_blank">NID-02 Website comments</a> nostur</div>
 															<div class="grey-button"><a href="https://github.com/stemstr/sips/blob/main/01.md"target="_blank">SIP-01 Music Track</a> stemstr</div>
+															<div class="grey-button"><a href="https://github.com/wds4/DCoSL/tree/main/dips" target="_blank">DIPs</a> DCoSL implementation proposals
 															</div>
 															<div class="button-grid1">
 															<div></div>
 															<div></div>
 															<div><hr></div>
+															<div id="item3" ><h2>Resources</h2></div>
 															<div class="grey-button"><a href="https://www.e2encrypted.com/nostr/nips/" target="_blank"style="text-decoration: none">NIPs Source e2encrypted</a></div>
 															<div class="grey-button"><div class="NIP" onclick="showDescription('NIP19-description')">Sherry Lessons</div></div>
 															<div class="grey-button"><a href="https://nostr-nips.com/" target="_blank"style="text-decoration: none">NIPs Source, nostr-nip.com</h1></a></div>
 															<div><hr></div>
 															</div>
+															<div class="button-grid1">
+
+<div><div id="item5" ><h1>Broken NIP</h1></div><h2>NIP 46: <a href="https://github.com/nostr-protocol/nips/commit/d3dad114e60cb45bb04f2088a68ebd16cf6837df" target="_blank">change</a> #1023</h2></div>
+<div>List <a href="https://github.com/mikedilger/nips/blob/breaking-changes-list/BREAKING.md">Breaking Changes</a> </div>
+<div></div>
+<div></div>
+</div>
    
   
  
-  <h2 class="space">Old Table</h2>
+<div id="item6" >  <h2 class="space">Old Table</h2></div>
   <iframe src="https://njump.me/note1zrxr7fynk32ldlwklu8w8xsagfgfm3ktlewhyzsg5xyayzl8qu8seckyja?embed" width="600px" height="300" style="border:1px solid black;">
-  
+ 
 </div>
 
 	
