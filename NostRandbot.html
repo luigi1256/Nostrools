@@ -7,7 +7,6 @@
 
 .flex-container {
   display: flex;
-  
   background-color: var(--background-color);
   justify-content: center;
   align-items: center;
@@ -17,11 +16,12 @@
 .flex-item1 {
   background-color: var(--background-color);
   width: 800px;
-  margin: 10px;
+   margin: 10px;
   text-align: center;
   line-height: 60px;
   font-size: 30px;
   box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.3);
+  border: 5 px solid black;
 }
 .flex-item2 {
   background-color: var(--background-color);
@@ -39,9 +39,8 @@
 <style>
         #chat {
             border: 3px solid #ccc;
-            padding: 10px;
-            width: 800px;
-            height: 500px;
+            width: 794px;
+            height: 600px;
             overflow-y: scroll;
 			font-size: 30px;
 			justify-content: center;
@@ -112,7 +111,7 @@ a {
         }
 	
 :root {
-  --background-color: DARKSLATEBLUE; 
+  --background-color: #F8F8FF; 
   --text-color: #000000;
 }
 .my-button883{
@@ -130,6 +129,12 @@ a {
 	
 
 }
+.my-button885{
+  background-color: var(--background-color);
+  height:60px;
+  width:200px;
+  border:2px;   
+  }
 .dark {
   --background-color: #1F1F1F;
   --text-color: #FFFFFF;
@@ -168,17 +173,20 @@ body {
 
 <div class="flex-container">
 
-
-  <div class="flex-item1">
+<div class="flex-item1">
+  <div >
 <button class="color-button" ><a href="https://nostrools.netlify.app/"target="_blank">Main Page</a></button>
 <button class="my-button883"onclick="impostaTeme('dark')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"></path></svg></button>
 <button class="my-button883"onclick="impostaTeme('semilight')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"></path></svg></button>
 <button class="my-button883" onclick="impostaTeme('light')"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg></button>
 
 
-</button>
-</div>
-  
+
+</div><div  class="my-button885">
+   ⬛<a href="https://nostrudel.ninja/#/n/nevent1qqs95vumhfmfdu6gv8wetkfr9wg08qgpk2ggqklmu9xasf7h2dpdyacpp4mhxue69uhkummn9ekx7mqpr3mhxue69uhkummnw3ezucnfw33k76twv4ezuum0vd5kzmqppamhxue69uhkummnw3ezumt0d5q3yamnwvaz7tm0venxx6rpd9hzuur4vgq3jamnwvaz7tms09exzmtfvshxv6tpw34xze3wvdhk6qg5waehxw309aex2mrp0yhxgctdw4eju6t0qyt8wumn8ghj7un9d3shjtnwdaehgu3wvfskueqpz3mhxue69uhhyetvv9ujumn0wd68ytnzvuq3wamnwvaz7tmjv4kxz7fwwpkx2cnnw3ezucm0d5q3vamnwvaz7tmjv4kxz7fwwpexjmtpdshxuet5qgsrhuxx8l9ex335q7he0f09aej04zpazpl0ne2cgukyawd24mayt8gk6kqgv">Fiatjaf QA</a> 
+	</div>
+	
+	
 <script>
 function impostaTeme(teme) {
   document.body.className = teme;
@@ -186,15 +194,18 @@ function impostaTeme(teme) {
 </script>
 	
 </head>
-<body><div class="flex-item2">
+
 	  
-		<p><img src="https://media.tenor.com/rfLC7WHNMMMAAAAC/dragon-ball-dragon-ball-gt.gif" width="200px" height="200px"> <h2>Nostr is in danger danger warning danger danger girù girù!! </h2>
-<br><h2 >So click the button "Ask NostRandbot", it shows Answers. [Version ZZ] 
-   <br><div  id="triggerButton" onclick="triggerChatbot()"><button class="color-button">Ask NostRandbot</button></button>
+		<div><p><h2>Some questions and answers about Nostr </h2></p></div>
+<div><h2 >So click the button "Ask NostRandbot", it shows Answers. [Version AAAA] </div></p>
+   <div  id="triggerButton" onclick="triggerChatbot()"><button class="color-button">Ask NostRandbot</button></button>
   </h2>
-   <center><div id="chat"></div></center></div></div>
-    <br> </div>
+  <div id="chat"></div></div>
+   <div></div>
+   
 	
+	
+	</div>
 	
 	<script>
         // Define a list of possible responses
@@ -252,6 +263,34 @@ function impostaTeme(teme) {
 			"Extensible, The protocol is designed to be extended with new event kinds via NIPs (Nostr Implementation Proposals).   XX",
 			"Interoperable, Common event kinds work across different clients and relays.    YY",
 			"In summary, Nostr is a decentralized, secure, extensible protocol optimized for social media and apps. Identities, data, and infrastructure are all user-controlled. ZZ",
+			"Instead of connecting to only your list of relays, the Gossip model is a method of discovering what relays your friends use, and connecting to those. The relays you connect to will change over time as your followers change the relays they use, etc. It is considered a boon for decentralization, as it reduces the need to use the biggest relays in order to see people's posts.  AAA",
+			"What problem does nostr solve? Nostr doesn't solve any problems, it helps avoid creating others.   BBB ",
+			"Why are public and private keys better than password login? They're not better, they're different.     CCC",
+			"Why did we bring passwords back via extensons like alby? Alby is first and foremost a lightning wallet.    DDD",
+			"Why only on Nostr I cannot delete *my* posts?! Can you delete your notes, yes no maybe  EEE",
+			"Relays have no incetives to run the network? It is true. 		FFF",
+			"Tell me why I should not worship Big Tech Social Media? They're great, there's something different here.    GGG",	
+			"Why can't I access any/all notes posted publicly on Nostr? There is no global state, the note is linked to some relay, perhaps for the more well-known ones yes         HHH",
+			"Is the Global feed truly global or just all notes posted publicly by the relays you are connected to? Only the relays you are connected to, but a note can also appear due to interaction or broadcast of a note    III",
+			"Why do I sometimes see responses and reactions when I log into other clients that I didn't see before? How much did I miss because of this?! It can be a different set of relays, assuming the same set, there are no big changes.    JJJ",
+			"Why does trying different clients sometimes cause me to lose my followers and profile data? Different customers have different developers, who implement the protocol differently, and there may be bugs, malfunctions, etc.   KKK",
+			"How can I recover my account if I lose my private key/NSEC? If you lose your private key you lose your account    LLL",
+			"Why can't I reset my private key if it is compromised or leaked? There are some mechanisms that the developers are working on.   MMM",
+			"Why do Nostr clients/websites ask for your private key if it can lead to data leaks and compromise of your account? It's the simplest method, it's safer sometimes to put a new key in a new client.    NNN",
+			"Why does my client show that I have 1 follower while other apps show that I have hundreds? Clients sometimes don't count followers, they count them based on relays and these can change.    OOO",
+			"Why can't I edit or delete my notes? Deletion is possible, modification is not.    PPP",
+			"Will connecting to many relays slow down my customer's and Nostr's experience? Yes definitely    QQQ",
+			"Is it possible for something to go viral on Nostr? It's a small network so yes it's possible   RRR",
+			"Is some of my data lost when relays turn off or delete older notes?  You should always back up your data. It can happen   SSS",
+			"Do I have to use Bitcoin/cryptocurrency to use Nostr? No, it's not necessary    TTT",
+			"How do I find my friends? Difficult to find them  UUU",
+			"How can I reset my password? It does not work like that   VVV",
+			"How do I make my profile private? You cannot make your profile private  WWW",
+			"How do I share my posts outside Nostr? Services like njump.me or w3.do   XXX",
+			"Where is my information stored? The information is sent to servers generally called relays.    YYY",
+			"How to block spam and why is it here? Everyone can make an account easily, you can block accounts or words   ZZZ",
+			"If I need relays, how many do I need where do I find more? Some clients suggest relays, you can watch relays on <a href='https://nostr.watch'>nostr.watch</a> or <a href='https://nostrrr.com/'>nostrrr.com</a>    AAAA",
+
 			];
 
         // Function to simulate the chatbot
