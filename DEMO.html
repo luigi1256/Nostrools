@@ -51,9 +51,7 @@
   }
 </style>
 <style>
-  body {
-    background-color: grey;
-  }
+ 
   .space{
   padding-left:50px;
   }
@@ -97,8 +95,6 @@ function impostaTema(tema) {
 <title>DEMO</title>
 <h1 class="space" ><b>Nostr:</b>
 <b >Note and other stuff transmitted by Relays</b></h1>
-<div class="space"><button ><img src="https://image.nostr.build/a531bdc53de13acaac2d69d15143988f51c2990994be283882241e8ddb0f4d80.jpg" width="500px" height="500px"/>
-<img src="https://image.nostr.build/98a70cb1a7a5e6d03af8fd76d1dd61b99231db541c9d6e896c7d0811ae16adb9.jpg"width="500px" height="500px"/></button></div>
 <br><br><div class="space"><button onclick="openDialog1()"class="my-button"style="font-size:20px">Welcome</button>
 <button onclick="openDialog2()"class="my-button"style="font-size:20px">Keys</button>
 <button onclick="openDialog3()"class="my-button"style="font-size:20px">Profile</button>
@@ -108,8 +104,8 @@ function impostaTema(tema) {
 <button onclick="openDialog7()"class="my-button"style="font-size:20px">Relay Explorer</button>
 <button onclick="openDialog8()"class="my-button"style="font-size:20px">Nostr key to safety</button><br><br></div>
 <div class="space"><button onclick="openDialog9()"class="my-button" style="font-size:20px" >Apps Blog Tools</button>
-<button onclick="openDialog10()"class="my-button" style="font-size:20px" >Nostr Preview page</button></div>
-
+<button onclick="openDialog10()"class="my-button" style="font-size:20px" >Nostr Preview page</button>
+<button onclick="openDialog11()"class="my-button" style="font-size:25px" >Nostr works!</button></div>
 <body>
 <dialog id="myDialog1" class="dialog">
   <h2>Window 1</h2>
@@ -291,6 +287,14 @@ AKA extension <img src="https://lh3.googleusercontent.com/HNdF4BkwNJXbypmVb8RLo9
 	</p>
   <button onclick="closeDialog10()"style="font-size:30px">Close</button>
 </dialog>
+<dialog id="myDialog11" class="dialog">
+  <h2>Dialog 11</h2>
+  <h2 class="space">Nostr works!</h2> <button  onclick="closeDialog11()"style="font-size:30px">Close</button>
+  <br><br><img src="https://image.nostr.build/a531bdc53de13acaac2d69d15143988f51c2990994be283882241e8ddb0f4d80.jpg" width="450px" height="500px"/>
+<br><br><img src="https://image.nostr.build/98a70cb1a7a5e6d03af8fd76d1dd61b99231db541c9d6e896c7d0811ae16adb9.jpg"width="450px" height="500px"/>
+
+
+</dialog>
 
 <script>
   function openDialog1() {
@@ -387,16 +391,26 @@ AKA extension <img src="https://lh3.googleusercontent.com/HNdF4BkwNJXbypmVb8RLo9
     var dialog = document.getElementById("myDialog10");
     dialog.close();
   }
+   function openDialog11() {
+    var dialog = document.getElementById("myDialog11");
+    dialog.showModal();
+  }
+
+   function closeDialog11() {
+    var dialog = document.getElementById("myDialog11");
+    dialog.close();
+  }
 </script>
 <br><br><p style="font-size:30px">
-<h1>&emsp;&emsp;click here, the triangle</h1></p>
-&emsp;&emsp;<details>
+<h1 class="space">Click here, the triangle</h1></p>
+&emsp;&emsp;<details style="font-size:30px">
   <summary class="space">
     <button class="language-button" onclick="toggleLanguage()"style="font-size:30px">English summary</button>&emsp;&emsp;
     <button class="language-button" onclick="toggleLanguage()"style="font-size:30px">Italian summary</button>
   </summary>
-  <div id="english-pass">
-    <p style="font-size:30px">
+  <div id="english-pass" class="space">
+    <p style="font-size:30px" >
+	
 Welcome, this is a summary, an initial approach to Nostr.<br><br>
 
 Tab 1: Simulating the generation of a private key associated with a public key.<br>
@@ -412,10 +426,12 @@ Tab 7: Another interesting thing concerns the relays. We send messages and other
 Tab 8: A slightly more secure but slower way to sign notes and other things.<br>
 <br>
 Tab 9: The best apps, clients, and tools of Nostr. Take a look.<br>
-Tab 10: It is an easy way to preview a note and then open it with your preferred client/app.</p>
-  </div>
+Tab 10: It is an easy way to preview a note and then open it with your preferred client/app.
+<br>
+Tab 11: A simplified view of how Nostr works
+</p> </div>
   
-  <div id="italiano-passi" style="display: none;">
+  <div id="italiano-passi" style="display: none;"class="space">
     <p style="font-size:30px">
 Benvenuto questo è un sommario, un primo approccio a nostr<Br><br>
 Tab 1: Simulazione della generazione di una chiave privata associata a una chiave pubblica<br>
@@ -431,10 +447,15 @@ tab 7: Un'altra cosa interessante riguarda i relay. Noi inviamo messaggi e altre
 tab 8: Un modo per firmare le note e altre cose in modo leggermente più sicuro ma meno veloce<br><br>
 
 Tab 9: Le migliori app, client e strumenti di Nostr. Dai un'occhiata. 
-tab 10: È un modo semplice per visualizzare in anteprima una nota e quindi aprirla con il tuo client/app preferito. 
+tab 10: È un modo semplice per visualizzare in anteprima una nota e quindi aprirla con il tuo client/app preferito. <br><br>
+
+tab 11: Una visualizzazzione semplicista di come funziona Nostr. 
+
 </p>
   </div>
 </details>
+
+<div class="my-buttonb"></div><div class="my-buttonb"></div>
 <script>
 function toggleLanguage() {
   var englishPass = document.getElementById("english-pass");
