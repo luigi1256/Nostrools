@@ -113,7 +113,7 @@ function impostaTema(tema) {
 	<form>
 		<label for="testo"style="font-size:30px">Enter npub o nsec:</label>
 		<input type="text" id="testo" name="testo"><br><br>
-		<button type="button" onclick="cancellaTesto()"style="font-size:30px">login</button>
+		<button type="button" onclick="cancellaTesto()"style="font-size:30px">Sign-in</button>
 		
 	</form><script>
 		function cancellaTesto() {
@@ -155,12 +155,17 @@ function impostaTema(tema) {
 
 <dialog id="myDialog2" class="dialog">
   <h2>Tab 2</h2>
-  <p style="font-size:30px"><h1>Save your keys</h1>
+  
+ 	<p style="font-size:30px"><h1>Save your keys</h1><button onclick="closeDialog2()"style="font-size:30px">Close</button>
 	<div> <label for="npub"  style="font-size:30px">npub:</label> <input type="text" id="npub" name="npub" value="npub1e08fhgecn6zykl3aagvd5ln33j7upx7yp9scf9ardj5z950avfsqwem3jm"> 
 	<button type="button" onclick="copiaChiave('npub')"style="font-size:30px">Copy</button> </div> 
+	<p style="font-size:22px">Nostr public key </p>
 	<br><br> <div> <label for="nsec"  style="font-size:30px">nsec:</label> 
 	<input type="text" id="nsec" name="nsec" readonly value="***********************************************"> 
 	<button type="button" onclick="copiaChiave('nsec')"style="font-size:30px">Copy</button> </div> 
+	<p style="font-size:22px">Nostr private key</p>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhR_N-kwu77eOjHO2nHNtwSHmTNagOaIKlOMeFDVAlCaRKg9Woo6ukmcfFqdlwyPxlt6E&usqp=CAU" height="150px" />
+	<a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhR_N-kwu77eOjHO2nHNtwSHmTNagOaIKlOMeFDVAlCaRKg9Woo6ukmcfFqdlwyPxlt6E&usqp=CAU">Source</a>
 	<br><br>
 	<script> function copiaChiave(id) { var chiave = document.getElementById(id).value; navigator.clipboard.writeText(chiave); }
 function salvaChiavi() {
@@ -171,7 +176,7 @@ var nsec = document.getElementById("nsec").value;
 
 </script>
  
-  <br><button onclick="closeDialog2()"style="font-size:30px">Close</button>
+  
 </dialog>
 <dialog id="myDialog3" class="dialog">
   <h2>dialog 3</h2>
