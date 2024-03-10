@@ -5,42 +5,22 @@
  
     <title>Video</title>
 	 <style>
-        /* Stili per la corona circolare */
-        .circle-container {
-            position: relative;
-            width: 500px;
-            height: 500px;
-            border: 1px solid black;
-            border-radius: 50%;
-            overflow: hidden;
-			background-color:grey
-        }
-        
-        .outer-circle {
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            width: 400px;
-            height: 400px;
-            border: 1px solid black;
-            border-radius: 50%;
-			
-        }
-        
+               
         /* Stili per le schede delle app */
         .app-tab {
             display: none;
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 500px;
+            left: 700px;
             transform: translate(-50%, -50%);
             width: 320px;
             height: 320px;
-            background-color: white;
+            background-color: var(--background-color);
             border-radius: 55%;
             text-align: center;
             line-height: 120px;
             font-size: 20px;
+			
         }
         
         .active {
@@ -58,6 +38,13 @@
 		 position: absolute;
       top: 100px;
       left: 550px;
+      background-color: darkwhite;
+      padding: 10px;
+    }
+		.sidebar1 {
+		width: 500px;
+		 position: absolute;
+      top: 250px;
       background-color: darkwhite;
       padding: 10px;
     }
@@ -125,7 +112,7 @@
 /* tema scuro */
 .dark {
   --background-color: #1F1F1F;
-  --text-color: #5a5a60;
+  --text-color: #2986cc;
 }
 
 /* tema semi-scuro */
@@ -153,8 +140,9 @@ function impostaTema(tema) {
  
 .options {
   margin-top: 10px;
-  background-color: #cbcbce;
+  background-color:  var(--background-color);
    width:400px;
+   padding-left:50px;
    
 }
 
@@ -172,7 +160,7 @@ function impostaTema(tema) {
   
   margin-top: 10px;
   padding: 10px;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   font-size: 25px;
   height:200px;
   
@@ -180,6 +168,7 @@ function impostaTema(tema) {
 
 .options-content p {
   margin-bottom: 5px;
+  
 }
 h1 {
   color: #990000
@@ -188,70 +177,43 @@ h1 {
 .space{
 padding-left:50px;
 }
+.space2{
+padding-left:100px;
+}
 a {
   text-decoration: none !important;
 }
 </style>
+
+
+
  
-  
- 
-
-<h1 class="space"style="font-size: 30px;">Video - Filter - Descr - Display</h1>
-<div class="content">
-  
-   <button >
-
-<input type="text" id="filtro" style="font-size: 30px;" onkeyup="filtra()">
-<button class="space"type="button" class="my-button5" style="font-size: 30px;" onclick="filtra()"><b > Filter</b></button>
-    </button>
-    
-  </div>
-
-
-
-
 </head>
 
-
-<ul id="lista"style="font-size: 30px;">
-  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app1')" >micro-blog</a></li>
-  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app2')">Project update</a></li>
-  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app3')">Others Video</a></li>
-  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app4')">projects</a></li>
-  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app5')">test-"podcast"</a></li>
-  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app6')">by nostriches</a></li>
-  <li style="display: none;"><a class="app-link" href="#" onclick="showApp('app7')">NWC</a></li>
+<h1 class="space"style="font-size: 30px;"> Old Video
+<div class="space" style="font-size: 30px;"><a href="https://cdn.satellite.earth/eaafcdd3333c5d5c27d53a30676efb4ed3ee62e7e24910fddef360e8df936a14.html" target="_blank">New Video on CDN</a>
+  </h1></div>
  
+<div class="content">
+  <div style="font-size: 30px;">
+  <div class="space"><a class="app-link" href="#" onclick="showApp('app1')" >micro-blog</a> |
+  <a class="app-link" href="#" onclick="showApp('app2')">Project update</a> |
+  <a class="app-link" href="#" onclick="showApp('app3')">Others Video</a> 
+  </div>
+  <div class="space"><a class="app-link" href="#" onclick="showApp('app4')">projects</a> |
+  <a class="app-link" href="#" onclick="showApp('app5')">test-"podcast"</a> |
+  <a class="app-link" href="#" onclick="showApp('app6')">by nostriches</a> |
+  <a class="app-link" href="#" onclick="showApp('app7')">NWC</a>
+  </div><br>
+  </div>
 
   
-</ul>
+
  
-<script>
-function filtra() {
-  var input = document.getElementById("filtro");
-  var filtro = input.value.toUpperCase();
-  var lista = document.getElementById("lista");
-  var elementi = lista.getElementsByTagName("li");
-  
-  for (var i = 0; i < elementi.length; i++) {
-    var testo = elementi[i].textContent || elementi[i].innerText;
-    if (testo.toUpperCase().indexOf(filtro) > -1) {
-      elementi[i].style.display = "";
-    } else {
-      elementi[i].style.display = "none";
-    }
-  }
-}
-</script>
     
 	
-	<div class="space"><button class="my-button5" ><b>Display<b></button></div>
-    <div class="circle-container">
-		
-		
-        <div class="outer-circle">
-		
-            </div>
+			
+        
         
         <div class="app-tab" id="app1-tab" style="display: none;">
           
@@ -260,7 +222,6 @@ function filtra() {
 		<source src="https://nostr.build/av/990d1d505dfb3857ceb161a9ec130f14e4faf39dd9a5ec6ff89e25551038656d.mov"></video>
 		</button>
 		
-			
 			</div>
 			<div id="hiddenContent10" class="hidden" >
 		
@@ -581,6 +542,14 @@ function filtra() {
 		    <source src="https://video.nostr.build/089f7895afec73b30387482688e587c82a6d53d5e7d02eea4390b1271dabc951.mp4"/></video>
 		    </button>
 			</div>
+			<div id="hiddenContent85" class="hidden">
+			<iframe class="my-button" width="320" height="320" 
+			src="https://www.youtube.com/embed/RLN72EwRm6Q?si=NGf_kPnRFGYnpEUH" 
+			title="YouTube video player" frameborder="0" 
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+			allowfullscreen></iframe>
+		    
+			</div>
 		
 		    </div>
 		<div class="app-tab" id="app5-tab" style="display: none;">
@@ -691,15 +660,16 @@ function filtra() {
 		
     </div>
 
-    <div class="sidebar2">
+			
+    <div class="sidebar1">
 	 
   
-       <button class="my-button5"><b>Descr</b></button>
+       <!--descr!-->
         <div class="descr-tab" id="descr1" style="display: none;">
 			 
            
            <br>
-			<button class="my-button5">Micro-blog</button>
+			<div class="space"><button class="my-button5" >Micro-blog</button></div>
 			<!--hidden!--><br><br>
 			
 				<div class="options">
@@ -743,7 +713,7 @@ function filtra() {
 				<button onclick="toggleContent('hiddenContent38')"class="my-button4">Amethyst</button>
 			
 			</div>
-			</div>
+			</div><div class="space">
 			<br><br><button onclick="toggleContent('hiddenContent1')"class="my-button4">Swamstr</button>
 		
 	
@@ -756,16 +726,16 @@ function filtra() {
 			<button onclick="toggleContent('hiddenContent68')"class="my-button4">Nostter Dark mode</button>	
 			<button onclick="toggleContent('hiddenContent73')"class="my-button4">Nostros Offline</button>	
 			<button onclick="toggleContent('hiddenContent74')"class="my-button4">Gleasonator NIP-48</button>	
-			
+			</div>
 			
 			</p>
         </div>
 		
 		
         <div class="descr-tab" id="descr2" style="display: none;">
-            
-            <br><button class="my-button5">Project Update</button><br><br>
-			<button onclick="toggleContent('hiddenContent4')"class="my-button4">Spring.site</button>
+            <br>
+            <div class="space"><button class="my-button5">Project Update</button></div><br><br>
+			 <div class="space"><button onclick="toggleContent('hiddenContent4')"class="my-button4">Spring.site</button>
 	
 			
 	
@@ -773,7 +743,7 @@ function filtra() {
 	<button onclick="toggleContent('hiddenContent52')"class="my-button4">Shipyard.pub</button>
 	<button onclick="toggleContent('hiddenContent53')"class="my-button4">nostatus</button>
 	<button onclick="toggleContent('hiddenContent58')"class="my-button4">Mutiny-Damus</button>
-	
+	</div>
 	<div class="options">
 	<button class="toggle-button">Relay Guide</button>
 			<div class="options-content">
@@ -790,7 +760,7 @@ function filtra() {
 		
 			
 			</div>
-			<br><br><br>
+			<br><br><br> <div class="space">
 			<button onclick="toggleContent('hiddenContent44')"class="my-button4">Nostr.cooking</button>
 			<button onclick="toggleContent('hiddenContent48')"class="my-button4">Nos-dav</button>
 			<button onclick="toggleContent('hiddenContent50')"class="my-button4">$Prism + Listr</button>
@@ -800,14 +770,14 @@ function filtra() {
 			<br><button onclick="toggleContent('hiddenContent23')"class="my-button4">Pinstr.app</button>
 			<button onclick="toggleContent('hiddenContent65')"class="my-button4">Pinstr-boostr</button>
 			<button onclick="toggleContent('hiddenContent70')"class="my-button4">Ex Nos2x</button>
-			</div>
+			</div></div>
 			
         
 		
 		
     <div class="descr-tab" id="descr3" style="display: none;">
-          
-           <br><button class="my-button5">Other Videos</button><br><br>
+          <br>
+            <div class="space"><button class="my-button5">Other Videos</button><br><br>
 			<button onclick="toggleContent('hiddenContent7')"class="my-button4">Marce Files</button>
 				
 			
@@ -818,13 +788,13 @@ function filtra() {
 	<button onclick="toggleContent('hiddenContent61')"class="my-button4">Why Nostr? Rabble (nostrasia)</button>
 	<button onclick="toggleContent('hiddenContent76')"class="my-button4">Nostr for "Normies"</button>
 	<button onclick="toggleContent('hiddenContent64')"class="my-button4">Creatr.wine</button>
-	<button onclick="toggleContent('hiddenContent66')"class="my-button4">Uploading an mp4 to a Derby storage node</button>
-	
+	<button onclick="toggleContent('hiddenContent66')"class="my-button4">Uploading an mp4 to a Derby storage</button>
+	</div>
         </div>
 		
 		 <div class="descr-tab" id="descr4" style="display: none;">
-            
-        <br><button class="my-button5">Short</button><br><br>
+            <br>
+         <div class="space"><button class="my-button5">Projects</button><br><br>
 			<button onclick="toggleContent('hiddenContent12')"class="my-button4">NostrNet</button>
 		<button onclick="toggleContent('hiddenContent14')"class="my-button4">Show/hidden 3</button>
 	<div id="hiddenContent14" class="hidden">
@@ -838,12 +808,13 @@ function filtra() {
 		<button onclick="toggleContent('hiddenContent80')"class="my-button4">nak v0.1.1 (bunker)</button>
 		<button onclick="toggleContent('hiddenContent81')"class="my-button4">nak (bunker) NIP-46</button>
 		<button onclick="toggleContent('hiddenContent84')"class="my-button4">kronostr to schedule meetings</button>
-	
+		<button onclick="toggleContent('hiddenContent85')"class="my-button4">cafe-society.news AI</button>
+	</div>
 		</div>
 		
 		<div class="descr-tab" id="descr5" style="display: none;">
-           
-            <br><button class="my-button5">test_podcast</button><br><br>
+           <br>
+             <div class="space"><button class="my-button5">test_podcast</button><br><br>
 			<button onclick="toggleContent('hiddenContent15')"class="my-button4">Audio</button>
 	<br><br><div id="hiddenContent15" class="hidden">
 		<audio controls >
@@ -870,11 +841,11 @@ function filtra() {
 	<button onclick="toggleContent('hiddenContent27')"class="my-button4">CDN Test4 27</button>
 	
 	<button onclick="toggleContent('hiddenContent28')"class="my-button4">CDN Test6 28</button>
-	
+	</div>
 	</div>
 	
 	<div class="descr-tab" id="descr6" style="display: none;">
-          <br>  <button class="my-button5">by nostriches</button><br><br>
+        <br>  <div class="space">  <button class="my-button5">by nostriches</button><br><br>
             
 	<button onclick="toggleContent('hiddenContent18')"class="my-button4">Show Art 18</button>
 	
@@ -888,16 +859,16 @@ function filtra() {
 	
 		<button onclick="toggleContent('hiddenContent46')"class="my-button4">fireworks 46</button>
 	<button onclick="toggleContent('hiddenContent82')"class="my-button4">Nostr basics</button>
-	
+	</div>
 		</div>
 
   <div class="descr-tab" id="descr7" style="display: none;">	
-		 <br>  <button class="my-button5">NWC Nostr Wallet Connect</button><br><br>
+		<br> <div class="space"> <button class="my-button5">NWC Nostr Wallet Connect</button><br><br>
 		<button onclick="toggleContent('hiddenContent32')"class="my-button4">Lume-3</button><br><br>
 		<button onclick="toggleContent('hiddenContent43')"class="my-button4">Habla NWC</button>  <br><br>
 		<button onclick="toggleContent('hiddenContent59')"class="my-button4">Wherostr.social NWC</button><br><br>	
 		<button onclick="toggleContent('hiddenContent71')"class="my-button4">0xchat NWC</button>
-			
+		</div>	
 		</div>
 		
 		
